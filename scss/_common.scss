@@ -5,13 +5,15 @@
 html {
   color: $base-color;
 
-  font-family: "Roboto", sans-serif;
+  font-family: $base-font;
   font-size: 16px;
   line-height: 1.5;
 }
 
 a {
   text-decoration: none;
+
+  color: $light-color;
 }
 
 .grid {
@@ -19,7 +21,9 @@ a {
 }
 
 .container {
-  max-width: 100px;
+  max-width: $xlarge;
+  margin: auto;
+  padding: 0 $gutter;
 }
 
 .img-responsive {
@@ -27,4 +31,27 @@ a {
 
   width: 100%;
   height: auto;
+}
+
+.btn {
+  display: inline-block;
+
+  min-width: 250px;
+  margin: 0 ($gutter / 2);
+  padding: 15px;
+
+  transition: background-color 0.5s;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  border: 2px solid $light-color;
+  background-color: rgba($light-color, 0.1);
+
+  font-size: 1.125rem;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }

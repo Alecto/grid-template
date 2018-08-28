@@ -388,6 +388,7 @@ html {
 
 a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 .grid {
@@ -395,12 +396,140 @@ a {
 }
 
 .container {
-  max-width: 100px;
+  max-width: 1340px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 .img-responsive {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 250px;
+  margin: 0 10px;
+  padding: 15px;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1.125rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #d66926;
+}
+
+.header {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 0;
+  color: #ffffff;
+  background-color: #2d3651;
+  background-position: 50% 50%;
+  background-size: cover;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  background-color: #2d3651;
+}
+
+.header-content {
+  z-index: 1;
+}
+
+.header-title {
+  margin-bottom: 53px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-family: "Roboto Slab", serif;
+  font-size: 3.75rem;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+.header-buttons {
+  text-align: center;
+}
+
+.header-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-menu .grid {
+  grid-template-columns: 120px 1fr;
+}
+
+.header-logo {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.header-logo a {
+  display: block;
+  width: auto;
+  padding: 20px 20px 20px 0;
+}
+
+.header-logo a:hover,
+.header-logo a:focus {
+  color: #ffffff;
+}
+
+.header-logo span {
+  padding: 3px 7px;
+  border: 2px solid #d53d27;
+}
+
+.header-navbar {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.header-navbar__list {
+  margin: 0 -10px 0 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: right;
+}
+
+.header-navbar__item {
+  display: inline-block;
+}
+
+.header-navbar__item a {
+  display: block;
+  padding: 10px;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #ffffff;
+}
+
+.header-navbar__item a:hover,
+.header-navbar__item a:focus {
+  color: #d66926;
 }
 /*# sourceMappingURL=style.css.map */

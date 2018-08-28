@@ -1,0 +1,112 @@
+.header {
+  position: relative;
+
+  min-height: 100vh;
+  padding: 100px 0;
+
+  color: $light-color;
+  background-color: $base-color;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  align-content: center;
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    opacity: 0.8;
+    background-color: $base-color;
+  }
+
+  &-content {
+    z-index: 1;
+  }
+
+  &-title {
+    margin-bottom: 53px;
+
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    font-family: $header-font;
+    font-size: 3.75rem;
+    font-weight: 300;
+    line-height: 1.2em;
+  }
+
+  &-buttons {
+    text-align: center;
+  }
+}
+
+.header-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  justify-content: center;
+
+  .grid {
+    grid-template-columns: 120px 1fr;
+  }
+}
+
+.header-logo {
+  align-self: center;
+
+  a {
+    display: block;
+
+    width: auto;
+    padding: $gutter $gutter $gutter 0;
+
+    &:hover,
+    &:focus {
+      color: $light-color;
+    }
+  }
+
+  span {
+    padding: 3px 7px;
+
+    border: 2px solid $highlight-color;
+  }
+}
+
+.header-navbar {
+  align-self: center;
+
+  &__list {
+    margin: 0 (-$gutter / 2) 0 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    text-align: right;
+  }
+
+  &__item {
+    display: inline-block;
+
+    a {
+      display: block;
+
+      padding: $gutter / 2;
+
+      transition: color 0.5s;
+
+      color: $light-color;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }
+}
