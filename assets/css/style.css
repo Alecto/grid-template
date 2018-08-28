@@ -373,4 +373,34 @@ template {
 [hidden] {
   display: none;
 }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  color: #2d3651;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  max-width: 100px;
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=style.css.map */
