@@ -532,4 +532,67 @@ a {
 .header-navbar__item a:focus {
   color: #d66926;
 }
+
+.section-skills {
+  min-height: 100vh;
+  padding: 10px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.skill-item {
+  position: relative;
+  min-height: 33%;
+  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill-item__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0.8;
+  background-color: #2d3651;
+}
+
+.skill-item__title {
+  z-index: 1;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.skill-item:hover .skill-item__overlay {
+  opacity: 0.95 !important;
+}
+
+.skill-item:hover .skill-item__title {
+  color: #d66926;
+}
+
+.skill-item:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+.skill-item:nth-of-type(5) {
+  grid-column: 2 / 4;
+}
+
+.skill-item:nth-of-type(6) {
+  grid-column: 4;
+  grid-row: 2 / 4;
+}
 /*# sourceMappingURL=style.css.map */
