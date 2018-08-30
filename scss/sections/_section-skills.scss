@@ -1,23 +1,22 @@
 
-.section-skills {
-  &__grid {
+.skills {
+  display: grid;
+
+  padding: 10px;
+
+  grid-gap: $gutter / 2;
+  grid-template-columns: repeat(4, 1fr);
+
+  &-btnset {
     display: grid;
 
-    min-height: 100vh;
-    padding: 10px;
+    padding: 40px 0 $gutter;
 
-    grid-gap: $gutter / 2;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  &__btn-set {
-    display: grid;
-
+    grid-column: 1 / span 4;
     justify-content: center;
 
     .btn {
       min-width: 350px;
-      margin-top: 40px;
 
       border-color: $base-color;
       background-color: $accent-color;
@@ -32,15 +31,17 @@
 
   padding: $gutter;
 
+  cursor: pointer;
+
   align-items: center;
   justify-content: center;
 
   @media (min-height: 691px) {
-    min-height: 33.33%;
+    min-height: calc(33.33vh - #{$gutter} * 0.66);
   }
 
   @media (max-height: 690px) {
-    min-height: 230px;
+    min-height: calc(230px - #{$gutter} * 0.66);
   }
 
   &__overlay {
