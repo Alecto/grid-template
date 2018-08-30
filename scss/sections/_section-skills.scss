@@ -1,12 +1,28 @@
 
 .section-skills {
-  display: grid;
+  &__grid {
+    display: grid;
 
-  min-height: 100vh;
-  padding: 10px;
+    min-height: 100vh;
+    padding: 10px;
 
-  grid-gap: $gutter / 2;
-  grid-template-columns: repeat(4, 1fr);
+    grid-gap: $gutter / 2;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__btn-set {
+    display: grid;
+
+    justify-content: center;
+
+    .btn {
+      min-width: 350px;
+      margin-top: 40px;
+
+      border-color: $base-color;
+      background-color: $accent-color;
+    }
+  }
 }
 
 .skill-item {
@@ -14,11 +30,18 @@
 
   display: grid;
 
-  min-height: 33%;
   padding: $gutter;
 
   align-items: center;
   justify-content: center;
+
+  @media (min-height: 691px) {
+    min-height: 33.33%;
+  }
+
+  @media (max-height: 690px) {
+    min-height: 230px;
+  }
 
   &__overlay {
     position: absolute;
