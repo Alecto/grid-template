@@ -391,10 +391,6 @@ a {
   color: #ffffff;
 }
 
-.grid {
-  display: grid;
-}
-
 .container {
   max-width: 1340px;
   margin: auto;
@@ -430,6 +426,7 @@ a {
 
 .header {
   position: relative;
+  display: grid;
   min-height: 100vh;
   padding: 100px 0;
   color: #ffffff;
@@ -478,7 +475,8 @@ a {
           justify-content: center;
 }
 
-.header-menu .grid {
+.header-menu > .container {
+  display: grid;
   grid-template-columns: 120px 1fr;
 }
 
@@ -499,7 +497,8 @@ a {
 }
 
 .header-logo span {
-  padding: 3px 7px;
+  display: inline-block;
+  padding: 5px 7px 3px;
   border: 2px solid #d53d27;
 }
 
@@ -534,6 +533,7 @@ a {
 }
 
 .section-skills {
+  display: grid;
   min-height: 100vh;
   padding: 10px;
   grid-gap: 10px;
@@ -542,6 +542,7 @@ a {
 
 .skill-item {
   position: relative;
+  display: grid;
   min-height: 33%;
   padding: 20px;
   -webkit-box-align: center;

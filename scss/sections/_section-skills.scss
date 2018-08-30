@@ -1,5 +1,7 @@
 
 .section-skills {
+  display: grid;
+
   min-height: 100vh;
   padding: 10px;
 
@@ -9,6 +11,8 @@
 
 .skill-item {
   position: relative;
+
+  display: grid;
 
   min-height: 33%;
   padding: $gutter;
