@@ -17,9 +17,16 @@ a {
 }
 
 .container {
+  display: grid;
+
   max-width: $xlarge;
   margin: auto;
   padding: 0 $gutter;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 .img-responsive {

@@ -4,13 +4,15 @@
 
   padding: 10px;
 
+  background-color: #ffffff;
+
   grid-gap: $gutter / 2;
   grid-template-columns: repeat(4, 1fr);
 
   &-btnset {
     display: grid;
 
-    padding: 40px 0 $gutter;
+    padding: ($gutter / 2) 0 ($gutter / 2 * 3);
 
     grid-column: 1 / span 4;
     justify-content: center;
@@ -19,7 +21,12 @@
       min-width: 350px;
 
       border-color: $base-color;
-      background-color: $accent-color;
+      background-color: lighten($accent-color, 5%);
+
+      &:hover {
+        border-color: $highlight-color;
+        background-color: $accent-color;
+      }
     }
   }
 }

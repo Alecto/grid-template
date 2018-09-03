@@ -55,8 +55,6 @@
   justify-content: center;
 
   > .container {
-    display: grid;
-
     grid-template-columns: 120px 1fr;
   }
 }
