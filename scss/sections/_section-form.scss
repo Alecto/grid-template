@@ -1,6 +1,6 @@
 
 .form {
-  padding: $gutter 0;
+  padding: ($gutter * 1.5) 0;
 
   background-color: $base-color;
 
@@ -35,6 +35,7 @@
     padding-right: $gutter;
     padding-left: $gutter;
 
+    transition: background-color 0.5s, border-color 0.5s;
     letter-spacing: 0.15em;
 
     color: $light-color;
@@ -43,12 +44,17 @@
     background-color: rgba($light-color, 0.05);
 
     font-size: 1.125rem;
+
     &:hover,
     &:focus {
       border-color: rgba($light-color, 0.15);
       border-bottom-color: $light-color;
       outline: none;
       background-color: rgba($light-color, 0.15);
+
+      &::placeholder {
+        color: lighten($gray-color, 15%);
+      }
     }
   }
 }

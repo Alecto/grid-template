@@ -380,10 +380,26 @@ template {
 }
 
 html {
-  color: #2d3651;
+  color: #637588;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
+}
+
+h1 {
+  letter-spacing: 0.1em;
+  font-family: "Roboto Slab", serif;
+  font-size: 3.75rem;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+h2 {
+  letter-spacing: 0.1em;
+  color: #2d3651;
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  line-height: 1.2em;
 }
 
 a {
@@ -403,6 +419,10 @@ a {
   padding-bottom: 80px;
 }
 
+.section h2 {
+  margin-top: 0;
+}
+
 .img-responsive {
   display: block;
   width: 100%;
@@ -416,9 +436,9 @@ a {
   height: 60px;
   margin: 0 10px;
   padding: 15px 20px;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
   text-align: center;
   text-decoration: none;
   letter-spacing: 0.15em;
@@ -477,11 +497,6 @@ a {
 .header-title {
   margin: 0 0 53px;
   text-align: center;
-  letter-spacing: 0.1em;
-  font-family: "Roboto Slab", serif;
-  font-size: 3.75rem;
-  font-weight: 300;
-  line-height: 1.2em;
 }
 
 .header-buttons {
@@ -502,7 +517,7 @@ a {
           justify-content: center;
 }
 
-.header-menu > .container {
+.header-menu .container {
   grid-template-columns: 120px 1fr;
 }
 
@@ -583,6 +598,7 @@ a {
 .skill-item {
   position: relative;
   display: grid;
+  overflow: hidden;
   padding: 20px;
   cursor: pointer;
   -webkit-box-align: center;
@@ -595,6 +611,7 @@ a {
 
 .skill-item__overlay {
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   bottom: 0;
@@ -606,11 +623,28 @@ a {
   background-color: #2d3651;
 }
 
+.skill-item__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
 .skill-item__title {
   z-index: 1;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
+  letter-spacing: 0.1em;
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 700;
@@ -618,6 +652,12 @@ a {
 
 .skill-item:hover .skill-item__overlay {
   opacity: 0.95 !important;
+}
+
+.skill-item:hover .skill-item__image {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .skill-item:hover .skill-item__title {
@@ -641,16 +681,17 @@ a {
   background-color: #e5e5e5;
 }
 
-.about > .container {
+.about .container {
   grid-gap: 100px;
   grid-template-columns: 1fr 270px;
 }
 
 .about-content h2 {
-  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .about-content p {
+  color: #637588;
   font-size: 1.125rem;
 }
 
@@ -665,7 +706,7 @@ a {
   width: 2px;
   height: 200px;
   content: "";
-  background-color: rgba(112, 112, 112, 0.05);
+  background-color: rgba(99, 117, 136, 0.05);
 }
 
 .about-image img {
@@ -674,7 +715,7 @@ a {
 }
 
 .form {
-  padding: 20px 0;
+  padding: 30px 0;
   background-color: #2d3651;
 }
 
@@ -705,6 +746,9 @@ a {
   height: 60px;
   padding-right: 20px;
   padding-left: 20px;
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.15em;
   color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -719,6 +763,110 @@ a {
   border-bottom-color: #ffffff;
   outline: none;
   background-color: rgba(255, 255, 255, 0.15);
+}
+
+.form input:hover::-webkit-input-placeholder,
+.form input:focus::-webkit-input-placeholder {
+  color: #8c9bab;
+}
+
+.form input:hover:-ms-input-placeholder,
+.form input:focus:-ms-input-placeholder {
+  color: #8c9bab;
+}
+
+.form input:hover::-ms-input-placeholder,
+.form input:focus::-ms-input-placeholder {
+  color: #8c9bab;
+}
+
+.form input:hover::placeholder,
+.form input:focus::placeholder {
+  color: #8c9bab;
+}
+
+.posts .container {
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.posts h2 {
+  margin-bottom: 30px;
+  grid-column: 1 / span 4;
+}
+
+.posts-item {
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  background-color: #f2f2f2;
+}
+
+.posts-item:hover {
+  background-color: #d8d8d8;
+}
+
+.posts-item:hover .posts-item__image {
+  -webkit-transform: scale(1.1) translateY(-14px);
+      -ms-transform: scale(1.1) translateY(-14px);
+          transform: scale(1.1) translateY(-14px);
+}
+
+.posts-item:hover h3 {
+  color: #2d3651;
+}
+
+.posts-item:hover p {
+  color: #2d3651;
+}
+
+.posts-item a {
+  display: grid;
+  overflow: hidden;
+  height: 100%;
+  grid-template-rows: 300px 1fr;
+}
+
+.posts-item__image {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  background-color: #2d3651;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.posts-item__caption {
+  display: grid;
+  padding: 20px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.posts-item__caption h3 {
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  text-align: center;
+  color: #637588;
+}
+
+.posts-item__caption p {
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  text-align: center;
+  color: #637588;
+}
+
+.posts-item:nth-of-type(1) {
+  grid-column: 1 / span 2;
+}
+
+.posts-item:nth-of-type(6) {
+  grid-column: 3 / span 2;
 }
 
 @media (min-height: 691px) {

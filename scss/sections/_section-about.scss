@@ -2,7 +2,7 @@
 .about {
   background-color: $gray-light;
 
-  > .container {
+  .container {
     grid-gap: $gutter * 5;
     grid-template-columns: 1fr 270px;
   }
@@ -10,10 +10,12 @@
 
 .about-content {
   h2 {
-    margin-top: 0;
+    margin-bottom: $gutter * 2.5;
   }
 
   p {
+    color: $gray-color;
+
     font-size: 1.125rem;
 
     &:first-of-type {

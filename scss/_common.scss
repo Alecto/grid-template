@@ -3,11 +3,30 @@
 }
 
 html {
-  color: $base-color;
+  color: $gray-color;
 
   font-family: $base-font;
   font-size: 16px;
   line-height: 1.5;
+}
+
+h1 {
+  letter-spacing: 0.1em;
+
+  font-family: $header-font;
+  font-size: 3.75rem;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+h2 {
+  letter-spacing: 0.1em;
+
+  color: $base-color;
+
+  font-family: $header-font;
+  font-size: 2.5rem;
+  line-height: 1.2em;
 }
 
 a {
@@ -27,6 +46,10 @@ a {
 .section {
   padding-top: 100px;
   padding-bottom: 80px;
+
+  h2 {
+    margin-top: 0;
+  }
 }
 
 .img-responsive {
@@ -44,7 +67,7 @@ a {
   margin: 0 ($gutter / 2);
   padding: 15px $gutter;
 
-  transition: background-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
   text-align: center;
   text-decoration: none;
   letter-spacing: 0.15em;

@@ -32,12 +32,6 @@
     margin: 0 0 53px;
 
     text-align: center;
-    letter-spacing: 0.1em;
-
-    font-family: $header-font;
-    font-size: 3.75rem;
-    font-weight: 300;
-    line-height: 1.2em;
   }
 
   &-buttons {
@@ -58,7 +52,7 @@
 
   justify-content: center;
 
-  > .container {
+  .container {
     grid-template-columns: 120px 1fr;
   }
 }
