@@ -20,8 +20,8 @@
   &:hover {
     background-color: darken($gray-light, 5%);
 
-    .posts-item__image {
-      transform: scale(1.1) translateY(-14px);
+    .posts-item__image div {
+      transform: scale(1.1);
     }
 
     h3 {
@@ -42,41 +42,53 @@
     grid-template-rows: 300px 1fr;
   }
 
-  &__image {
-    transition: transform 0.5s;
-
-    background-color: $base-color;
-    background-position: 50% 50%;
-    background-size: cover;
-  }
-
-  &__caption {
-    display: grid;
-
-    padding: $gutter;
-
-    align-content: center;
-
-    h3 {
-      transition: color 0.5s;
-      text-align: center;
-
-      color: $gray-color;
-    }
-
-    p {
-      transition: color 0.5s;
-      text-align: center;
-
-      color: $gray-color;
-    }
-  }
-
   &:nth-of-type(1) {
     grid-column: 1 / span 2;
   }
 
   &:nth-of-type(6) {
     grid-column: 3 / span 2;
+  }
+}
+
+.posts-item__image {
+  position: relative;
+
+  overflow: hidden;
+
+  div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transition: transform 0.5s;
+
+    background-color: $base-color;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+}
+
+.posts-item__caption {
+  display: grid;
+
+  padding: $gutter;
+
+  align-content: center;
+
+  h3 {
+    transition: color 0.5s;
+    text-align: center;
+
+    color: $gray-color;
+  }
+
+  p {
+    transition: color 0.5s;
+    text-align: center;
+
+    color: $gray-color;
   }
 }
