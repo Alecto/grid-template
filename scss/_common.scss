@@ -36,25 +36,45 @@ a {
   height: auto;
 }
 
-.btn {
-  display: inline-block;
+%btn-common {
+  display: block;
 
   min-width: 250px;
+  height: 60px;
   margin: 0 ($gutter / 2);
-  padding: 15px;
+  padding: 15px $gutter;
 
   transition: background-color 0.5s;
   text-align: center;
   text-decoration: none;
   letter-spacing: 0.15em;
 
-  border: 2px solid $light-color;
-  background-color: rgba($light-color, 0.1);
+  border-width: 2px;
+  border-style: solid;
 
   font-size: 1.125rem;
+}
+
+.btn {
+  border-color: $light-color;
+  background-color: rgba($light-color, 0.1);
+
+  @extend %btn-common;
 
   &:hover,
   &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.btn-accent {
+  border-color: $base-color;
+  background-color: rgba($base-color, 0.8);
+
+  @extend %btn-common;
+
+  &:hover {
+    border-color: $base-color;
     background-color: $accent-color;
   }
 }
