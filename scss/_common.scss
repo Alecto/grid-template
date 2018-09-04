@@ -101,3 +101,17 @@ a {
     background-color: $accent-color;
   }
 }
+
+
+.btn-set {
+  display: grid;
+
+  padding: ($gutter / 2) 0 ($gutter / 2 * 3);
+
+  grid-column: 1 / span 4;
+  justify-content: center;
+
+  .btn-accent {
+    min-width: 350px;
+  }
+}

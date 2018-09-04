@@ -8,19 +8,6 @@
 
   grid-gap: $gutter / 2;
   grid-template-columns: repeat(4, 1fr);
-
-  &-btnset {
-    display: grid;
-
-    padding: ($gutter / 2) 0 ($gutter / 2 * 3);
-
-    grid-column: 1 / span 4;
-    justify-content: center;
-
-    .btn-accent {
-      min-width: 350px;
-    }
-  }
 }
 
 .skill-item {

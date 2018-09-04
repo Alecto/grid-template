@@ -467,6 +467,19 @@ a {
   background-color: #d66926;
 }
 
+.btn-set {
+  display: grid;
+  padding: 10px 0 30px;
+  grid-column: 1 / span 4;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-set .btn-accent {
+  min-width: 350px;
+}
+
 .header {
   position: relative;
   display: grid;
@@ -580,19 +593,6 @@ a {
   background-color: #ffffff;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
-}
-
-.skills-btnset {
-  display: grid;
-  padding: 10px 0 30px;
-  grid-column: 1 / span 4;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.skills-btnset .btn-accent {
-  min-width: 350px;
 }
 
 .skill-item {
