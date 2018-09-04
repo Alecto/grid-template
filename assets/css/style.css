@@ -380,14 +380,13 @@ template {
 }
 
 html {
+  letter-spacing: 0.1em;
   color: #637588;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
 }
 
 h1 {
-  letter-spacing: 0.1em;
   font-family: "Roboto Slab", serif;
   font-size: 3.75rem;
   font-weight: 300;
@@ -395,7 +394,6 @@ h1 {
 }
 
 h2 {
-  letter-spacing: 0.1em;
   color: #2d3651;
   font-family: "Roboto Slab", serif;
   font-size: 2.5rem;
@@ -405,6 +403,10 @@ h2 {
 a {
   text-decoration: none;
   color: #ffffff;
+}
+
+p {
+  letter-spacing: 1px;
 }
 
 .container {
@@ -531,10 +533,11 @@ a {
 }
 
 .header-menu .container {
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 200px 1fr;
 }
 
 .header-logo {
+  letter-spacing: 0.5em;
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -552,7 +555,7 @@ a {
 
 .header-logo span {
   display: inline-block;
-  padding: 4px 7px 2px;
+  padding: 15px 7px 15px 15px;
   border: 2px solid #d53d27;
 }
 
@@ -877,6 +880,59 @@ a {
   transition: color 0.5s;
   text-align: center;
   color: #637588;
+}
+
+.footer {
+  padding: 50px 20px 70px;
+  text-align: center;
+  background-color: #1b2030;
+}
+
+.footer .fab {
+  font-size: 36px;
+}
+
+.footer span:nth-of-type(1) {
+  color: #637588;
+  font-weight: 100;
+}
+
+.footer span:nth-of-type(2) {
+  color: #e5e5e5;
+  font-weight: 700;
+}
+
+.footer-social {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-social::after {
+  position: absolute;
+  bottom: -20px;
+  width: 75px;
+  height: 2px;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social a {
+  display: block;
+  padding: 10px;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+  color: #d66926;
 }
 
 @media (min-height: 691px) {

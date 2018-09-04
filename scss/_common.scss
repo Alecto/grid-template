@@ -3,16 +3,15 @@
 }
 
 html {
+  letter-spacing: 0.1em;
+
   color: $gray-color;
 
   font-family: $base-font;
   font-size: 16px;
-  line-height: 1.5;
 }
 
 h1 {
-  letter-spacing: 0.1em;
-
   font-family: $header-font;
   font-size: 3.75rem;
   font-weight: 300;
@@ -20,8 +19,6 @@ h1 {
 }
 
 h2 {
-  letter-spacing: 0.1em;
-
   color: $base-color;
 
   font-family: $header-font;
@@ -33,6 +30,10 @@ a {
   text-decoration: none;
 
   color: $light-color;
+}
+
+p {
+  letter-spacing: 1px;
 }
 
 .container {
