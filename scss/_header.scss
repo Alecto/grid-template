@@ -12,33 +12,71 @@
   background-size: cover;
 
   align-content: center;
+}
 
-  &-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.header-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-    opacity: 0.8;
-    background-color: $base-color;
-  }
+  opacity: 0.8;
+  background-color: $base-color;
+}
 
-  &-content {
-    z-index: 1;
-  }
+.header-content {
+  z-index: 1;
+}
 
-  &-title {
+.header-title {
+  text-align: center;
+
+  @media (min-width: $medium + 1) {
     margin: 0 0 53px;
-
-    text-align: center;
   }
 
-  &-buttons {
-    text-align: center;
+  @media (max-width: $medium) and (min-width: $small + 1) {
+    margin: 0 0 43px;
 
-    .btn {
-      display: inline-block;
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: $small) {
+    margin: 0 0 43px;
+
+    font-size: 1.5rem;
+  }
+}
+
+.header-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .btn {
+    @media (max-width: $medium) and (min-width: $small + 1) {
+      min-width: 200px;
+      height: 50px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+
+      letter-spacing: 0.1em;
+
+      font-size: 1rem;
+    }
+
+    @media (max-width: $small) {
+      min-width: 170px;
+      height: 40px;
+      margin-bottom: $gutter;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      letter-spacing: 0.05em;
+
+      font-size: 1rem;
     }
   }
 }

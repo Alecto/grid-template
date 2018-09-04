@@ -437,7 +437,7 @@ p {
   min-width: 250px;
   height: 60px;
   margin: 0 10px;
-  padding: 15px 20px;
+  padding: 18px 20px;
   -webkit-transition: background-color 0.5s, border-color 0.5s;
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
@@ -510,16 +510,18 @@ p {
 }
 
 .header-title {
-  margin: 0 0 53px;
   text-align: center;
 }
 
 .header-buttons {
-  text-align: center;
-}
-
-.header-buttons .btn {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header-menu {
@@ -1024,7 +1026,28 @@ p {
   }
 }
 
+@media (min-width: 993px) {
+  .header-title {
+    margin: 0 0 53px;
+  }
+}
+
 @media (max-width: 768px) {
+  .header-title {
+    margin: 0 0 43px;
+    font-size: 1.5rem;
+  }
+
+  .header-buttons .btn {
+    min-width: 170px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
+
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
   }
@@ -1035,6 +1058,22 @@ p {
 
   .header-navbar__hamburger {
     display: block;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  .header-title {
+    margin: 0 0 43px;
+    font-size: 2.5rem;
+  }
+
+  .header-buttons .btn {
+    min-width: 200px;
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
   }
 }
 
