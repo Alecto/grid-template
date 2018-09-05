@@ -472,7 +472,6 @@ p {
 .btn-set {
   display: grid;
   padding: 10px 0 30px;
-  grid-column: 1 / span 4;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -674,7 +673,6 @@ p {
   padding: 10px;
   background-color: #ffffff;
   grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
 }
 
 .skill-item {
@@ -744,19 +742,6 @@ p {
 
 .skill-item:hover .skill-item__title {
   color: #d66926;
-}
-
-.skill-item:nth-of-type(1) {
-  grid-column: 1 / span 2;
-}
-
-.skill-item:nth-of-type(5) {
-  grid-column: 2 / span 2;
-}
-
-.skill-item:nth-of-type(6) {
-  grid-column: 4;
-  grid-row: 2 / span 2;
 }
 
 .about {
@@ -1027,8 +1012,29 @@ p {
 }
 
 @media (min-width: 993px) {
+  .btn-set {
+    grid-column: 1 / span 4;
+  }
+
   .header-title {
     margin: 0 0 53px;
+  }
+
+  .skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .skill-item:nth-of-type(1) {
+    grid-column: 1 / span 2;
+  }
+
+  .skill-item:nth-of-type(5) {
+    grid-column: 2 / span 2;
+  }
+
+  .skill-item:nth-of-type(6) {
+    grid-column: 4;
+    grid-row: 2 / span 2;
   }
 }
 
@@ -1061,7 +1067,17 @@ p {
   }
 }
 
+@media (max-width: 576px) {
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 992px) and (min-width: 769px) {
+  .btn-set {
+    grid-column: 1 / span 3;
+  }
+
   .header-title {
     margin: 0 0 43px;
     font-size: 2.5rem;
@@ -1074,6 +1090,60 @@ p {
     padding-bottom: 14px;
     letter-spacing: 0.1em;
     font-size: 1rem;
+  }
+
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skill-item:nth-of-type(1) {
+    grid-column: 1 / span 2;
+  }
+
+  .skill-item:nth-of-type(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .skill-item:nth-of-type(5) {
+    grid-column: 1 / span 2;
+  }
+
+  .skill-item:nth-of-type(6) {
+    grid-column: 3;
+    grid-row: 3 / span 2;
+  }
+
+  .skill-item:nth-of-type(7) {
+    grid-column: 1;
+    grid-row: 4 / span 2;
+  }
+
+  .skill-item:nth-of-type(9) {
+    grid-column: 2 / span 2;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 577px) {
+  .btn-set {
+    grid-column: 1 / span 2;
+  }
+
+  .skills {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skill-item:nth-of-type(1) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .skill-item:nth-of-type(4) {
+    grid-column: 1 / span 2;
+  }
+
+  .skill-item:nth-of-type(5) {
+    grid-column: 1;
+    grid-row: 4 / span 2;
   }
 }
 

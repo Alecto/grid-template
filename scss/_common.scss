@@ -109,8 +109,19 @@ p {
 
   padding: ($gutter / 2) 0 ($gutter / 2 * 3);
 
-  grid-column: 1 / span 4;
   justify-content: center;
+
+  @media (min-width: $medium + 1) {
+    grid-column: 1 / span 4;
+  }
+
+  @media (max-width: $medium) and (min-width: $small + 1) {
+    grid-column: 1 / span 3;
+  }
+
+  @media (max-width: $small) and (min-width: $xsmall + 1) {
+    grid-column: 1 / span 2;
+  }
 
   .btn-accent {
     min-width: 350px;
