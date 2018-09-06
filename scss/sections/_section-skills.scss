@@ -102,8 +102,15 @@
 
     color: $light-color;
 
-    font-size: 1.25rem;
     font-weight: 700;
+
+    @media (min-width: $small + 1) {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: $small) {
+      font-size: 1.125rem;
+    }
   }
 
   &:hover {

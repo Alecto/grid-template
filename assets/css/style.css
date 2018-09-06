@@ -717,7 +717,6 @@ p {
   transition: color 0.5s;
   letter-spacing: 0.1em;
   color: #ffffff;
-  font-size: 1.25rem;
   font-weight: 700;
 }
 
@@ -984,6 +983,10 @@ p {
   .header-navbar__hamburger {
     display: none;
   }
+
+  .skill-item__title {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 993px) {
@@ -1104,6 +1107,10 @@ p {
 
   .header-navbar__hamburger {
     display: block;
+  }
+
+  .skill-item__title {
+    font-size: 1.125rem;
   }
 }
 
