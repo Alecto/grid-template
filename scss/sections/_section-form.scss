@@ -6,7 +6,18 @@
 
   .container {
     grid-gap: $gutter;
-    grid-template-columns: repeat(3, 1fr);
+
+    @media (min-width: $medium + 1) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $medium) and (min-width: $small + 1) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $small) and (min-width: $xsmall + 1) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .btn-accent {
@@ -55,6 +66,14 @@
       &::placeholder {
         color: lighten($gray-color, 15%);
       }
+    }
+  }
+}
+
+.form-item {
+  &:nth-of-type(1) {
+    @media (max-width: $small) and (min-width: $xsmall + 1) {
+      grid-column: 1 / span 2;
     }
   }
 }

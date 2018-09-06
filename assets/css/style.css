@@ -778,7 +778,6 @@ p {
 
 .form .container {
   grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .form .btn-accent {
@@ -1058,6 +1057,10 @@ p {
     right: -50px;
   }
 
+  .form .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .posts h2 {
     margin-bottom: 30px;
   }
@@ -1209,6 +1212,10 @@ p {
     right: -20px;
   }
 
+  .form .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .posts h2 {
     margin-bottom: 20px;
   }
@@ -1254,6 +1261,14 @@ p {
 
   .about-content p:first-of-type::before {
     right: -10px;
+  }
+
+  .form .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-item:nth-of-type(1) {
+    grid-column: 1 / span 2;
   }
 }
 
