@@ -161,7 +161,9 @@ p {
   }
 
   .btn-accent {
-    min-width: 350px;
+    @media (min-width: $xsmall + 1) {
+      min-width: 350px;
+    }
 
     @media (max-width: $xsmall) {
       margin: 0;

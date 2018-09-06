@@ -470,10 +470,6 @@ p {
           justify-content: center;
 }
 
-.btn-set .btn-accent {
-  min-width: 350px;
-}
-
 .header {
   position: relative;
   display: grid;
@@ -971,6 +967,12 @@ p {
 .footer-social a:hover,
 .footer-social a:focus {
   color: #d66926;
+}
+
+@media (min-width: 577px) {
+  .btn-set .btn-accent {
+    min-width: 350px;
+  }
 }
 
 @media (min-width: 769px) {
