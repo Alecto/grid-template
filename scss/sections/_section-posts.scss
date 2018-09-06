@@ -6,9 +6,19 @@
   }
 
   h2 {
-    margin-bottom: $gutter * 1.5;
-
     grid-column: 1 / span 4;
+
+    @media (min-width: $medium + 1) {
+      margin-bottom: $gutter * 1.5;
+    }
+
+    @media (max-width: $medium) and (min-width: $small + 1) {
+      margin-bottom: $gutter * 1;
+    }
+
+    @media (max-width: $small) {
+      margin-bottom: $gutter * 0.5;
+    }
   }
 }
 

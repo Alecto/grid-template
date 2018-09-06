@@ -2,26 +2,50 @@
 .skills {
   display: grid;
 
-  padding: 10px;
-
   background-color: #ffffff;
 
-  grid-gap: $gutter / 2;
-
   @media (min-width: $medium + 1) {
+    padding: $gutter / 2;
+
+    grid-gap: $gutter / 2;
     grid-template-columns: repeat(4, 1fr);
   }
 
   @media (max-width: $medium) and (min-width: $small + 1) {
+    padding: $gutter / 2;
+
+    grid-gap: $gutter / 2;
     grid-template-columns: repeat(3, 1fr);
   }
 
   @media (max-width: $small) and (min-width: $xsmall + 1) {
+    padding: $gutter / 2;
+
+    grid-gap: $gutter / 2;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (max-width: $xsmall) {
+    padding: $gutter;
+
+    grid-gap: $gutter;
     grid-template-columns: 1fr;
+  }
+
+  .btn-set {
+    @media (max-width: $small) and (min-width: $xsmall + 1) {
+      padding: ($gutter / 2) 0 ($gutter / 2 * 3);
+    }
+
+    @media (max-width: $xsmall) {
+      padding: 0;
+    }
+  }
+
+  .btn-accent {
+    @media (max-width: $xsmall) {
+      margin: 0;
+    }
   }
 }
 
@@ -45,6 +69,7 @@
   @media (max-height: 690px) {
     min-height: calc(230px - #{$gutter} * 0.66);
   }
+
 
   &__overlay {
     position: absolute;
