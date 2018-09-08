@@ -435,7 +435,6 @@ p {
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
   text-align: center;
-  text-decoration: none;
   letter-spacing: 0.15em;
   border-width: 2px;
   border-style: solid;
@@ -534,7 +533,6 @@ p {
 
 .header-logo a {
   display: block;
-  width: auto;
   padding: 20px 20px 20px 0;
 }
 
@@ -973,6 +971,10 @@ p {
   .btn-set .btn-accent {
     min-width: 350px;
   }
+
+  .skills .btn-set {
+    padding: 10px 0 30px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -1258,11 +1260,7 @@ p {
     grid-template-columns: 1fr 1fr;
   }
 
-  .skills .btn-set {
-    padding: 10px 0 30px;
-  }
-
-  .skill-item:nth-of-type(1) {
+  .skill-item:nth-of-type(2) {
     grid-column: 2;
     grid-row: 1 / span 2;
   }

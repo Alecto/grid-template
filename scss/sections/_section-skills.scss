@@ -33,7 +33,7 @@
   }
 
   .btn-set {
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
+    @media (min-width: $xsmall + 1) {
       padding: ($gutter / 2) 0 ($gutter / 2 * 3);
     }
 
@@ -135,7 +135,9 @@
     @media (max-width: $medium) and (min-width: $small + 1) {
       grid-column: 1 / span 2;
     }
+  }
 
+  &:nth-of-type(2) {
     @media (max-width: $small) and (min-width: $xsmall + 1) {
       grid-column: 2;
       grid-row: 1 / span 2;
