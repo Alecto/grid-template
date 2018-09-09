@@ -26,8 +26,8 @@
 
     color: $light-color;
     border-color: rgba($light-color, 0);
-    border-bottom-color: rgba($light-color, 0.25);
-    background-color: rgba($light-color, 0.15);
+    border-bottom-color: rgba($light-color, 0.20);
+    background-color: rgba($light-color, 0.10);
 
     &:hover,
     &:focus {
@@ -56,11 +56,14 @@
 
     font-size: 1.125rem;
 
+    &::placeholder {
+      color: $gray-color;
+    }
+
     &:hover,
     &:focus {
       border-color: rgba($light-color, 0.15);
       border-bottom-color: $light-color;
-      outline: none;
       background-color: rgba($light-color, 0.15);
 
       &::placeholder {

@@ -19,6 +19,8 @@
     }
 
     @media (max-width: $xsmall) {
+      grid-gap: $gutter;
+      grid-template-columns: 1fr;
     }
   }
 }
@@ -45,8 +47,6 @@
   }
 
   p {
-    color: $gray-color;
-
     @media (min-width: $medium + 1) {
       font-size: 1.125rem;
     }
@@ -54,7 +54,7 @@
     &:first-of-type {
       position: relative;
 
-      &::before {
+      &::after {
         position: absolute;
         top: 0;
 

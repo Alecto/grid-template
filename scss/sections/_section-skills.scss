@@ -2,7 +2,7 @@
 .skills {
   display: grid;
 
-  background-color: #ffffff;
+  background-color: $light-color;
 
   @media (min-width: $medium + 1) {
     padding: $gutter / 2;

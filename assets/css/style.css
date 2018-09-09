@@ -398,6 +398,10 @@ h2 {
   line-height: 1.2em;
 }
 
+h3 {
+  color: #637588;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -405,6 +409,11 @@ a {
 
 p {
   letter-spacing: 1px;
+  color: #637588;
+}
+
+input:focus {
+  outline: none;
 }
 
 .container {
@@ -732,15 +741,11 @@ p {
   background-color: #e5e5e5;
 }
 
-.about-content p {
-  color: #637588;
-}
-
 .about-content p:first-of-type {
   position: relative;
 }
 
-.about-content p:first-of-type::before {
+.about-content p:first-of-type::after {
   position: absolute;
   top: 0;
   width: 2px;
@@ -778,8 +783,8 @@ p {
   margin: 0;
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.25);
-  background-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .form .btn-accent:hover,
@@ -806,11 +811,26 @@ p {
   font-size: 1.125rem;
 }
 
+.form input::-webkit-input-placeholder {
+  color: #637588;
+}
+
+.form input:-ms-input-placeholder {
+  color: #637588;
+}
+
+.form input::-ms-input-placeholder {
+  color: #637588;
+}
+
+.form input::placeholder {
+  color: #637588;
+}
+
 .form input:hover,
 .form input:focus {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
-  outline: none;
   background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -903,7 +923,6 @@ p {
   -o-transition: color 0.5s;
   transition: color 0.5s;
   text-align: center;
-  color: #637588;
 }
 
 .posts-item__caption p {
@@ -911,7 +930,6 @@ p {
   -o-transition: color 0.5s;
   transition: color 0.5s;
   text-align: center;
-  color: #637588;
 }
 
 .footer {
@@ -925,7 +943,6 @@ p {
 }
 
 .footer span:nth-of-type(1) {
-  color: #637588;
   font-weight: 100;
 }
 
@@ -1047,7 +1064,7 @@ p {
     font-size: 1.125rem;
   }
 
-  .about-content p:first-of-type::before {
+  .about-content p:first-of-type::after {
     right: -50px;
   }
 
@@ -1137,6 +1154,11 @@ p {
     padding: 0;
   }
 
+  .about .container {
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
   .about-content h2 {
     margin-bottom: 30px;
     text-align: center;
@@ -1219,7 +1241,7 @@ p {
     margin-bottom: 40px;
   }
 
-  .about-content p:first-of-type::before {
+  .about-content p:first-of-type::after {
     right: -20px;
   }
 
@@ -1283,7 +1305,7 @@ p {
     margin-bottom: 30px;
   }
 
-  .about-content p:first-of-type::before {
+  .about-content p:first-of-type::after {
     right: -10px;
   }
 
