@@ -54,7 +54,7 @@
   cursor: pointer;
 
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 
   @media (min-height: 691px) {
     min-height: calc(33.33vh - #{$gutter} * 0.66);

@@ -26,15 +26,17 @@
 .footer-social {
   position: relative;
 
-  display: flex;
+  display: grid;
 
   margin-bottom: $gutter * 2;
 
+  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   justify-content: center;
 
   &::after {
     position: absolute;
     bottom: -$gutter;
+    left: calc(50% - 75px / 2);
 
     width: 75px;
     height: 2px;

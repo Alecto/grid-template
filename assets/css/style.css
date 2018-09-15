@@ -473,9 +473,7 @@ input:focus {
 .btn-set {
   display: grid;
   padding: 0 0 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
 }
 
 .header {
@@ -525,9 +523,6 @@ input:focus {
   top: 0;
   left: 0;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .header-menu .container {
@@ -558,32 +553,24 @@ input:focus {
 
 .header-navbar {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  display: grid;
+  align-self: center;
+  justify-items: end;
 }
 
 .header-navbar__list {
+  display: grid;
   margin: 0 -20px 0 0;
   padding: 0;
   list-style-type: none;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
+          justify-content: end;
 }
 
 .header-navbar__list.active {
   z-index: 1;
-  top: 100%;
-  display: grid;
-  text-align: right;
   opacity: 1;
-  background-color: rgba(68, 89, 110, 0.5);
 }
 
 .header-navbar__hamburger {
@@ -676,9 +663,7 @@ input:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
 }
 
 .skill-item__overlay {
@@ -756,9 +741,7 @@ input:focus {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
 }
 
 .about-image img {
@@ -951,10 +934,10 @@ input:focus {
 
 .footer-social {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
   margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -963,6 +946,7 @@ input:focus {
 .footer-social::after {
   position: absolute;
   bottom: -20px;
+  left: calc(50% - 75px / 2);
   width: 75px;
   height: 2px;
   content: "";
@@ -994,10 +978,9 @@ input:focus {
 
 @media (min-width: 769px) {
   .header-navbar__list {
-    display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(10px, -webkit-max-content));
-    grid-template-columns: repeat(auto-fit, minmax(10px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   }
 
   .header-navbar__hamburger {
@@ -1124,10 +1107,14 @@ input:focus {
   .header-navbar__list {
     position: absolute;
     z-index: -100;
+    top: 100%;
+    right: 20px;
     -webkit-transition: opacity 1s;
     -o-transition: opacity 1s;
     transition: opacity 1s;
+    text-align: right;
     opacity: 0;
+    background-color: rgba(68, 89, 110, 0.5);
   }
 
   .header-navbar__hamburger {
