@@ -91,7 +91,7 @@
   }
 
   .container {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: auto 1fr;
   }
 }
 
@@ -134,23 +134,34 @@
 
   list-style-type: none;
 
+  justify-content: flex-end;
+
   @media (min-width: $small + 1) {
-    display: flex;
+    display: grid;
+
+    width: 100%;
+
+    grid-template-columns: repeat(auto-fit, minmax(10px, max-content));
   }
 
   @media (max-width: $small) {
-    display: none;
+    position: absolute;
+    z-index: -100;
+
+    transition: opacity 1s;
+
+    opacity: 0;
   }
 
   &.active {
-    position: absolute;
+    z-index: 1;
     top: 100%;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
 
     text-align: right;
 
+    opacity: 1;
     background-color: rgba($grey-dark, 0.5);
   }
 }
