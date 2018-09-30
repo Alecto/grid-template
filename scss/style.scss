@@ -1,11 +1,14 @@
-@import "../libs/normalize/normalize";
 
-@import "_skin";
-@import "_variables";
-@import "_common";
-@import "_header";
-@import "sections/_section-skills";
-@import "sections/_section-about";
-@import "sections/_section-form";
-@import "sections/_section-posts";
-@import "_footer";
+@import "../libs/normalize/normalize";
+@import "skin";
+@import "variables";
+
+@import "common";
+@import "header";
+
+@import "sections/section-skills";
+@import "sections/section-about";
+@import "sections/section-form";
+@import "sections/section-posts";
+
+@import "footer";
