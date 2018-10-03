@@ -1,0 +1,17 @@
+{
+  "name": "grid-template",
+  "homepage": "https://github.com/Alecto/grid-template",
+  "authors": [
+    "Alecto <fomenkoandrey@inbox.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
