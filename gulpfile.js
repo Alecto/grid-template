@@ -1,38 +1,9 @@
 'use strict';
 
-require('../../gulp/gulp-init.js');
-
-const
-  SCSS = './assets/scss',
-  CSS  = './assets/css',
-  HTML = './',
-  JS   = './assets/js';
-
-global.$.path = {
-  scss: {
-    folder: SCSS + '/',
-    files: SCSS + '/**/*.scss',
-  },
-  css: {
-    folder: CSS + '/',
-    files: CSS + '/**/*.css',
-    filesMin: CSS + '/**/*.min.css',
-    mapFolder: CSS + '/',
-    mapFiles: CSS + '/**/*.map'
-  },
-  html: {
-    folder: HTML + '',
-    files: HTML + '*.html'
-  },
-  js: {
-    folder: JS + '/',
-    files: JS + '/**/*.js',
-    filesMin: JS + '/**/*.min.js'
-  }
-};
+require('../../gulp/gulp-init.js')();
 
 const comb = require('../../gulp/tasks/comb.js'),
-  scss     = require('../../gulp/tasks/scss.js'),
+  scss     = require('../../gulp/tasks/scss.js').scss,
   mincss   = require('../../gulp/tasks/mincss.js'),
   uglifyes = require('../../gulp/tasks/uglify.js').uglifyes,
   { sync, syncInit } = require('../../gulp/tasks/sync.js');
