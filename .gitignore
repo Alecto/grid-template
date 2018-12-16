@@ -3,4 +3,4 @@ temp/
 
 # IntellijIdea files
 .idea/
-*/scss-comb/
+.DS_Store
