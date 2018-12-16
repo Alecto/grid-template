@@ -1,139 +1,139 @@
 
 .posts {
-  .container {
-    grid-gap: $gutter;
+    .container {
+        grid-gap: $gutter;
 
-    @media (min-width: $medium + 1) {
-      grid-template-columns: repeat(4, 1fr);
+        @media (min-width: $medium + 1) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: $medium) and (min-width: $small + 1) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: $small) and (min-width: $xsmall + 1) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: $xsmall) {
+            grid-template-columns: 1fr;
+        }
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
-      grid-template-columns: repeat(3, 1fr);
+    h2 {
+        @media (min-width: $medium + 1) {
+            margin-bottom: $gutter * 1.5;
+
+            grid-column: 1 / span 4;
+        }
+
+        @media (max-width: $medium) and (min-width: $small + 1) {
+            margin-bottom: $gutter * 1;
+
+            grid-column: 1 / span 3;
+        }
+
+        @media (max-width: $small) and (min-width: $xsmall + 1) {
+            margin-bottom: $gutter * 0.5;
+
+            grid-column: 1 / span 2;
+        }
     }
-
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media (max-width: $xsmall) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  h2 {
-    @media (min-width: $medium + 1) {
-      margin-bottom: $gutter * 1.5;
-
-      grid-column: 1 / span 4;
-    }
-
-    @media (max-width: $medium) and (min-width: $small + 1) {
-      margin-bottom: $gutter * 1;
-
-      grid-column: 1 / span 3;
-    }
-
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
-      margin-bottom: $gutter * 0.5;
-
-      grid-column: 1 / span 2;
-    }
-  }
 }
 
 .posts-item {
-  transition: background-color 0.5s;
+    transition: background-color 0.5s;
 
-  background-color: lighten($gray-light, 5%);
+    background-color: lighten($gray-light, 5%);
 
-  &:hover {
-    background-color: darken($gray-light, 5%);
+    &:hover {
+        background-color: darken($gray-light, 5%);
 
-    .posts-item__image div {
-      transform: scale(1.1);
+        .posts-item__image div {
+            transform: scale(1.1);
+        }
+
+        h3 {
+            color: $base-color;
+        }
+
+        p {
+            color: $base-color;
+        }
     }
 
-    h3 {
-      color: $base-color;
+    a {
+        display: grid;
+        overflow: hidden;
+
+        height: 100%;
+
+        grid-template-rows: 300px 1fr;
     }
 
-    p {
-      color: $base-color;
-    }
-  }
+    &:nth-of-type(1) {
+        @media (min-width: $medium + 1) {
+            grid-column: 1 / span 2;
+        }
 
-  a {
-    display: grid;
-    overflow: hidden;
-
-    height: 100%;
-
-    grid-template-rows: 300px 1fr;
-  }
-
-  &:nth-of-type(1) {
-    @media (min-width: $medium + 1) {
-      grid-column: 1 / span 2;
+        @media (max-width: $medium) and (min-width: $small + 1) {
+            grid-column: 1 / span 2;
+        }
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
-      grid-column: 1 / span 2;
+    &:nth-of-type(4) {
+        @media (max-width: $medium) and (min-width: $small + 1) {
+            grid-column: 2 / span 2;
+        }
     }
-  }
 
-  &:nth-of-type(4) {
-    @media (max-width: $medium) and (min-width: $small + 1) {
-      grid-column: 2 / span 2;
+    &:nth-of-type(5) {
+        @media (max-width: $medium) and (min-width: $small + 1) {
+            grid-column: 1 / span 2;
+        }
     }
-  }
 
-  &:nth-of-type(5) {
-    @media (max-width: $medium) and (min-width: $small + 1) {
-      grid-column: 1 / span 2;
+    &:nth-of-type(6) {
+        @media (min-width: $medium + 1) {
+            grid-column: 3 / span 2;
+        }
     }
-  }
-
-  &:nth-of-type(6) {
-    @media (min-width: $medium + 1) {
-      grid-column: 3 / span 2;
-    }
-  }
 }
 
 .posts-item__image {
-  position: relative;
+    position: relative;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  div {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-    transition: transform 0.5s;
+        transition: transform 0.5s;
 
-    background-color: $base-color;
-    background-position: 50% 50%;
-    background-size: cover;
-  }
+        background-color: $base-color;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
 }
 
 .posts-item__caption {
-  display: grid;
+    display: grid;
 
-  padding: $gutter;
+    padding: $gutter;
 
-  align-content: center;
+    align-content: center;
 
-  h3 {
-    transition: color 0.5s;
-    text-align: center;
-  }
+    h3 {
+        transition: color 0.5s;
+        text-align: center;
+    }
 
-  p {
-    transition: color 0.5s;
-    text-align: center;
-  }
-}
+    p {
+        transition: color 0.5s;
+        text-align: center;
+    }
+}
