@@ -17,5 +17,5 @@ function watchFiles () {
 
 task('combScss', comb);
 task('uglifyEs6', series(uglifyes, sync));
-task('sass2minCss', series(scss, mincss));
+task('sass', series(scss));
 task('watch', watchFiles);
