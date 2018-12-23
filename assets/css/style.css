@@ -617,7 +617,7 @@ input:focus {
 }
 
 .header-content {
-    z-index: 1;
+    position: relative;
 }
 
 .header-title {
@@ -638,6 +638,7 @@ input:focus {
 
 .header-menu {
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
 
@@ -679,27 +680,17 @@ input:focus {
 
     display: grid;
 
-    align-self: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     justify-items: end;
 }
 
 .header-navbar__list {
-    display: grid;
-
     margin: 0 -20px 0 0;
     padding: 0;
 
     list-style-type: none;
-
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-}
-
-.header-navbar__list.active {
-    z-index: 1;
-
-    opacity: 1;
 }
 
 .header-navbar__hamburger {
@@ -1316,7 +1307,6 @@ input:focus {
     .header-buttons .btn {
         min-width: 170px;
         height: 40px;
-        margin-bottom: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
 
@@ -1329,17 +1319,14 @@ input:focus {
     }
     .header-navbar__list {
         position: absolute;
-        z-index: -100;
         top: 100%;
         right: 20px;
 
-        -webkit-transition: opacity 1s;
-             -o-transition: opacity 1s;
-                transition: opacity 1s;
+        display: none;
+
         text-align: right;
 
-        opacity: 0;
-        background-color: rgba(68, 89, 110, 0.5);
+        background-color: rgba(68, 89, 110, 0.9);
     }
     .header-navbar__hamburger {
         display: block;
@@ -1440,8 +1427,13 @@ input:focus {
 
 @media (min-width: 769px) {
     .header-navbar__list {
+        display: grid;
+
         width: 100%;
 
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end;
         grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
         grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     }

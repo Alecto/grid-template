@@ -26,7 +26,7 @@
 }
 
 .header-content {
-    z-index: 1;
+    position: relative;
 }
 
 .header-title {
@@ -66,7 +66,6 @@
         @media (max-width: $small) {
             min-width: 170px;
             height: 40px;
-            margin-bottom: $gutter;
             padding-top: 10px;
             padding-bottom: 10px;
 
@@ -83,6 +82,7 @@
     left: 0;
 
     width: 100%;
+    z-index: 1;
 
     @media (max-width: $small) {
         background-color: rgba($grey-dark, 0.25);
@@ -122,43 +122,31 @@
 
     display: grid;
 
-    align-self: center;
+    align-items: center;
     justify-items: end;
 }
 
 .header-navbar__list {
-    display: grid;
-
     margin: 0 (-$gutter) 0 0;
     padding: 0;
 
     list-style-type: none;
 
-    justify-content: end;
-
     @media (min-width: $small + 1) {
+        display: grid;
         width: 100%;
+        justify-content: end;
 
         grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     }
 
     @media (max-width: $small) {
+        display: none;
         position: absolute;
-        z-index: -100;
         top: 100%;
         right: 20px;
-
-        transition: opacity 1s;
         text-align: right;
-
-        opacity: 0;
-        background-color: rgba($grey-dark, 0.5);
-    }
-
-    &.active {
-        z-index: 1;
-
-        opacity: 1;
+        background-color: rgba($grey-dark, 0.9);
     }
 }
 
@@ -246,4 +234,4 @@
             color: $accent-color;
         }
     }
-}
+}
