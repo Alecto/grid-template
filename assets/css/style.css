@@ -1304,16 +1304,6 @@ input:focus {
     .header-title {
         margin: 0 0 43px;
     }
-    .header-buttons .btn {
-        min-width: 170px;
-        height: 40px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-
-        letter-spacing: 0.05em;
-
-        font-size: 1rem;
-    }
     .header-menu {
         background-color: rgba(68, 89, 110, 0.25);
     }
@@ -1390,6 +1380,19 @@ input:focus {
     .btn-set .btn-accent {
         margin: 0;
     }
+    .header-buttons .btn {
+        min-width: 170px;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        letter-spacing: 0.05em;
+
+        font-size: 1rem;
+    }
+    .header-buttons .btn:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
     .skills {
         padding: 20px;
 
@@ -1398,6 +1401,9 @@ input:focus {
     }
     .skills .btn-set {
         padding: 0;
+    }
+    .skills .btn-set .btn-accent {
+        width: 100%;
     }
     .about .container {
         grid-gap: 20px;
@@ -1414,6 +1420,9 @@ input:focus {
     .posts .container {
         grid-template-columns: 1fr;
     }
+    .posts .btn-accent {
+        width: 100%;
+    }
 }
 
 @media (min-width: 577px) {
@@ -1422,6 +1431,19 @@ input:focus {
     }
     .skills .btn-set {
         padding: 10px 0 30px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    .header-buttons .btn {
+        min-width: 170px;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        letter-spacing: 0.05em;
+
+        font-size: 1rem;
     }
 }
 

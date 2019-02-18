@@ -39,6 +39,10 @@
 
         @media (max-width: $xsmall) {
             padding: 0;
+
+            .btn-accent {
+                width: 100%;
+            }
         }
     }
 }

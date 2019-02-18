@@ -39,6 +39,12 @@
             grid-column: 1 / span 2;
         }
     }
+
+    .btn-accent {
+        @media (max-width: $xsmall) {
+            width: 100%;
+        }
+    }
 }
 
 .posts-item {
@@ -136,4 +142,4 @@
         transition: color 0.5s;
         text-align: center;
     }
-}
+}
