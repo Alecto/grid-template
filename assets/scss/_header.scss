@@ -31,6 +31,7 @@
 
 .header-title {
     text-align: center;
+    letter-spacing: 0.08em;
 
     @media (min-width: $medium + 1) {
         margin: 0 0 53px;
@@ -93,11 +94,11 @@
 
 .header-menu {
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
 
     width: 100%;
-    z-index: 1;
 
     @media (max-width: $small) {
         background-color: rgba($grey-dark, 0.25);
@@ -109,9 +110,12 @@
 }
 
 .header-logo {
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
+
+    font-size: 1.5rem;
 
     align-self: center;
+
     a {
         display: block;
 
@@ -126,7 +130,8 @@
     span {
         display: inline-block;
 
-        padding: 15px 7px 15px 15px;
+        margin-right: 5px;
+        padding: 15px 3px 15px 7px;
 
         border: 2px solid $highlight-color;
     }
@@ -149,18 +154,22 @@
 
     @media (min-width: $small + 1) {
         display: grid;
-        width: 100%;
-        justify-content: end;
 
+        width: 100%;
+
+        justify-content: end;
         grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     }
 
     @media (max-width: $small) {
-        display: none;
         position: absolute;
         top: 100%;
         right: 20px;
+
+        display: none;
+
         text-align: right;
+
         background-color: rgba($grey-dark, 0.9);
     }
 }
@@ -244,9 +253,11 @@
 
         color: $light-color;
 
+        font-size: 1.125rem;
+
         &:hover,
         &:focus {
             color: $accent-color;
         }
     }
-}
+}

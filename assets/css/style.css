@@ -553,7 +553,7 @@ input:focus {
          -o-transition: background-color 0.5s, border-color 0.5s;
             transition: background-color 0.5s, border-color 0.5s;
     text-align: center;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
 
     border-width: 2px;
     border-style: solid;
@@ -622,6 +622,7 @@ input:focus {
 
 .header-title {
     text-align: center;
+    letter-spacing: 0.08em;
 }
 
 .header-buttons {
@@ -650,7 +651,9 @@ input:focus {
 }
 
 .header-logo {
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
+
+    font-size: 1.5rem;
 
     -ms-flex-item-align: center;
     align-self: center;
@@ -670,7 +673,8 @@ input:focus {
 .header-logo span {
     display: inline-block;
 
-    padding: 15px 7px 15px 15px;
+    margin-right: 5px;
+    padding: 15px 3px 15px 7px;
 
     border: 2px solid #d53d27;
 }
@@ -774,6 +778,8 @@ input:focus {
             transition: color 0.5s;
 
     color: #ffffff;
+
+    font-size: 1.125rem;
 }
 
 .header-navbar__item a:hover,
