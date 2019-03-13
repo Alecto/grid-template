@@ -4,7 +4,7 @@
 
     text-align: center;
 
-    background-color: darken($base-color, 10%);
+    background-color: $base-color;
 
     .fab {
         font-size: 36px;
@@ -58,4 +58,4 @@
             color: $accent-color;
         }
     }
-}
+}
