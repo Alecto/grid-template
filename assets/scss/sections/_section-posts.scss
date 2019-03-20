@@ -47,7 +47,7 @@
     }
 }
 
-.posts-item {
+.post-item {
     transition: background-color 0.5s;
 
     background-color: lighten($gray-light, 5%);
@@ -55,7 +55,7 @@
     &:hover {
         background-color: darken($gray-light, 5%);
 
-        .posts-item__image div {
+        .post-item__image div {
             transform: scale(1.1);
         }
 
@@ -66,15 +66,6 @@
         p {
             color: $base-color;
         }
-    }
-
-    a {
-        display: grid;
-        overflow: hidden;
-
-        height: 100%;
-
-        grid-template-rows: 300px 1fr;
     }
 
     &:nth-of-type(1) {
@@ -106,7 +97,16 @@
     }
 }
 
-.posts-item__image {
+.post-item__link {
+    display: grid;
+    overflow: hidden;
+
+    height: 100%;
+
+    grid-template-rows: 300px 1fr;
+}
+
+.post-item__image {
     position: relative;
 
     overflow: hidden;
@@ -126,7 +126,7 @@
     }
 }
 
-.posts-item__caption {
+.post-item__caption {
     display: grid;
 
     padding: $gutter;
@@ -142,4 +142,4 @@
         transition: color 0.5s;
         text-align: center;
     }
-}
+}

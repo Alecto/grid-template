@@ -1000,7 +1000,7 @@ input:focus {
     grid-gap: 20px;
 }
 
-.posts-item {
+.post-item {
     -webkit-transition: background-color 0.5s;
          -o-transition: background-color 0.5s;
             transition: background-color 0.5s;
@@ -1008,25 +1008,25 @@ input:focus {
     background-color: #f2f2f2;
 }
 
-.posts-item:hover {
+.post-item:hover {
     background-color: #d8d8d8;
 }
 
-.posts-item:hover .posts-item__image div {
+.post-item:hover .post-item__image div {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
 }
 
-.posts-item:hover h3 {
+.post-item:hover h3 {
     color: #2d3651;
 }
 
-.posts-item:hover p {
+.post-item:hover p {
     color: #2d3651;
 }
 
-.posts-item a {
+.post-item__link {
     display: grid;
     overflow: hidden;
 
@@ -1035,13 +1035,13 @@ input:focus {
     grid-template-rows: 300px 1fr;
 }
 
-.posts-item__image {
+.post-item__image {
     position: relative;
 
     overflow: hidden;
 }
 
-.posts-item__image div {
+.post-item__image div {
     position: absolute;
     top: 0;
     right: 0;
@@ -1059,7 +1059,7 @@ input:focus {
     background-size: cover;
 }
 
-.posts-item__caption {
+.post-item__caption {
     display: grid;
 
     padding: 20px;
@@ -1068,14 +1068,14 @@ input:focus {
     align-content: center;
 }
 
-.posts-item__caption h3 {
+.post-item__caption h3 {
     -webkit-transition: color 0.5s;
          -o-transition: color 0.5s;
             transition: color 0.5s;
     text-align: center;
 }
 
-.posts-item__caption p {
+.post-item__caption p {
     -webkit-transition: color 0.5s;
          -o-transition: color 0.5s;
             transition: color 0.5s;
@@ -1203,10 +1203,10 @@ input:focus {
 
         grid-column: 1 / span 4;
     }
-    .posts-item:nth-of-type(1) {
+    .post-item:nth-of-type(1) {
         grid-column: 1 / span 2;
     }
-    .posts-item:nth-of-type(6) {
+    .post-item:nth-of-type(6) {
         grid-column: 3 / span 2;
     }
 }
@@ -1285,13 +1285,13 @@ input:focus {
 
         grid-column: 1 / span 3;
     }
-    .posts-item:nth-of-type(1) {
+    .post-item:nth-of-type(1) {
         grid-column: 1 / span 2;
     }
-    .posts-item:nth-of-type(4) {
+    .post-item:nth-of-type(4) {
         grid-column: 2 / span 2;
     }
-    .posts-item:nth-of-type(5) {
+    .post-item:nth-of-type(5) {
         grid-column: 1 / span 2;
     }
 }
