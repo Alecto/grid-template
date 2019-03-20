@@ -37,8 +37,16 @@
             background-color: $accent-color;
         }
     }
+}
 
-    input {
+.form-item {
+    &:nth-of-type(1) {
+        @media (max-width: $small) and (min-width: $xsmall + 1) {
+            grid-column: 1 / span 2;
+        }
+    }
+
+    &__input {
         display: block;
 
         width: 100%;
@@ -72,11 +80,3 @@
         }
     }
 }
-
-.form-item {
-    &:nth-of-type(1) {
-        @media (max-width: $small) and (min-width: $xsmall + 1) {
-            grid-column: 1 / span 2;
-        }
-    }
-}
