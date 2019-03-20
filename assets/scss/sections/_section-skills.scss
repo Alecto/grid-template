@@ -55,8 +55,6 @@
 
     padding: $gutter;
 
-    cursor: pointer;
-
     align-items: center;
     justify-items: center;
 
@@ -68,6 +66,17 @@
         min-height: calc(230px - #{$gutter} * 0.66);
     }
 
+    &__link {
+        display: flex;
+
+        height: 100%;
+        padding: $gutter;
+
+        transition: color 0.5s;
+
+        align-items: center;
+        justify-content: center;
+    }
 
     &__overlay {
         position: absolute;
@@ -98,12 +107,16 @@
     }
 
     &__title {
+        position: absolute;
         z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-        transition: color 0.5s;
+        margin: 0;
+
         letter-spacing: 0.1em;
-
-        color: $light-color;
 
         font-weight: 700;
 
@@ -125,7 +138,7 @@
             transform: scale(1.1);
         }
 
-        .skill-item__title {
+        .skill-item__link {
             color: $accent-color;
         }
     }
