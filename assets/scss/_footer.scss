@@ -1,61 +1,61 @@
 
 .footer {
-    padding: ($gutter * 2.5) $gutter ($gutter * 3.5);
+  padding: ($gutter * 2.5) $gutter ($gutter * 3.5);
 
-    text-align: center;
+  text-align: center;
 
-    background-color: $base-color;
+  background-color: $base-color;
 
-    .fab {
-        font-size: 36px;
+  .fab {
+    font-size: 36px;
+  }
+
+  span {
+    &:nth-of-type(1) {
+      font-weight: 100;
     }
 
-    span {
-        &:nth-of-type(1) {
-            font-weight: 100;
-        }
+    &:nth-of-type(2) {
+      color: $gray-light;
 
-        &:nth-of-type(2) {
-            color: $gray-light;
-
-            font-weight: 700;
-        }
+      font-weight: 700;
     }
+  }
 }
 
 .footer-social {
-    position: relative;
+  position: relative;
 
-    display: grid;
+  display: grid;
 
-    margin-bottom: $gutter * 2;
+  margin-bottom: $gutter * 2;
 
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+  justify-content: center;
 
-    &::after {
-        position: absolute;
-        bottom: -$gutter;
-        left: calc(50% - 75px / 2);
+  &::after {
+    position: absolute;
+    bottom: -$gutter;
+    left: calc(50% - 75px / 2);
 
-        width: 75px;
-        height: 2px;
+    width: 75px;
+    height: 2px;
 
-        content: "";
+    content: "";
 
-        background-color: rgba($light-color, 0.1);
+    background-color: rgba($light-color, 0.1);
+  }
+
+  a {
+    display: block;
+
+    padding: $gutter / 2;
+
+    transition: color 0.5s;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
     }
-
-    a {
-        display: block;
-
-        padding: $gutter / 2;
-
-        transition: color 0.5s;
-
-        &:hover,
-        &:focus {
-            color: $accent-color;
-        }
-    }
+  }
 }

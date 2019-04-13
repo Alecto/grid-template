@@ -1,212 +1,212 @@
 
 .skills {
-    display: grid;
+  display: grid;
 
-    background-color: $light-color;
+  background-color: $light-color;
 
-    @media (min-width: $medium + 1) {
-        padding: $gutter / 2;
+  @media (min-width: $medium + 1) {
+    padding: $gutter / 2;
 
-        grid-gap: $gutter / 2;
-        grid-template-columns: repeat(4, 1fr);
-    }
+    grid-gap: $gutter / 2;
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
-        padding: $gutter / 2;
+  @media (max-width: $medium) and (min-width: $small + 1) {
+    padding: $gutter / 2;
 
-        grid-gap: $gutter / 2;
-        grid-template-columns: repeat(3, 1fr);
-    }
+    grid-gap: $gutter / 2;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
-        padding: $gutter / 2;
+  @media (max-width: $small) and (min-width: $xsmall + 1) {
+    padding: $gutter / 2;
 
-        grid-gap: $gutter / 2;
-        grid-template-columns: 1fr 1fr;
+    grid-gap: $gutter / 2;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $xsmall) {
+    padding: $gutter;
+
+    grid-gap: $gutter;
+    grid-template-columns: 1fr;
+  }
+
+  .btn-set {
+    @media (min-width: $xsmall + 1) {
+      padding: ($gutter / 2) 0 ($gutter / 2 * 3);
     }
 
     @media (max-width: $xsmall) {
-        padding: $gutter;
+      padding: 0;
 
-        grid-gap: $gutter;
-        grid-template-columns: 1fr;
+      .btn-accent {
+        width: 100%;
+      }
     }
-
-    .btn-set {
-        @media (min-width: $xsmall + 1) {
-            padding: ($gutter / 2) 0 ($gutter / 2 * 3);
-        }
-
-        @media (max-width: $xsmall) {
-            padding: 0;
-
-            .btn-accent {
-                width: 100%;
-            }
-        }
-    }
+  }
 }
 
 .skill-item {
-    position: relative;
+  position: relative;
 
-    display: grid;
-    overflow: hidden;
+  display: grid;
+  overflow: hidden;
 
+  padding: $gutter;
+
+  align-items: center;
+  justify-items: center;
+
+  @media (min-height: 691px) {
+    min-height: calc(33.33vh - #{$gutter} * 0.66);
+  }
+
+  @media (max-height: 690px) {
+    min-height: calc(230px - #{$gutter} * 0.66);
+  }
+
+  &__link {
+    display: flex;
+
+    height: 100%;
     padding: $gutter;
 
+    transition: color 0.5s;
+
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+  }
 
-    @media (min-height: 691px) {
-        min-height: calc(33.33vh - #{$gutter} * 0.66);
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transition: opacity 0.5s;
+
+    opacity: 0.8;
+    background-color: $base-color;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transition: transform 0.5s;
+
+    background-color: $base-color;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: 0;
+
+    letter-spacing: 0.1em;
+
+    font-weight: 700;
+
+    @media (min-width: $small + 1) {
+      font-size: 1.25rem;
     }
 
-    @media (max-height: 690px) {
-        min-height: calc(230px - #{$gutter} * 0.66);
+    @media (max-width: $small) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &:hover {
+    .skill-item__overlay {
+      opacity: 0.95 !important;
     }
 
-    &__link {
-        display: flex;
-
-        height: 100%;
-        padding: $gutter;
-
-        transition: color 0.5s;
-
-        align-items: center;
-        justify-content: center;
+    .skill-item__image {
+      transform: scale(1.1);
     }
 
-    &__overlay {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    .skill-item__link {
+      color: $accent-color;
+    }
+  }
 
-        transition: opacity 0.5s;
-
-        opacity: 0.8;
-        background-color: $base-color;
+  &:nth-of-type(1) {
+    @media (min-width: $medium + 1) {
+      grid-column: 1 / span 2;
     }
 
-    &__image {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    @media (max-width: $medium) and (min-width: $small + 1) {
+      grid-column: 1 / span 2;
+    }
+  }
 
-        transition: transform 0.5s;
+  &:nth-of-type(2) {
+    @media (max-width: $small) and (min-width: $xsmall + 1) {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+  }
 
-        background-color: $base-color;
-        background-position: 50% 50%;
-        background-size: cover;
+  &:nth-of-type(4) {
+    @media (max-width: $medium) and (min-width: $small + 1) {
+      grid-column: 2 / span 2;
     }
 
-    &__title {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    @media (max-width: $small) and (min-width: $xsmall + 1) {
+      grid-column: 1 / span 2;
+    }
+  }
 
-        margin: 0;
-
-        letter-spacing: 0.1em;
-
-        font-weight: 700;
-
-        @media (min-width: $small + 1) {
-            font-size: 1.25rem;
-        }
-
-        @media (max-width: $small) {
-            font-size: 1.125rem;
-        }
+  &:nth-of-type(5) {
+    @media (min-width: $medium + 1) {
+      grid-column: 2 / span 2;
     }
 
-    &:hover {
-        .skill-item__overlay {
-            opacity: 0.95 !important;
-        }
-
-        .skill-item__image {
-            transform: scale(1.1);
-        }
-
-        .skill-item__link {
-            color: $accent-color;
-        }
+    @media (max-width: $medium) and (min-width: $small + 1) {
+      grid-column: 1 / span 2;
     }
 
-    &:nth-of-type(1) {
-        @media (min-width: $medium + 1) {
-            grid-column: 1 / span 2;
-        }
+    @media (max-width: $small) and (min-width: $xsmall + 1) {
+      grid-column: 1;
+      grid-row: 4 / span 2;
+    }
+  }
 
-        @media (max-width: $medium) and (min-width: $small + 1) {
-            grid-column: 1 / span 2;
-        }
+  &:nth-of-type(6) {
+    @media (min-width: $medium + 1) {
+      grid-column: 4;
+      grid-row: 2 / span 2;
     }
 
-    &:nth-of-type(2) {
-        @media (max-width: $small) and (min-width: $xsmall + 1) {
-            grid-column: 2;
-            grid-row: 1 / span 2;
-        }
+    @media (max-width: $medium) and (min-width: $small + 1) {
+      grid-column: 3;
+      grid-row: 3 / span 2;
     }
+  }
 
-    &:nth-of-type(4) {
-        @media (max-width: $medium) and (min-width: $small + 1) {
-            grid-column: 2 / span 2;
-        }
-
-        @media (max-width: $small) and (min-width: $xsmall + 1) {
-            grid-column: 1 / span 2;
-        }
+  &:nth-of-type(7) {
+    @media (max-width: $medium) and (min-width: $small + 1) {
+      grid-column: 1;
+      grid-row: 4 / span 2;
     }
+  }
 
-    &:nth-of-type(5) {
-        @media (min-width: $medium + 1) {
-            grid-column: 2 / span 2;
-        }
-
-        @media (max-width: $medium) and (min-width: $small + 1) {
-            grid-column: 1 / span 2;
-        }
-
-        @media (max-width: $small) and (min-width: $xsmall + 1) {
-            grid-column: 1;
-            grid-row: 4 / span 2;
-        }
+  &:nth-of-type(9) {
+    @media (max-width: $medium) and (min-width: $small + 1) {
+      grid-column: 2 / span 2;
     }
-
-    &:nth-of-type(6) {
-        @media (min-width: $medium + 1) {
-            grid-column: 4;
-            grid-row: 2 / span 2;
-        }
-
-        @media (max-width: $medium) and (min-width: $small + 1) {
-            grid-column: 3;
-            grid-row: 3 / span 2;
-        }
-    }
-
-    &:nth-of-type(7) {
-        @media (max-width: $medium) and (min-width: $small + 1) {
-            grid-column: 1;
-            grid-row: 4 / span 2;
-        }
-    }
-
-    &:nth-of-type(9) {
-        @media (max-width: $medium) and (min-width: $small + 1) {
-            grid-column: 2 / span 2;
-        }
-    }
+  }
 }
