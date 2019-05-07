@@ -46,7 +46,7 @@
   &:hover {
     background-color: darken($color-gray-light, 5%);
 
-    .post-item__image div {
+    .post-item__image img {
       transform: scale(1.1);
     }
 
@@ -94,22 +94,20 @@
 }
 
 .post-item__image {
-  position: relative;
-
+  display: flex;
   overflow: hidden;
 
-  div {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  background-color: $color-main;
+
+  justify-content: center;
+  align-content: center;
+
+  img {
+    width: 100%;
 
     transition: transform 0.5s;
 
-    background-color: $color-main;
-    background-position: 50% 50%;
-    background-size: cover;
+    object-fit: cover;
   }
 }
 
