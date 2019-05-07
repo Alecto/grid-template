@@ -34,12 +34,25 @@ h2 {
   line-height: 1.2em;
 
   @include lg-min {
+    margin-bottom: $gap * 2.8;
+
     font-size: 2.5rem;
   }
   @include lg-md {
+    margin-bottom: $gap * 2.1;
+
     font-size: 2rem;
   }
-  @include md {
+  @include md-sm {
+    margin-bottom: $gap * 1.8;
+
+    font-size: 1.5rem;
+  }
+  @include sm {
+    margin-bottom: $gap * 1.8;
+
+    text-align: center;
+
     font-size: 1.5rem;
   }
 }
@@ -64,68 +77,11 @@ input:focus {
   outline: none;
 }
 
-.container {
-  display: grid;
-
-  max-width: $ul;
-  margin: auto;
-  padding: 0 $gap;
-}
-
-.section {
-  @include lg-min {
-    padding-top: $gap * 5;
-    padding-bottom: $gap * 4;
-  }
-  @include lg-md {
-    padding-top: $gap * 4;
-    padding-bottom: $gap * 3;
-  }
-  @include md {
-    padding-top: $gap * 3;
-    padding-bottom: $gap * 2;
-  }
-
-  h2 {
-    margin-top: 0;
-  }
-}
-
-.img-responsive {
-  display: block;
-
-  width: 100%;
-  height: auto;
-}
-
-%btn-common {
-  display: block;
-
-  min-width: 250px;
-  height: 60px;
-  margin: 0 ($gap / 2);
-  padding: 18px $gap;
-
-  transition: background-color 0.5s, border-color 0.5s;
-  text-align: center;
-  letter-spacing: 0.1em;
-
-  border-width: 2px;
-  border-style: solid;
-
-  font-size: 1.125rem;
-}
-
 .btn {
   border-color: $color-light;
   background-color: rgba($color-light, 0.1);
 
   @extend %btn-common;
-
-  &:hover,
-  &:focus {
-    background-color: $color-accent;
-  }
 }
 
 .btn-accent {
@@ -133,28 +89,4 @@ input:focus {
   background-color: rgba($color-main, 0.8);
 
   @extend %btn-common;
-  @include sm {
-    width: 100%;
-  }
-
-  &:hover {
-    background-color: $color-accent;
-  }
-}
-
-.btn-set {
-  display: grid;
-
-  padding: 0 0 $gap;
-
-  justify-items: center;
-
-  .btn-accent {
-    @include sm-min {
-      min-width: 350px;
-    }
-    @include sm {
-      margin: 0;
-    }
-  }
 }

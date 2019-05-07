@@ -1,11 +1,13 @@
-
 .form {
   padding: ($gap * 1.5) 0;
 
   background-color: $color-main;
 
-  .container {
+  &__container {
+    display: grid;
+
     grid-gap: $gap;
+    @extend %container;
     @include lg-min {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -19,7 +21,6 @@
 
   .btn-accent {
     width: 100%;
-    margin: 0;
 
     color: $color-light;
     border-color: rgba($color-light, 0);

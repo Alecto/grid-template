@@ -1,29 +1,16 @@
-
 .footer {
   padding: ($gap * 2.5) $gap ($gap * 3.5);
 
   text-align: center;
 
   background-color: $color-main;
-
-  .fab {
-    font-size: 36px;
-  }
-
-  span {
-    &:nth-of-type(1) {
-      font-weight: 100;
-    }
-
-    &:nth-of-type(2) {
-      color: $color-gray-light;
-
-      font-weight: 700;
-    }
-  }
 }
 
-.footer-social {
+.footer__container {
+  @extend %container;
+}
+
+.footer__social {
   position: relative;
 
   display: grid;
@@ -58,4 +45,26 @@
       color: $color-accent;
     }
   }
-}
+
+  .fab {
+    font-size: 36px;
+  }
+}
+
+.footer__copy {
+  span {
+    &:nth-of-type(1) {
+      margin-right: -0.5em;
+
+      letter-spacing: 0.33em;
+
+      font-weight: 100;
+    }
+
+    &:nth-of-type(2) {
+      color: $color-gray-light;
+
+      font-weight: 700;
+    }
+  }
+}

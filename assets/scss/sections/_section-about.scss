@@ -1,45 +1,32 @@
-
 .about {
   background-color: $color-gray-light;
 
-  .container {
-    @include lg-min {
-      grid-gap: $gap * 5;
-      grid-template-columns: 1fr 271px;
-    }
-    @include lg-md {
-      grid-gap: $gap * 2;
-      grid-template-columns: 1fr 271px;
-    }
-    @include md-sm {
-      grid-gap: $gap;
-      grid-template-columns: 1fr 236px;
-    }
-    @include sm {
-      grid-gap: $gap;
-      grid-template-columns: 1fr;
-    }
+  @extend %section;
+}
+
+.about__container {
+  display: grid;
+
+  @extend %container;
+  @include lg-min {
+    grid-gap: $gap * 5;
+    grid-template-columns: 1fr 271px;
+  }
+  @include lg-md {
+    grid-gap: $gap * 2;
+    grid-template-columns: 1fr 271px;
+  }
+  @include md-sm {
+    grid-gap: $gap;
+    grid-template-columns: 1fr 236px;
+  }
+  @include sm {
+    grid-gap: $gap;
+    grid-template-columns: 1fr;
   }
 }
 
-.about-content {
-  h2 {
-    @include lg-min {
-      margin-bottom: $gap * 2.5;
-    }
-    @include lg-md {
-      margin-bottom: $gap * 2;
-    }
-    @include md-sm {
-      margin-bottom: $gap * 1.5;
-    }
-    @include sm {
-      margin-bottom: $gap * 1.5;
-
-      text-align: center;
-    }
-  }
-
+.about__content {
   p {
     @include lg-min {
       font-size: 1.125rem;
@@ -47,6 +34,8 @@
 
     &:first-of-type {
       position: relative;
+
+      margin-top: -5px;
 
       &::after {
         position: absolute;
@@ -73,10 +62,14 @@
         }
       }
     }
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 }
 
-.about-image {
+.about__image {
   display: grid;
 
   align-content: center;

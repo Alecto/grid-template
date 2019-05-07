@@ -1,40 +1,36 @@
-
 .posts {
-  .container {
+  @extend %section;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__grid {
+    display: grid;
+
+    padding-bottom: $gap;
+
     grid-gap: $gap;
     @include lg-min {
       grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "h2 h2 h2 h2" "p1 p1 p2 p3" "p4 p5 p6 p6" "bs bs bs bs";
+      grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
     }
     @include lg-md {
       grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: "h2 h2 h2" "p1 p1 p2" "p3 p4 p4" "p5 p5 p6" "bs bs bs";
+      grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
     }
     @include md-sm {
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "h2 h2" "p1 p2" "p3 p4" "p5 p6" "bs bs";
+      grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
     }
     @include sm {
       grid-template-columns: 1fr;
-      grid-template-areas: "h2" "p1" "p2" "p3" "p4" "p5" "p6" "bs";
+      grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
     }
   }
 
-  h2 {
-    grid-area: h2;
-    @include lg-min {
-      margin-bottom: $gap * 1.5;
-    }
-    @include lg-md {
-      margin-bottom: $gap * 1;
-    }
-    @include md-sm {
-      margin-bottom: $gap * 0.5;
-    }
-  }
-
-  .btn-set {
-    grid-area: bs;
+  &__button {
+    @extend %btn-wrapper;
   }
 }
 
