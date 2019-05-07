@@ -1,43 +1,42 @@
-
 .skills {
   display: grid;
 
   background-color: $color-light;
 
-  @media (min-width: $lg + 1) {
+  @include lg-min {
     padding: $gap / 2;
 
     grid-gap: $gap / 2;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
-
-  @media (max-width: $lg) and (min-width: $md + 1) {
+  @include lg-md {
     padding: $gap / 2;
 
     grid-gap: $gap / 2;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
-
-  @media (max-width: $md) and (min-width: $sm + 1) {
+  @include md-sm {
     padding: $gap / 2;
 
     grid-gap: $gap / 2;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
-
-  @media (max-width: $sm) {
+  @include sm {
     padding: $gap;
 
     grid-gap: $gap;
     grid-template-columns: 1fr;
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
   }
 
   .btn-set {
-    @media (min-width: $sm + 1) {
+    @include sm-min {
       padding: ($gap / 2) 0 ($gap / 2 * 3);
     }
-
-    @media (max-width: $sm) {
+    @include sm {
       padding: 0;
 
       .btn-accent {
@@ -120,11 +119,10 @@
 
     font-weight: 700;
 
-    @media (min-width: $md + 1) {
+    @include md-min {
       font-size: 1.25rem;
     }
-
-    @media (max-width: $md) {
+    @include md {
       font-size: 1.125rem;
     }
   }
@@ -144,69 +142,38 @@
   }
 
   &:nth-of-type(1) {
-    @media (min-width: $lg + 1) {
-      grid-column: 1 / span 2;
-    }
-
-    @media (max-width: $lg) and (min-width: $md + 1) {
-      grid-column: 1 / span 2;
-    }
+    grid-area: a1;
   }
 
   &:nth-of-type(2) {
-    @media (max-width: $md) and (min-width: $sm + 1) {
-      grid-column: 2;
-      grid-row: 1 / span 2;
-    }
+    grid-area: a2;
+  }
+
+  &:nth-of-type(3) {
+    grid-area: a3;
   }
 
   &:nth-of-type(4) {
-    @media (max-width: $lg) and (min-width: $md + 1) {
-      grid-column: 2 / span 2;
-    }
-
-    @media (max-width: $md) and (min-width: $sm + 1) {
-      grid-column: 1 / span 2;
-    }
+    grid-area: a4;
   }
 
   &:nth-of-type(5) {
-    @media (min-width: $lg + 1) {
-      grid-column: 2 / span 2;
-    }
-
-    @media (max-width: $lg) and (min-width: $md + 1) {
-      grid-column: 1 / span 2;
-    }
-
-    @media (max-width: $md) and (min-width: $sm + 1) {
-      grid-column: 1;
-      grid-row: 4 / span 2;
-    }
+    grid-area: a5;
   }
 
   &:nth-of-type(6) {
-    @media (min-width: $lg + 1) {
-      grid-column: 4;
-      grid-row: 2 / span 2;
-    }
-
-    @media (max-width: $lg) and (min-width: $md + 1) {
-      grid-column: 3;
-      grid-row: 3 / span 2;
-    }
+    grid-area: a6;
   }
 
   &:nth-of-type(7) {
-    @media (max-width: $lg) and (min-width: $md + 1) {
-      grid-column: 1;
-      grid-row: 4 / span 2;
-    }
+    grid-area: a7;
+  }
+
+  &:nth-of-type(8) {
+    grid-area: a8;
   }
 
   &:nth-of-type(9) {
-    @media (max-width: $lg) and (min-width: $md + 1) {
-      grid-column: 2 / span 2;
-    }
+    grid-area: a9;
   }
 }
