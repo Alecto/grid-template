@@ -145,18 +145,6 @@ input:focus {
   padding: 0 0 $gap;
 
   justify-items: center;
-  @include lg-min {
-    grid-column: 1 / span 4;
-  }
-  @include lg-md {
-    grid-column: 1 / span 3;
-  }
-  @include md-sm {
-    grid-column: 1 / span 2;
-  }
-  @include sm {
-    grid-template-columns: 1fr;
-  }
 
   .btn-accent {
     @include sm-min {
@@ -166,4 +154,4 @@ input:focus {
       margin: 0;
     }
   }
-}
+}

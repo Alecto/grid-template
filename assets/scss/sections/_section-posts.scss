@@ -2,37 +2,39 @@
 .posts {
   .container {
     grid-gap: $gap;
-
     @include lg-min {
       grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "h2 h2 h2 h2" "p1 p1 p2 p3" "p4 p5 p6 p6" "bs bs bs bs";
     }
     @include lg-md {
       grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "h2 h2 h2" "p1 p1 p2" "p3 p4 p4" "p5 p5 p6" "bs bs bs";
     }
     @include md-sm {
       grid-template-columns: 1fr 1fr;
+      grid-template-areas: "h2 h2" "p1 p2" "p3 p4" "p5 p6" "bs bs";
     }
     @include sm {
       grid-template-columns: 1fr;
+      grid-template-areas: "h2" "p1" "p2" "p3" "p4" "p5" "p6" "bs";
     }
   }
 
   h2 {
+    grid-area: h2;
     @include lg-min {
       margin-bottom: $gap * 1.5;
-
-      grid-column: 1 / span 4;
     }
     @include lg-md {
       margin-bottom: $gap * 1;
-
-      grid-column: 1 / span 3;
     }
     @include md-sm {
       margin-bottom: $gap * 0.5;
-
-      grid-column: 1 / span 2;
     }
+  }
+
+  .btn-set {
+    grid-area: bs;
   }
 
   .btn-accent {
@@ -64,31 +66,27 @@
   }
 
   &:nth-of-type(1) {
-    @media (min-width: $lg + 1) {
-      grid-column: 1 / span 2;
-    }
+    grid-area: p1;
+  }
 
-    @media (max-width: $lg) and (min-width: $md + 1) {
-      grid-column: 1 / span 2;
-    }
+  &:nth-of-type(2) {
+    grid-area: p2;
+  }
+
+  &:nth-of-type(3) {
+    grid-area: p3;
   }
 
   &:nth-of-type(4) {
-    @media (max-width: $lg) and (min-width: $md + 1) {
-      grid-column: 2 / span 2;
-    }
+    grid-area: p4;
   }
 
   &:nth-of-type(5) {
-    @media (max-width: $lg) and (min-width: $md + 1) {
-      grid-column: 1 / span 2;
-    }
+    grid-area: p5;
   }
 
   &:nth-of-type(6) {
-    @media (min-width: $lg + 1) {
-      grid-column: 3 / span 2;
-    }
+    grid-area: p6;
   }
 }
 
