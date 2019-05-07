@@ -2,42 +2,42 @@
 .skills {
   display: grid;
 
-  background-color: $light-color;
+  background-color: $color-light;
 
-  @media (min-width: $medium + 1) {
-    padding: $gutter / 2;
+  @media (min-width: $lg + 1) {
+    padding: $gap / 2;
 
-    grid-gap: $gutter / 2;
+    grid-gap: $gap / 2;
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media (max-width: $medium) and (min-width: $small + 1) {
-    padding: $gutter / 2;
+  @media (max-width: $lg) and (min-width: $md + 1) {
+    padding: $gap / 2;
 
-    grid-gap: $gutter / 2;
+    grid-gap: $gap / 2;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: $small) and (min-width: $xsmall + 1) {
-    padding: $gutter / 2;
+  @media (max-width: $md) and (min-width: $sm + 1) {
+    padding: $gap / 2;
 
-    grid-gap: $gutter / 2;
+    grid-gap: $gap / 2;
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: $xsmall) {
-    padding: $gutter;
+  @media (max-width: $sm) {
+    padding: $gap;
 
-    grid-gap: $gutter;
+    grid-gap: $gap;
     grid-template-columns: 1fr;
   }
 
   .btn-set {
-    @media (min-width: $xsmall + 1) {
-      padding: ($gutter / 2) 0 ($gutter / 2 * 3);
+    @media (min-width: $sm + 1) {
+      padding: ($gap / 2) 0 ($gap / 2 * 3);
     }
 
-    @media (max-width: $xsmall) {
+    @media (max-width: $sm) {
       padding: 0;
 
       .btn-accent {
@@ -53,24 +53,24 @@
   display: grid;
   overflow: hidden;
 
-  padding: $gutter;
+  padding: $gap;
 
   align-items: center;
   justify-items: center;
 
   @media (min-height: 691px) {
-    min-height: calc(33.33vh - #{$gutter} * 0.66);
+    min-height: calc(33.33vh - #{$gap} * 0.66);
   }
 
   @media (max-height: 690px) {
-    min-height: calc(230px - #{$gutter} * 0.66);
+    min-height: calc(230px - #{$gap} * 0.66);
   }
 
   &__link {
     display: flex;
 
     height: 100%;
-    padding: $gutter;
+    padding: $gap;
 
     transition: color 0.5s;
 
@@ -89,7 +89,7 @@
     transition: opacity 0.5s;
 
     opacity: 0.8;
-    background-color: $base-color;
+    background-color: $color-main;
   }
 
   &__image {
@@ -101,7 +101,7 @@
 
     transition: transform 0.5s;
 
-    background-color: $base-color;
+    background-color: $color-main;
     background-position: 50% 50%;
     background-size: cover;
   }
@@ -120,11 +120,11 @@
 
     font-weight: 700;
 
-    @media (min-width: $small + 1) {
+    @media (min-width: $md + 1) {
       font-size: 1.25rem;
     }
 
-    @media (max-width: $small) {
+    @media (max-width: $md) {
       font-size: 1.125rem;
     }
   }
@@ -139,73 +139,73 @@
     }
 
     .skill-item__link {
-      color: $accent-color;
+      color: $color-accent;
     }
   }
 
   &:nth-of-type(1) {
-    @media (min-width: $medium + 1) {
+    @media (min-width: $lg + 1) {
       grid-column: 1 / span 2;
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-column: 1 / span 2;
     }
   }
 
   &:nth-of-type(2) {
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
+    @media (max-width: $md) and (min-width: $sm + 1) {
       grid-column: 2;
       grid-row: 1 / span 2;
     }
   }
 
   &:nth-of-type(4) {
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-column: 2 / span 2;
     }
 
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
+    @media (max-width: $md) and (min-width: $sm + 1) {
       grid-column: 1 / span 2;
     }
   }
 
   &:nth-of-type(5) {
-    @media (min-width: $medium + 1) {
+    @media (min-width: $lg + 1) {
       grid-column: 2 / span 2;
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-column: 1 / span 2;
     }
 
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
+    @media (max-width: $md) and (min-width: $sm + 1) {
       grid-column: 1;
       grid-row: 4 / span 2;
     }
   }
 
   &:nth-of-type(6) {
-    @media (min-width: $medium + 1) {
+    @media (min-width: $lg + 1) {
       grid-column: 4;
       grid-row: 2 / span 2;
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-column: 3;
       grid-row: 3 / span 2;
     }
   }
 
   &:nth-of-type(7) {
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-column: 1;
       grid-row: 4 / span 2;
     }
   }
 
   &:nth-of-type(9) {
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-column: 2 / span 2;
     }
   }

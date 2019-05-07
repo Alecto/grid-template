@@ -1,21 +1,12 @@
 
-$header-font: "Roboto Slab", serif;
-$base-font: "Roboto", sans-serif;
-$xlarge: 1340px;
-$large: 1200px;
-$medium: 992px;
-$small: 768px;
-$xsmall: 576px;
-$gutter: 20px;
+$font-header: "Roboto Slab", serif;
+$font-main: "Roboto", sans-serif;
+$font-size: 16px;
 
-@media (min-width: $medium + 1) {
-}
+$ul: 1340px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
 
-@media (max-width: $medium) and (min-width: $small + 1) {
-}
-
-@media (max-width: $small) and (min-width: $xsmall + 1) {
-}
-
-@media (max-width: $xsmall) {
-}
+$gap: 20px;

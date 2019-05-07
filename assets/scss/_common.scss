@@ -5,63 +5,63 @@
 html {
   letter-spacing: 0.1em;
 
-  color: $gray-color;
+  color: $color-gray;
 
-  font-family: $base-font;
+  font-family: $font-main;
   font-size: 16px;
 }
 
 h1 {
-  font-family: $header-font;
+  font-family: $font-header;
   font-weight: 300;
   line-height: 1.2em;
 
-  @media (min-width: $medium + 1) {
+  @media (min-width: $lg + 1) {
     font-size: 3.75rem;
   }
 
-  @media (max-width: $medium) and (min-width: $small + 1) {
+  @media (max-width: $lg) and (min-width: $md + 1) {
     font-size: 2.5rem;
   }
 
-  @media (max-width: $small) {
+  @media (max-width: $md) {
     font-size: 1.875rem;
   }
 }
 
 h2 {
-  color: $base-color;
+  color: $color-main;
 
-  font-family: $header-font;
+  font-family: $font-header;
   line-height: 1.2em;
 
-  @media (min-width: $medium + 1) {
+  @media (min-width: $lg + 1) {
     font-size: 2.5rem;
   }
 
-  @media (max-width: $medium) and (min-width: $small + 1) {
+  @media (max-width: $lg) and (min-width: $md + 1) {
     font-size: 2rem;
   }
 
-  @media (max-width: $small) {
+  @media (max-width: $md) {
     font-size: 1.5rem;
   }
 }
 
 h3 {
-  color: $gray-color;
+  color: $color-gray;
 }
 
 a {
   text-decoration: none;
 
-  color: $light-color;
+  color: $color-light;
 }
 
 p {
   letter-spacing: 1px;
 
-  color: $gray-color;
+  color: $color-gray;
 }
 
 input:focus {
@@ -71,25 +71,25 @@ input:focus {
 .container {
   display: grid;
 
-  max-width: $xlarge;
+  max-width: $ul;
   margin: auto;
-  padding: 0 $gutter;
+  padding: 0 $gap;
 }
 
 .section {
-  @media (min-width: $medium + 1) {
-    padding-top: $gutter * 5;
-    padding-bottom: $gutter * 4;
+  @media (min-width: $lg + 1) {
+    padding-top: $gap * 5;
+    padding-bottom: $gap * 4;
   }
 
-  @media (max-width: $medium) and (min-width: $small + 1) {
-    padding-top: $gutter * 4;
-    padding-bottom: $gutter * 3;
+  @media (max-width: $lg) and (min-width: $md + 1) {
+    padding-top: $gap * 4;
+    padding-bottom: $gap * 3;
   }
 
-  @media (max-width: $small) {
-    padding-top: $gutter * 3;
-    padding-bottom: $gutter * 2;
+  @media (max-width: $md) {
+    padding-top: $gap * 3;
+    padding-bottom: $gap * 2;
   }
 
   h2 {
@@ -109,8 +109,8 @@ input:focus {
 
   min-width: 250px;
   height: 60px;
-  margin: 0 ($gutter / 2);
-  padding: 18px $gutter;
+  margin: 0 ($gap / 2);
+  padding: 18px $gap;
 
   transition: background-color 0.5s, border-color 0.5s;
   text-align: center;
@@ -123,58 +123,58 @@ input:focus {
 }
 
 .btn {
-  border-color: $light-color;
-  background-color: rgba($light-color, 0.1);
+  border-color: $color-light;
+  background-color: rgba($color-light, 0.1);
 
   @extend %btn-common;
 
   &:hover,
   &:focus {
-    background-color: $accent-color;
+    background-color: $color-accent;
   }
 }
 
 .btn-accent {
-  border-color: $base-color;
-  background-color: rgba($base-color, 0.8);
+  border-color: $color-main;
+  background-color: rgba($color-main, 0.8);
 
   @extend %btn-common;
 
   &:hover {
-    background-color: $accent-color;
+    background-color: $color-accent;
   }
 }
 
 .btn-set {
   display: grid;
 
-  padding: 0 0 $gutter;
+  padding: 0 0 $gap;
 
   justify-items: center;
 
-  @media (min-width: $medium + 1) {
+  @media (min-width: $lg + 1) {
     grid-column: 1 / span 4;
   }
 
-  @media (max-width: $medium) and (min-width: $small + 1) {
+  @media (max-width: $lg) and (min-width: $md + 1) {
     grid-column: 1 / span 3;
   }
 
-  @media (max-width: $small) and (min-width: $xsmall + 1) {
+  @media (max-width: $md) and (min-width: $sm + 1) {
     grid-column: 1 / span 2;
   }
 
-  @media (max-width: $xsmall) {
+  @media (max-width: $sm) {
     grid-template-columns: 1fr;
   }
 
   .btn-accent {
-    @media (min-width: $xsmall + 1) {
+    @media (min-width: $sm + 1) {
       min-width: 350px;
     }
 
-    @media (max-width: $xsmall) {
+    @media (max-width: $sm) {
       margin: 0;
     }
   }
-}
+}

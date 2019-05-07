@@ -1,10 +1,10 @@
 
 .footer {
-  padding: ($gutter * 2.5) $gutter ($gutter * 3.5);
+  padding: ($gap * 2.5) $gap ($gap * 3.5);
 
   text-align: center;
 
-  background-color: $base-color;
+  background-color: $color-main;
 
   .fab {
     font-size: 36px;
@@ -16,7 +16,7 @@
     }
 
     &:nth-of-type(2) {
-      color: $gray-light;
+      color: $color-gray-light;
 
       font-weight: 700;
     }
@@ -28,14 +28,14 @@
 
   display: grid;
 
-  margin-bottom: $gutter * 2;
+  margin-bottom: $gap * 2;
 
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   justify-content: center;
 
   &::after {
     position: absolute;
-    bottom: -$gutter;
+    bottom: -$gap;
     left: calc(50% - 75px / 2);
 
     width: 75px;
@@ -43,19 +43,19 @@
 
     content: "";
 
-    background-color: rgba($light-color, 0.1);
+    background-color: rgba($color-light, 0.1);
   }
 
   a {
     display: block;
 
-    padding: $gutter / 2;
+    padding: $gap / 2;
 
     transition: color 0.5s;
 
     &:hover,
     &:focus {
-      color: $accent-color;
+      color: $color-accent;
     }
   }
 }

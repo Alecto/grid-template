@@ -1,47 +1,47 @@
 
 .posts {
   .container {
-    grid-gap: $gutter;
+    grid-gap: $gap;
 
-    @media (min-width: $medium + 1) {
+    @media (min-width: $lg + 1) {
       grid-template-columns: repeat(4, 1fr);
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
+    @media (max-width: $md) and (min-width: $sm + 1) {
       grid-template-columns: 1fr 1fr;
     }
 
-    @media (max-width: $xsmall) {
+    @media (max-width: $sm) {
       grid-template-columns: 1fr;
     }
   }
 
   h2 {
-    @media (min-width: $medium + 1) {
-      margin-bottom: $gutter * 1.5;
+    @media (min-width: $lg + 1) {
+      margin-bottom: $gap * 1.5;
 
       grid-column: 1 / span 4;
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
-      margin-bottom: $gutter * 1;
+    @media (max-width: $lg) and (min-width: $md + 1) {
+      margin-bottom: $gap * 1;
 
       grid-column: 1 / span 3;
     }
 
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
-      margin-bottom: $gutter * 0.5;
+    @media (max-width: $md) and (min-width: $sm + 1) {
+      margin-bottom: $gap * 0.5;
 
       grid-column: 1 / span 2;
     }
   }
 
   .btn-accent {
-    @media (max-width: $xsmall) {
+    @media (max-width: $sm) {
       width: 100%;
     }
   }
@@ -50,48 +50,48 @@
 .post-item {
   transition: background-color 0.5s;
 
-  background-color: lighten($gray-light, 5%);
+  background-color: lighten($color-gray-light, 5%);
 
   &:hover {
-    background-color: darken($gray-light, 5%);
+    background-color: darken($color-gray-light, 5%);
 
     .post-item__image div {
       transform: scale(1.1);
     }
 
     h3 {
-      color: $base-color;
+      color: $color-main;
     }
 
     p {
-      color: $base-color;
+      color: $color-main;
     }
   }
 
   &:nth-of-type(1) {
-    @media (min-width: $medium + 1) {
+    @media (min-width: $lg + 1) {
       grid-column: 1 / span 2;
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-column: 1 / span 2;
     }
   }
 
   &:nth-of-type(4) {
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-column: 2 / span 2;
     }
   }
 
   &:nth-of-type(5) {
-    @media (max-width: $medium) and (min-width: $small + 1) {
+    @media (max-width: $lg) and (min-width: $md + 1) {
       grid-column: 1 / span 2;
     }
   }
 
   &:nth-of-type(6) {
-    @media (min-width: $medium + 1) {
+    @media (min-width: $lg + 1) {
       grid-column: 3 / span 2;
     }
   }
@@ -120,7 +120,7 @@
 
     transition: transform 0.5s;
 
-    background-color: $base-color;
+    background-color: $color-main;
     background-position: 50% 50%;
     background-size: cover;
   }
@@ -129,7 +129,7 @@
 .post-item__caption {
   display: grid;
 
-  padding: $gutter;
+  padding: $gap;
 
   align-content: center;
 

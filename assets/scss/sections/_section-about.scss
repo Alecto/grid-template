@@ -1,25 +1,25 @@
 
 .about {
-  background-color: $gray-light;
+  background-color: $color-gray-light;
 
   .container {
-    @media (min-width: $medium + 1) {
-      grid-gap: $gutter * 5;
+    @media (min-width: $lg + 1) {
+      grid-gap: $gap * 5;
       grid-template-columns: 1fr 271px;
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
-      grid-gap: $gutter * 2;
+    @media (max-width: $lg) and (min-width: $md + 1) {
+      grid-gap: $gap * 2;
       grid-template-columns: 1fr 271px;
     }
 
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
-      grid-gap: $gutter;
+    @media (max-width: $md) and (min-width: $sm + 1) {
+      grid-gap: $gap;
       grid-template-columns: 1fr 236px;
     }
 
-    @media (max-width: $xsmall) {
-      grid-gap: $gutter;
+    @media (max-width: $sm) {
+      grid-gap: $gap;
       grid-template-columns: 1fr;
     }
   }
@@ -27,27 +27,27 @@
 
 .about-content {
   h2 {
-    @media (min-width: $medium + 1) {
-      margin-bottom: $gutter * 2.5;
+    @media (min-width: $lg + 1) {
+      margin-bottom: $gap * 2.5;
     }
 
-    @media (max-width: $medium) and (min-width: $small + 1) {
-      margin-bottom: $gutter * 2;
+    @media (max-width: $lg) and (min-width: $md + 1) {
+      margin-bottom: $gap * 2;
     }
 
-    @media (max-width: $small) and (min-width: $xsmall + 1) {
-      margin-bottom: $gutter * 1.5;
+    @media (max-width: $md) and (min-width: $sm + 1) {
+      margin-bottom: $gap * 1.5;
     }
 
-    @media (max-width: $xsmall) {
-      margin-bottom: $gutter * 1.5;
+    @media (max-width: $sm) {
+      margin-bottom: $gap * 1.5;
 
       text-align: center;
     }
   }
 
   p {
-    @media (min-width: $medium + 1) {
+    @media (min-width: $lg + 1) {
       font-size: 1.125rem;
     }
 
@@ -63,21 +63,21 @@
 
         content: "";
 
-        background-color: rgba($gray-color, 0.1);
+        background-color: rgba($color-gray, 0.1);
 
-        @media (min-width: $medium + 1) {
-          right: -$gutter * 2.5;
+        @media (min-width: $lg + 1) {
+          right: -$gap * 2.5;
         }
 
-        @media (max-width: $medium) and (min-width: $small + 1) {
-          right: -$gutter;
+        @media (max-width: $lg) and (min-width: $md + 1) {
+          right: -$gap;
         }
 
-        @media (max-width: $small) and (min-width: $xsmall + 1) {
-          right: -$gutter / 2;
+        @media (max-width: $md) and (min-width: $sm + 1) {
+          right: -$gap / 2;
         }
 
-        @media (max-width: $xsmall) {
+        @media (max-width: $sm) {
           display: none;
         }
       }
@@ -94,6 +94,6 @@
   img {
     max-width: 100%;
     max-height: 480px;
-    margin-top: $gutter;
+    margin-top: $gap;
   }
-}
+}
