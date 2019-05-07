@@ -133,6 +133,9 @@ input:focus {
   background-color: rgba($color-main, 0.8);
 
   @extend %btn-common;
+  @include sm {
+    width: 100%;
+  }
 
   &:hover {
     background-color: $color-accent;

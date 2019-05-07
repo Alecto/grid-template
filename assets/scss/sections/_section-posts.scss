@@ -36,12 +36,6 @@
   .btn-set {
     grid-area: bs;
   }
-
-  .btn-accent {
-    @include sm {
-      width: 100%;
-    }
-  }
 }
 
 .post-item {

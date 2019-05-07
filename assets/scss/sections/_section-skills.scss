@@ -8,40 +8,37 @@
 
     grid-gap: $gap / 2;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6" "bs bs bs bs";
   }
   @include lg-md {
     padding: $gap / 2;
 
     grid-gap: $gap / 2;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9" "bs bs bs";
   }
   @include md-sm {
     padding: $gap / 2;
 
     grid-gap: $gap / 2;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9" "bs bs";
   }
   @include sm {
     padding: $gap;
 
     grid-gap: $gap;
     grid-template-columns: 1fr;
-    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9" "bs";
   }
 
   .btn-set {
+    grid-area: bs;
     @include sm-min {
       padding: ($gap / 2) 0 ($gap / 2 * 3);
     }
     @include sm {
       padding: 0;
-
-      .btn-accent {
-        width: 100%;
-      }
     }
   }
 }
