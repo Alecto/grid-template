@@ -3,37 +3,32 @@
   .container {
     grid-gap: $gap;
 
-    @media (min-width: $lg + 1) {
+    @include lg-min {
       grid-template-columns: repeat(4, 1fr);
     }
-
-    @media (max-width: $lg) and (min-width: $md + 1) {
+    @include lg-md {
       grid-template-columns: repeat(3, 1fr);
     }
-
-    @media (max-width: $md) and (min-width: $sm + 1) {
+    @include md-sm {
       grid-template-columns: 1fr 1fr;
     }
-
-    @media (max-width: $sm) {
+    @include sm {
       grid-template-columns: 1fr;
     }
   }
 
   h2 {
-    @media (min-width: $lg + 1) {
+    @include lg-min {
       margin-bottom: $gap * 1.5;
 
       grid-column: 1 / span 4;
     }
-
-    @media (max-width: $lg) and (min-width: $md + 1) {
+    @include lg-md {
       margin-bottom: $gap * 1;
 
       grid-column: 1 / span 3;
     }
-
-    @media (max-width: $md) and (min-width: $sm + 1) {
+    @include md-sm {
       margin-bottom: $gap * 0.5;
 
       grid-column: 1 / span 2;
@@ -41,7 +36,7 @@
   }
 
   .btn-accent {
-    @media (max-width: $sm) {
+    @include sm {
       width: 100%;
     }
   }
@@ -142,4 +137,4 @@
     transition: color 0.5s;
     text-align: center;
   }
-}
+}

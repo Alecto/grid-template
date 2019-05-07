@@ -16,15 +16,13 @@ h1 {
   font-weight: 300;
   line-height: 1.2em;
 
-  @media (min-width: $lg + 1) {
+  @include lg-min {
     font-size: 3.75rem;
   }
-
-  @media (max-width: $lg) and (min-width: $md + 1) {
+  @include lg-md {
     font-size: 2.5rem;
   }
-
-  @media (max-width: $md) {
+  @include md {
     font-size: 1.875rem;
   }
 }
@@ -35,15 +33,13 @@ h2 {
   font-family: $font-header;
   line-height: 1.2em;
 
-  @media (min-width: $lg + 1) {
+  @include lg-min {
     font-size: 2.5rem;
   }
-
-  @media (max-width: $lg) and (min-width: $md + 1) {
+  @include lg-md {
     font-size: 2rem;
   }
-
-  @media (max-width: $md) {
+  @include md {
     font-size: 1.5rem;
   }
 }
@@ -77,17 +73,15 @@ input:focus {
 }
 
 .section {
-  @media (min-width: $lg + 1) {
+  @include lg-min {
     padding-top: $gap * 5;
     padding-bottom: $gap * 4;
   }
-
-  @media (max-width: $lg) and (min-width: $md + 1) {
+  @include lg-md {
     padding-top: $gap * 4;
     padding-bottom: $gap * 3;
   }
-
-  @media (max-width: $md) {
+  @include md {
     padding-top: $gap * 3;
     padding-bottom: $gap * 2;
   }
@@ -151,29 +145,24 @@ input:focus {
   padding: 0 0 $gap;
 
   justify-items: center;
-
-  @media (min-width: $lg + 1) {
+  @include lg-min {
     grid-column: 1 / span 4;
   }
-
-  @media (max-width: $lg) and (min-width: $md + 1) {
+  @include lg-md {
     grid-column: 1 / span 3;
   }
-
-  @media (max-width: $md) and (min-width: $sm + 1) {
+  @include md-sm {
     grid-column: 1 / span 2;
   }
-
-  @media (max-width: $sm) {
+  @include sm {
     grid-template-columns: 1fr;
   }
 
   .btn-accent {
-    @media (min-width: $sm + 1) {
+    @include sm-min {
       min-width: 350px;
     }
-
-    @media (max-width: $sm) {
+    @include sm {
       margin: 0;
     }
   }

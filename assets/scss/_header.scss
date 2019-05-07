@@ -33,15 +33,10 @@
   text-align: center;
   letter-spacing: 0.08em;
 
-  @media (min-width: $lg + 1) {
+  @include lg-min {
     margin: 0 0 53px;
   }
-
-  @media (max-width: $lg) and (min-width: $md + 1) {
-    margin: 0 0 43px;
-  }
-
-  @media (max-width: $md) {
+  @include lg {
     margin: 0 0 43px;
   }
 }
@@ -53,7 +48,7 @@
   justify-content: center;
 
   .btn {
-    @media (max-width: $lg) and (min-width: $md + 1) {
+    @include lg-md {
       min-width: 200px;
       height: 50px;
       padding-top: 14px;
@@ -63,8 +58,7 @@
 
       font-size: 1rem;
     }
-
-    @media (max-width: $md) and (min-width: $sm) {
+    @include md-sm {
       min-width: 170px;
       height: 40px;
       padding-top: 10px;
@@ -74,8 +68,7 @@
 
       font-size: 1rem;
     }
-
-    @media (max-width: $sm) {
+    @include sm {
       min-width: 170px;
       height: 40px;
       padding-top: 10px;
@@ -100,7 +93,7 @@
 
   width: 100%;
 
-  @media (max-width: $md) {
+  @include md {
     background-color: rgba($color-gray-dark, 0.25);
   }
 
@@ -152,16 +145,15 @@
 
   list-style-type: none;
 
-  @media (min-width: $md + 1) {
+  @include md-min {
     display: grid;
 
     width: 100%;
 
-    justify-content: end;
+    justify-content: flex-end;
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   }
-
-  @media (max-width: $md) {
+  @include md {
     position: absolute;
     top: 100%;
     right: 20px;
@@ -185,11 +177,10 @@
   transition: 0.5s ease-in-out;
   transform: rotate(0deg);
 
-  @media (min-width: $md + 1) {
+  @include md-min {
     display: none;
   }
-
-  @media (max-width: $md) {
+  @include md {
     display: block;
   }
 

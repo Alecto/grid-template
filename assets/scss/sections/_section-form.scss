@@ -6,16 +6,13 @@
 
   .container {
     grid-gap: $gap;
-
-    @media (min-width: $lg + 1) {
+    @include lg-min {
       grid-template-columns: repeat(3, 1fr);
     }
-
-    @media (max-width: $lg) and (min-width: $md + 1) {
+    @include lg-md {
       grid-template-columns: repeat(3, 1fr);
     }
-
-    @media (max-width: $md) and (min-width: $sm + 1) {
+    @include md-sm {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -41,7 +38,7 @@
 
 .form-item {
   &:nth-of-type(1) {
-    @media (max-width: $md) and (min-width: $sm + 1) {
+    @include md-sm {
       grid-column: 1 / span 2;
     }
   }
@@ -79,4 +76,4 @@
       }
     }
   }
-}
+}

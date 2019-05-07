@@ -3,22 +3,19 @@
   background-color: $color-gray-light;
 
   .container {
-    @media (min-width: $lg + 1) {
+    @include lg-min {
       grid-gap: $gap * 5;
       grid-template-columns: 1fr 271px;
     }
-
-    @media (max-width: $lg) and (min-width: $md + 1) {
+    @include lg-md {
       grid-gap: $gap * 2;
       grid-template-columns: 1fr 271px;
     }
-
-    @media (max-width: $md) and (min-width: $sm + 1) {
+    @include md-sm {
       grid-gap: $gap;
       grid-template-columns: 1fr 236px;
     }
-
-    @media (max-width: $sm) {
+    @include sm {
       grid-gap: $gap;
       grid-template-columns: 1fr;
     }
@@ -27,19 +24,16 @@
 
 .about-content {
   h2 {
-    @media (min-width: $lg + 1) {
+    @include lg-min {
       margin-bottom: $gap * 2.5;
     }
-
-    @media (max-width: $lg) and (min-width: $md + 1) {
+    @include lg-md {
       margin-bottom: $gap * 2;
     }
-
-    @media (max-width: $md) and (min-width: $sm + 1) {
+    @include md-sm {
       margin-bottom: $gap * 1.5;
     }
-
-    @media (max-width: $sm) {
+    @include sm {
       margin-bottom: $gap * 1.5;
 
       text-align: center;
@@ -47,7 +41,7 @@
   }
 
   p {
-    @media (min-width: $lg + 1) {
+    @include lg-min {
       font-size: 1.125rem;
     }
 
@@ -65,19 +59,16 @@
 
         background-color: rgba($color-gray, 0.1);
 
-        @media (min-width: $lg + 1) {
+        @include lg-min {
           right: -$gap * 2.5;
         }
-
-        @media (max-width: $lg) and (min-width: $md + 1) {
+        @include lg-md {
           right: -$gap;
         }
-
-        @media (max-width: $md) and (min-width: $sm + 1) {
+        @include md-sm {
           right: -$gap / 2;
         }
-
-        @media (max-width: $sm) {
+        @include sm {
           display: none;
         }
       }
