@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-  color: $color-main;
+  color: $color-primary;
 
   font-family: $font-header;
   line-height: 1.2em;
@@ -85,8 +85,8 @@ input:focus {
 }
 
 .btn-accent {
-  border-color: $color-main;
-  background-color: rgba($color-main, 0.8);
+  border-color: $color-primary;
+  background-color: rgba($color-primary, 0.8);
 
   @extend %btn-common;
 }

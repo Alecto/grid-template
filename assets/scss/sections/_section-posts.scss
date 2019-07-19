@@ -47,11 +47,11 @@
     }
 
     h3 {
-      color: $color-main;
+      color: $color-primary;
     }
 
     p {
-      color: $color-main;
+      color: $color-primary;
     }
   }
 
@@ -93,7 +93,7 @@
   display: flex;
   overflow: hidden;
 
-  background-color: $color-main;
+  background-color: $color-primary;
 
   justify-content: center;
   align-content: center;
