@@ -3,8 +3,6 @@
 }
 
 html {
-  letter-spacing: 0.1em;
-
   color: $color-gray;
 
   font-family: $font-main;
@@ -28,6 +26,8 @@ h1 {
 }
 
 h2 {
+  letter-spacing: 0.1em;
+
   color: $color-primary;
 
   font-family: $font-header;
@@ -58,7 +58,12 @@ h2 {
 }
 
 h3 {
+  letter-spacing: 0.05em;
+
   color: $color-gray;
+
+  font-family: $font-header;
+  font-size: 1.125rem;
 }
 
 a {
@@ -68,8 +73,6 @@ a {
 }
 
 p {
-  letter-spacing: 1px;
-
   color: $color-gray;
 }
 
