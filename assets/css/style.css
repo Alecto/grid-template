@@ -1089,13 +1089,13 @@ input:focus {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.8px) {
   .header-content__title {
     margin: 0 0 43px;
   }
 }
 
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 991.8px) and (min-width: 768px) {
   .about,
   .posts {
     padding-top: 80px;
@@ -1143,7 +1143,7 @@ input:focus {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.8px) {
   .about,
   .posts {
     padding-top: 60px;
@@ -1174,7 +1174,7 @@ input:focus {
   }
 }
 
-@media (max-width: 767px) and (min-width: 576px) {
+@media (max-width: 767.8px) and (min-width: 576px) {
   h2 {
     margin-bottom: 36px;
 
@@ -1223,7 +1223,7 @@ input:focus {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 575.8px) {
   .skills__button .btn-accent,
   .posts__button .btn-accent {
     width: 100%;
