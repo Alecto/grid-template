@@ -109,8 +109,6 @@
 
     letter-spacing: 0.1em;
 
-    font-family: $font-main;
-
     @include md-min {
       font-size: 1.25rem;
     }

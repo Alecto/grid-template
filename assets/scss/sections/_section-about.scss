@@ -4,82 +4,82 @@
   background-color: $color-gray-light;
 
   @extend %section;
-}
 
-.about__container {
-  display: grid;
+  &__container {
+    display: grid;
 
-  @extend %container;
-  @include lg-min {
-    grid-gap: $gap * 5;
-    grid-template-columns: 1fr 271px;
-  }
-  @include lg-md {
-    grid-gap: $gap * 2;
-    grid-template-columns: 1fr 271px;
-  }
-  @include md-sm {
-    grid-gap: $gap;
-    grid-template-columns: 1fr 236px;
-  }
-  @include sm {
-    grid-gap: $gap;
-    grid-template-columns: 1fr;
-  }
-}
-
-.about__content {
-  p {
+    @extend %container;
     @include lg-min {
-      font-size: 1.125rem;
+      grid-gap: $gap * 5;
+      grid-template-columns: 1fr 271px;
     }
+    @include lg-md {
+      grid-gap: $gap * 2;
+      grid-template-columns: 1fr 271px;
+    }
+    @include md-sm {
+      grid-gap: $gap;
+      grid-template-columns: 1fr 236px;
+    }
+    @include sm {
+      grid-gap: $gap;
+      grid-template-columns: 1fr;
+    }
+  }
 
-    &:first-of-type {
-      position: relative;
+  &__content {
+    p {
+      @include lg-min {
+        font-size: 1.125rem;
+      }
 
-      margin-top: -5px;
+      &:first-of-type {
+        position: relative;
 
-      &::after {
-        position: absolute;
-        top: 0;
+        margin-top: -5px;
 
-        width: 2px;
-        height: 200px;
+        &::after {
+          position: absolute;
+          top: 0;
 
-        content: "";
+          width: 2px;
+          height: 200px;
 
-        background-color: rgba($color-gray, 0.1);
+          content: "";
 
-        @include lg-min {
-          right: -$gap * 2.5;
-        }
-        @include lg-md {
-          right: -$gap;
-        }
-        @include md-sm {
-          right: -$gap / 2;
-        }
-        @include sm {
-          display: none;
+          background-color: rgba($color-gray, 0.1);
+
+          @include lg-min {
+            right: -$gap * 2.5;
+          }
+          @include lg-md {
+            right: -$gap;
+          }
+          @include md-sm {
+            right: -$gap / 2;
+          }
+          @include sm {
+            display: none;
+          }
         }
       }
-    }
 
-    &:last-of-type {
-      margin: 0;
+      &:last-of-type {
+        margin: 0;
+      }
     }
   }
-}
 
-.about__image {
-  display: grid;
+  &__image {
+    display: grid;
 
-  align-content: center;
-  justify-items: center;
+    align-content: center;
+    justify-items: center;
 
-  img {
-    max-width: 100%;
-    max-height: 480px;
-    margin-top: $gap;
+    img {
+      max-width: 100%;
+      max-height: 480px;
+      margin-top: $gap;
+    }
   }
 }
