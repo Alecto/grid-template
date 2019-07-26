@@ -61,10 +61,12 @@
       }
 
       &:nth-of-type(2) {
+        letter-spacing: 0.05em;
+
         color: $color-gray-light;
 
         font-weight: 700;
       }
     }
   }
-}
+}
