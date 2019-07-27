@@ -1,0 +1,6 @@
+temp/
+*.bat
+
+# IntellijIdea files
+.idea/
+*/scss-comb/
