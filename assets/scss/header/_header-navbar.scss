@@ -25,7 +25,7 @@
     @include md {
       position: absolute;
       top: 100%;
-      right: 20px;
+      right: $gap;
 
       display: none;
 
