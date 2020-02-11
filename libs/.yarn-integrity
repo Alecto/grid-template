@@ -1,5 +1,5 @@
 {
-  "systemParams": "win32-x64-64",
+  "systemParams": "win32-x64-72",
   "modulesFolders": [
     "libs"
   ],
@@ -11,7 +11,7 @@
     "normalize-scss@^7.0.1"
   ],
   "lockfileEntries": {
-    "@fortawesome/fontawesome-free@^5.4.2": "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.9.0.tgz#1aa5c59efb1b8c6eb6277d1e3e8c8f31998b8c8e",
+    "@fortawesome/fontawesome-free@^5.4.2": "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.12.1.tgz#2a98fea9fbb8a606ddc79a4680034e9d5591c550",
     "jquery@^3.3.1": "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2",
     "normalize-scss@^7.0.1": "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-7.0.1.tgz#74485e82bb5d0526371136422a09fdb868ffc1a4"
   },
