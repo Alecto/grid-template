@@ -328,6 +328,8 @@ input:focus {
   position: relative;
 
   display: grid;
+  -ms-flex-line-pack: center;
+  align-content: center;
 
   min-height: 100vh;
   padding: 100px 0;
@@ -336,9 +338,6 @@ input:focus {
   background-color: #2d3651;
   background-position: 50% 50%;
   background-size: cover;
-
-  -ms-flex-line-pack: center;
-  align-content: center;
 }
 
 .header-overlay {
@@ -368,12 +367,12 @@ input:focus {
 }
 
 .header-logo {
+  -ms-flex-item-align: center;
+  align-self: center;
+
   letter-spacing: 0.22em;
 
   font-size: 1.5rem;
-
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 .header-logo__link {
@@ -400,12 +399,12 @@ input:focus {
   position: relative;
 
   display: grid;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
 
   letter-spacing: 0.1em;
 
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   justify-items: end;
 }
 
@@ -521,7 +520,6 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -540,12 +538,12 @@ input:focus {
 
   display: grid;
   overflow: hidden;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
 
   padding: 20px;
 
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   justify-items: center;
 }
 
@@ -553,6 +551,12 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
   height: 100%;
   padding: 20px;
@@ -560,13 +564,6 @@ input:focus {
   -webkit-transition: color 0.5s;
        -o-transition: color 0.5s;
           transition: color 0.5s;
-
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .skill-item__overlay {
@@ -700,9 +697,9 @@ input:focus {
 
 .about__image {
   display: grid;
-
   -ms-flex-line-pack: center;
   align-content: center;
+
   justify-items: center;
 }
 
@@ -862,14 +859,13 @@ input:focus {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-
-  background-color: #2d3651;
-
+  -ms-flex-line-pack: center;
+  align-content: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
+
+  background-color: #2d3651;
 }
 
 .post-item__image img {
@@ -887,11 +883,10 @@ input:focus {
 
 .post-item__caption {
   display: grid;
-
-  padding: 20px;
-
   -ms-flex-line-pack: center;
   align-content: center;
+
+  padding: 20px;
 }
 
 .post-item__caption h3 {
@@ -946,14 +941,14 @@ input:focus {
   position: relative;
 
   display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
   margin-bottom: 40px;
 
   grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .footer__social::after {
@@ -1014,7 +1009,6 @@ input:focus {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1033,12 +1027,12 @@ input:focus {
 @media (min-width: 768px) {
   .header-navbar__list {
     display: grid;
-
-    width: 100%;
-
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+
+    width: 100%;
+
     grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   }
@@ -1244,14 +1238,13 @@ input:focus {
     font-size: 1.5rem;
   }
   .header-content__buttons {
-        flex-direction: column;
-
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        flex-direction: column;
   }
   .header-content__buttons .btn {
     min-width: 170px;
