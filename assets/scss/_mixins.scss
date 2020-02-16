@@ -9,13 +9,13 @@
 @mixin block-shortener($fz: 1rem, $lh: 1.5, $h: 70px, $l: 3) {
   display: -webkit-box;
   overflow: hidden;
+  -webkit-box-orient: vertical;
 
   height: $h;
 
   font-size: $fz;
   line-height: $fz * $lh;
 
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: $l;
 }
 

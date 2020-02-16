@@ -2,10 +2,10 @@
   position: relative;
 
   display: grid;
+  align-items: center;
 
   letter-spacing: 0.1em;
 
-  align-items: center;
   justify-items: end;
 
   &__list {
@@ -16,10 +16,10 @@
 
     @include md-min {
       display: grid;
+      justify-content: flex-end;
 
       width: 100%;
 
-      justify-content: flex-end;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     }
     @include md {
@@ -103,20 +103,18 @@
     }
   }
 
-  &__item {
-    a {
-      display: block;
+  &__link {
+    display: block;
 
-      padding: $gap;
+    padding: $gap;
 
-      transition: color 0.5s;
+    transition: color 0.5s;
 
-      font-size: 1.125rem;
+    font-size: 1.125rem;
 
-      &:hover,
-      &:focus {
-        color: $color-accent;
-      }
+    &:hover,
+    &:focus {
+      color: $color-accent;
     }
   }
 }

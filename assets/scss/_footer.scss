@@ -13,11 +13,11 @@
     position: relative;
 
     display: grid;
+    justify-content: center;
 
     margin-bottom: $gap * 2;
 
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    justify-content: center;
 
     &::after {
       position: absolute;

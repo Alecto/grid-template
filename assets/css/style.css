@@ -486,7 +486,7 @@ input:focus {
           transform: rotate(-135deg);
 }
 
-.header-navbar__item a {
+.header-navbar__link {
   display: block;
 
   padding: 20px;
@@ -498,8 +498,8 @@ input:focus {
   font-size: 1.125rem;
 }
 
-.header-navbar__item a:hover,
-.header-navbar__item a:focus {
+.header-navbar__link:hover,
+.header-navbar__link:focus {
   color: #d66926;
 }
 

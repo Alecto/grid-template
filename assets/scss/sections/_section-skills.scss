@@ -43,10 +43,10 @@
 
   display: grid;
   overflow: hidden;
+  align-items: center;
 
   padding: $gap;
 
-  align-items: center;
   justify-items: center;
 
   @media (min-height: 691px) {
@@ -59,14 +59,13 @@
 
   &__link {
     display: flex;
+    align-items: center;
+    justify-content: center;
 
     height: 100%;
     padding: $gap;
 
     transition: color 0.5s;
-
-    align-items: center;
-    justify-content: center;
   }
 
   &__overlay {

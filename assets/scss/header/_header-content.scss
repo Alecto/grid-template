@@ -21,13 +21,12 @@
 
   &__buttons {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: center;
-    @include sm {
-      flex-direction: column;
 
+    @include sm {
       align-items: center;
+      flex-direction: column;
     }
 
     .btn {

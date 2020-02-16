@@ -67,11 +67,10 @@
   &__image {
     display: flex;
     overflow: hidden;
+    align-content: center;
+    justify-content: center;
 
     background-color: $color-primary;
-
-    justify-content: center;
-    align-content: center;
 
     img {
       width: 100%;
@@ -84,10 +83,9 @@
 
   &__caption {
     display: grid;
+    align-content: center;
 
     padding: $gap;
-
-    align-content: center;
 
     h3 {
       transition: color 0.5s;
