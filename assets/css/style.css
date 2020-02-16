@@ -241,6 +241,10 @@ h1 {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
   line-height: 1.2em;
+  letter-spacing: 0.08em;
+  /* @media (min-width: 992px) */
+  /* @media (max-width: 767px) */
+
 }
 
 h2 {
@@ -328,6 +332,7 @@ input:focus {
   top: 0;
   left: 0;
   width: 100%;
+  /* @media (max-width: 767px) */
 }
 
 .header-menu__container {
@@ -344,7 +349,7 @@ input:focus {
 }
 
 .header-logo {
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   font-size: 1.5rem;
   align-self: center;
 }
@@ -376,6 +381,8 @@ input:focus {
   cursor: pointer;
   transition: 0.5s ease-in-out;
   transform: rotate(0deg);
+  /* @media (max-width: 991px) and (min-width: 768px) */
+  /* @media (min-width: 768px) */
 }
 
 .header-navbar__hamburger span {
@@ -427,17 +434,18 @@ input:focus {
   margin: 0 -20px 0 0;
   padding: 0;
   list-style: none;
+  /* @media (max-width: 767px) */
 }
 
-.header-navbar__item a {
+.header-navbar__link {
   display: block;
   padding: 20px;
   transition: color 0.5s;
   font-size: 1.125rem;
 }
 
-.header-navbar__item a:hover,
-.header-navbar__item a:focus {
+.header-navbar__link:hover,
+.header-navbar__link:focus {
   color: #d66926;
 }
 
@@ -447,7 +455,9 @@ input:focus {
 
 .header-content__title {
   text-align: center;
-  letter-spacing: 0.08em;
+  /* @media (min-width: 992px) */
+  /* @media (max-width: 991px) and (min-width: 768px) */
+  /* @media (max-width: 767px) */
 }
 
 .header-content__buttons {
@@ -576,6 +586,18 @@ input:focus {
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .header-navbar__hamburger {
+    display: none;
+  }
+  .header-navbar__list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    justify-content: end;
+  }
+}
+
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
@@ -614,17 +636,5 @@ input:focus {
   }
   .header-content__title {
     margin: 0 0 43px;
-  }
-}
-
-@media (min-width: 768px) {
-  .header-navbar__hamburger {
-    display: none;
-  }
-  .header-navbar__list {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    justify-content: end;
   }
 }
