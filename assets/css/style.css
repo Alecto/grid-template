@@ -301,6 +301,7 @@ input:focus {
   transition: background-color 0.5s;
   text-align: center;
   font-size: 1.125rem;
+  letter-spacing: 0.1em;
 }
 
 .header {
