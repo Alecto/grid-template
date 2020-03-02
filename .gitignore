@@ -1,6 +1,4 @@
-temp/
-*.bat
-
+node_modules/
 # IntellijIdea files
 .idea/
-*/scss-comb/
+.DS_Store
