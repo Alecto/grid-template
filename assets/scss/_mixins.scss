@@ -43,3 +43,18 @@
 
   border: 0;
 }
+
+@mixin unlist($m: 0, $p: 0) {
+  margin: $m;
+  padding: $p;
+
+  list-style: none;
+}
+
+@mixin abs-position ($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

@@ -69,45 +69,34 @@
   }
 
   &__overlay {
-    position: absolute;
     z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 
     transition: opacity 0.5s;
 
     opacity: 0.8;
     background-color: $color-primary;
+
+    @include abs-position;
   }
 
   &__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
     transition: transform 0.5s;
 
     background-color: $color-primary;
     background-position: 50% 50%;
     background-size: cover;
+
+    @include abs-position;
   }
 
   &__title {
-    position: absolute;
     z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 
     margin: 0;
 
     letter-spacing: 0.1em;
 
+    @include abs-position;
     @include md-min {
       font-size: 1.25rem;
     }
