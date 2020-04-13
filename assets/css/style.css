@@ -414,7 +414,7 @@ input:focus {
   margin: 0 -20px 0 0;
   padding: 0;
 
-  list-style-type: none;
+  list-style: none;
 }
 
 .header-navbar__btn {
@@ -466,7 +466,7 @@ input:focus {
   top: 18px;
 }
 
-.header-navbar__btn.active span:nth-of-type(1) {
+.header-navbar__btn--active span:nth-of-type(1) {
   top: 9px;
 
   -webkit-transform: rotate(135deg);
@@ -474,13 +474,13 @@ input:focus {
   transform: rotate(135deg);
 }
 
-.header-navbar__btn.active span:nth-of-type(2) {
+.header-navbar__btn--active span:nth-of-type(2) {
   left: -30px;
 
   opacity: 0;
 }
 
-.header-navbar__btn.active span:nth-of-type(3) {
+.header-navbar__btn--active span:nth-of-type(3) {
   top: 9px;
 
   -webkit-transform: rotate(-135deg);
