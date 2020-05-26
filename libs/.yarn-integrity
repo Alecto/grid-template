@@ -6,13 +6,13 @@
   "flags": [],
   "linkedModules": [],
   "topLevelPatterns": [
-    "@fortawesome/fontawesome-free@^5.12.1",
-    "jquery@^3.4.1",
+    "@fortawesome/fontawesome-free@^5.13.0",
+    "jquery@^3.5.1",
     "normalize-scss@^7.0.1"
   ],
   "lockfileEntries": {
-    "@fortawesome/fontawesome-free@^5.12.1": "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.13.0.tgz#fcb113d1aca4b471b709e8c9c168674fbd6e06d9",
-    "jquery@^3.4.1": "https://registry.yarnpkg.com/jquery/-/jquery-3.5.0.tgz#9980b97d9e4194611c36530e7dc46a58d7340fc9",
+    "@fortawesome/fontawesome-free@^5.13.0": "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.13.0.tgz#fcb113d1aca4b471b709e8c9c168674fbd6e06d9",
+    "jquery@^3.5.1": "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5",
     "normalize-scss@^7.0.1": "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-7.0.1.tgz#74485e82bb5d0526371136422a09fdb868ffc1a4"
   },
   "files": [],
