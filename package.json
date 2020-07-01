@@ -6,7 +6,7 @@
   "author": "Alecto <fomenkoandrey@inbox.ru>",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@fortawesome/fontawesome-free": "^5.13.1",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
