@@ -1,12 +1,12 @@
 'use strict';
 
-require('../../gulp/gulp-init.js')({HTML: '.'});
+require('/webProjects/gulp/gulp-init.js')({HTML: '.'});
 
-const comb = require('../../gulp/tasks/comb.js'),
-    scssDC     = require('../../gulp/tasks/scss.js').scssDC,
-    mincss   = require('../../gulp/tasks/mincss.js'),
-    uglifyes = require('../../gulp/tasks/uglify.js').uglifyes,
-    { sync, syncInit } = require('../../gulp/tasks/sync.js');
+const comb = require('/webProjects/gulp/tasks/comb.js'),
+    scssDC     = require('/webProjects/gulp/tasks/scss.js').scssDC,
+    mincss   = require('/webProjects/gulp/tasks/mincss.js'),
+    uglifyes = require('/webProjects/gulp/tasks/uglify.js').uglifyes,
+    { sync, syncInit } = require('/webProjects/gulp/tasks/sync.js');
 
 function watchFiles () {
     syncInit();
