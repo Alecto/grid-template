@@ -13,8 +13,11 @@
     @include lg-min {
       margin: 0 0 53px;
     }
-    @include lg {
+    @include lg-md {
       margin: 0 0 43px;
+    }
+    @include md {
+      margin: 0 0 33px;
     }
   }
 

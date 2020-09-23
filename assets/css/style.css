@@ -1091,12 +1091,6 @@ input:focus {
   }
 }
 
-@media (max-width: 991.8px) {
-  .header-content__title {
-    margin: 0 0 43px;
-  }
-}
-
 @media (max-width: 991.8px) and (min-width: 768px) {
   .about,
   .posts {
@@ -1110,6 +1104,9 @@ input:focus {
     margin-bottom: 42px;
 
     font-size: 2rem;
+  }
+  .header-content__title {
+    margin: 0 0 43px;
   }
   .header-content__buttons .btn {
     min-width: 200px;
@@ -1170,6 +1167,9 @@ input:focus {
   }
   .header-navbar__btn {
     display: block;
+  }
+  .header-content__title {
+    margin: 0 0 33px;
   }
   .skill-item__title {
     font-size: 1.125rem;
