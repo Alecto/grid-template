@@ -160,7 +160,6 @@ html [type="button"],
   -webkit-appearance: button;
 }
 
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -566,12 +565,13 @@ input:focus {
 }
 
 .skills {
-  padding: 10px 10px 40px;
+  padding: 10px;
+  margin-bottom: 30px;
 }
 
 .skills__container {
   display: grid;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   grid-gap: 10px;
 }
 
