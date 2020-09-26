@@ -118,40 +118,11 @@
       color: $color-accent;
     }
   }
+}
 
-  &:nth-of-type(1) {
-    grid-area: a1;
-  }
-
-  &:nth-of-type(2) {
-    grid-area: a2;
-  }
-
-  &:nth-of-type(3) {
-    grid-area: a3;
-  }
-
-  &:nth-of-type(4) {
-    grid-area: a4;
-  }
-
-  &:nth-of-type(5) {
-    grid-area: a5;
-  }
-
-  &:nth-of-type(6) {
-    grid-area: a6;
-  }
-
-  &:nth-of-type(7) {
-    grid-area: a7;
-  }
-
-  &:nth-of-type(8) {
-    grid-area: a8;
-  }
-
-  &:nth-of-type(9) {
-    grid-area: a9;
+@for $i from 1 through 9 {
+  .skill-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
   }
 }
+
