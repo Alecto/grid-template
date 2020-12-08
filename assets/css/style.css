@@ -1019,8 +1019,8 @@ input:focus {
 }
 
 @media (min-height: 691px) {
-  .skill-item {
-    min-height: calc(33.33vh - 20px * 0.66);
+  .skills__container {
+    grid-auto-rows: calc(33.333vh - 20px * 0.66);
   }
 }
 
@@ -1220,8 +1220,8 @@ input:focus {
 }
 
 @media (max-height: 690px) {
-  .skill-item {
-    min-height: calc(230px - 20px * 0.66);
+  .skills__container {
+    grid-auto-rows: calc(230px - 20px * 0.66);
   }
 }
 
