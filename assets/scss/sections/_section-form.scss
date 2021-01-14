@@ -7,7 +7,7 @@
     display: grid;
 
     @extend %container;
-    gap: $gap;
+    grid-gap: $gap;
     @include lg-min {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -19,7 +19,7 @@
     }
   }
 
-  .btn-accent {
+  .btn--primary {
     width: 100%;
 
     color: $color-light;

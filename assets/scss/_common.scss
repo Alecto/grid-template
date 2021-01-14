@@ -82,15 +82,15 @@ input:focus {
 }
 
 .btn {
-  border-color: $color-light;
-  background-color: rgba($color-light, 0.1);
-
   @extend %btn-common;
 }
 
-.btn-accent {
+.btn--light {
+  border-color: $color-light;
+  background-color: rgba($color-light, 0.1);
+}
+
+.btn--primary {
   border-color: $color-primary;
   background-color: rgba($color-primary, 0.8);
-
-  @extend %btn-common;
 }

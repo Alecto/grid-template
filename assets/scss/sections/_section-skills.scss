@@ -12,36 +12,36 @@
     padding-bottom: $gap;
 
     @include lg-min {
-      gap: $gap / 2;
+      grid-gap: $gap / 2;
       grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
       grid-template-columns: repeat(4, 1fr);
     }
     @include lg-md {
-      gap: $gap / 2;
+      grid-gap: $gap / 2;
       grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
       grid-template-columns: repeat(3, 1fr);
     }
     @include md-sm {
-      gap: $gap / 2;
+      grid-gap: $gap / 2;
       grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
       grid-template-columns: 1fr 1fr;
     }
     @include sm {
-      gap: $gap;
+      grid-gap: $gap;
       grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
       grid-template-columns: 1fr;
     }
 
     @media (min-height: 691px) {
-      grid-auto-rows: calc(33.333vh - #{$gap} * 0.66);
+      grid-auto-rows: calc(33.33333vh - #{$gap} * 0.66666); /* 20 / 2 * 4 / 3 => 20 * 2 / 3 => 20 * 0.66  */
     }
     @media (max-height: 690px) {
-      grid-auto-rows: calc(230px - #{$gap} * 0.66);
+      grid-auto-rows: calc(230px - #{$gap} * 0.66666);
     }
   }
 
-  &__button {
-    @extend %btn-wrapper;
+  &__actions {
+    @extend %btn-container;
   }
 }
 
@@ -124,4 +124,3 @@
     grid-area: a#{$i};
   }
 }
-

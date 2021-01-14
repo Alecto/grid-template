@@ -54,13 +54,13 @@
   }
 }
 
-%btn-wrapper {
+%btn-container {
   @include sm-min {
     display: flex;
     justify-content: center;
   }
 
-  .btn-accent {
+  .btn--primary {
     @extend %btn-min-size;
   }
 }

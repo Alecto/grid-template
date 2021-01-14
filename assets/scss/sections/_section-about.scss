@@ -10,19 +10,19 @@
 
     @extend %container;
     @include lg-min {
-      gap: $gap * 5;
+      grid-gap: $gap * 5;
       grid-template-columns: 1fr 271px;
     }
     @include lg-md {
-      gap: $gap * 2;
+      grid-gap: $gap * 2;
       grid-template-columns: 1fr 271px;
     }
     @include md-sm {
-      gap: $gap;
+      grid-gap: $gap;
       grid-template-columns: 1fr 236px;
     }
     @include sm {
-      gap: $gap;
+      grid-gap: $gap;
       grid-template-columns: 1fr;
     }
   }
