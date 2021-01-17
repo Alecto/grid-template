@@ -551,7 +551,7 @@ input:focus {
 .skills__container {
   display: grid;
   margin-bottom: 20px;
-  grid-gap: 10px;
+  gap: 10px;
 }
 @media (min-width: 992px) {
   .skills__container {
