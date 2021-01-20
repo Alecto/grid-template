@@ -395,8 +395,6 @@ input:focus {
 }
 
 .header-navbar {
-  position: relative;
-
   display: grid;
   -webkit-box-align: center;
   align-items: center;
@@ -407,11 +405,19 @@ input:focus {
   justify-items: end;
 }
 
-.header-navbar__list {
-  margin: 0 -20px 0 0;
-  padding: 0;
+.header-navbar__link {
+  display: block;
 
-  list-style: none;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+
+  font-size: 1.125rem;
+}
+
+.header-navbar__link:hover,
+.header-navbar__link:focus {
+  color: #d66926;
 }
 
 .header-navbar__btn {
@@ -483,23 +489,6 @@ input:focus {
   -webkit-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
-}
-
-.header-navbar__link {
-  display: block;
-
-  padding: 20px;
-
-  -webkit-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
-
-  font-size: 1.125rem;
-}
-
-.header-navbar__link:hover,
-.header-navbar__link:focus {
-  color: #d66926;
 }
 
 .header-content {
@@ -1029,9 +1018,19 @@ input:focus {
     justify-content: flex-end;
 
     width: 100%;
+    margin: 0 -10px 0 0;
+    padding: 0;
+
+    list-style: none;
 
     grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+  }
+  .header-navbar__item {
+    margin-left: 20px;
+  }
+  .header-navbar__link {
+    padding: 20px 10px;
   }
   .header-navbar__btn {
     display: none;
@@ -1150,6 +1149,8 @@ input:focus {
   }
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
+    -webkit-box-shadow: -3px 3px 20px -10px black;
+    box-shadow: -3px 3px 20px -10px black;
   }
   .header-navbar__list {
     position: absolute;
@@ -1158,9 +1159,22 @@ input:focus {
 
     display: none;
 
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
     text-align: right;
 
     background-color: rgba(68, 89, 110, 0.9);
+    -webkit-box-shadow: -3px 3px 20px -10px black;
+    box-shadow: -3px 3px 20px -10px black;
+  }
+  .header-navbar__item {
+    margin: 20px 10px;
+  }
+  .header-navbar__link {
+    padding: 10px 20px;
   }
   .header-navbar__btn {
     display: block;

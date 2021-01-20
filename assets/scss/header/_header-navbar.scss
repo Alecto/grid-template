@@ -1,6 +1,4 @@
 .header-navbar {
-  position: relative;
-
   display: grid;
   align-items: center;
 
@@ -9,7 +7,6 @@
   justify-items: end;
 
   &__list {
-    @include unlist(0 (-$gap) 0 0);
     @include md-min {
       display: grid;
       justify-content: flex-end;
@@ -17,6 +14,7 @@
       width: 100%;
 
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      @include unlist(0 (-$gap / 2) 0 0);
     }
     @include md {
       position: absolute;
@@ -28,6 +26,38 @@
       text-align: right;
 
       background-color: rgba($color-gray-dark, 0.9);
+
+      @include box-shadow;
+      @include unlist;
+    }
+  }
+
+  &__item {
+    @include md-min {
+      margin-left: $gap;
+    }
+    @include md {
+      margin: $gap $gap / 2;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    transition: color 0.5s;
+
+    font-size: 1.125rem;
+
+    @include md-min {
+      padding: $gap $gap / 2;
+    }
+    @include md {
+      padding: $gap / 2 $gap;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
     }
   }
 
@@ -96,21 +126,6 @@
 
         transform: rotate(-135deg);
       }
-    }
-  }
-
-  &__link {
-    display: block;
-
-    padding: $gap;
-
-    transition: color 0.5s;
-
-    font-size: 1.125rem;
-
-    &:hover,
-    &:focus {
-      color: $color-accent;
     }
   }
 }
