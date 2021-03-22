@@ -7,7 +7,8 @@
   "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "normalize-scss": "^7.0.1"

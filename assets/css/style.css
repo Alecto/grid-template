@@ -1,32 +1,19 @@
-/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
 
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 }
 body {
   margin: 0;
 }
-article,
-aside,
-footer,
-header,
-nav,
-section {
+main {
   display: block;
 }
 h1 {
   margin: 0.67em 0;
 
   font-size: 2em;
-}
-figcaption,
-figure {
-  display: block;
-}
-figure {
-  margin: 1em 40px;
 }
 hr {
   overflow: visible;
@@ -35,17 +22,12 @@ hr {
   box-sizing: content-box;
   height: 0;
 }
-main {
-  display: block;
-}
 pre {
   font-family: monospace, monospace;
   font-size: 1em;
 }
 a {
   background-color: transparent;
-
-  -webkit-text-decoration-skip: objects;
 }
 abbr[title] {
   text-decoration: underline;
@@ -57,10 +39,6 @@ abbr[title] {
 }
 b,
 strong {
-  font-weight: inherit;
-}
-b,
-strong {
   font-weight: bolder;
 }
 code,
@@ -68,13 +46,6 @@ kbd,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
-}
-dfn {
-  font-style: italic;
-}
-mark {
-  color: #000000;
-  background-color: #ffff00;
 }
 small {
   font-size: 80%;
@@ -96,20 +67,8 @@ sub {
 sup {
   top: -0.5em;
 }
-audio,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-
-  height: 0;
-}
 img {
   border-style: none;
-}
-svg:not(:root) {
-  overflow: hidden;
 }
 button,
 input,
@@ -118,11 +77,12 @@ select,
 textarea {
   margin: 0;
 
-  font-family: sans-serif;
+  font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
 }
-button {
+button,
+input {
   overflow: visible;
 }
 button,
@@ -130,14 +90,11 @@ select {
   text-transform: none;
 }
 button,
-html [type="button"],
+[type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
 }
-
-
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -146,40 +103,11 @@ button::-moz-focus-inner,
 
   border-style: none;
 }
-
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
-}
-input {
-  overflow: visible;
-}
-[type="checkbox"],
-[type="radio"] {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  outline-offset: -2px;
-
-  -webkit-appearance: textfield;
-}
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-file-upload-button {
-  font: inherit;
-
-  -webkit-appearance: button;
 }
 fieldset {
   padding: 0.35em 0.75em 0.625em;
@@ -197,24 +125,39 @@ legend {
   color: inherit;
 }
 progress {
-  display: inline-block;
-
   vertical-align: baseline;
 }
 textarea {
   overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  outline-offset: -2px;
+
+  -webkit-appearance: textfield;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+
+  -webkit-appearance: button;
 }
 details {
   display: block;
 }
 summary {
   display: list-item;
-}
-menu {
-  display: block;
-}
-canvas {
-  display: inline-block;
 }
 template {
   display: none;
