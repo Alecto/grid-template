@@ -990,6 +990,9 @@ input:focus {
   .skill-item__title {
     font-size: 1.25rem;
   }
+  .form__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 992px) {
@@ -1026,9 +1029,6 @@ input:focus {
   }
   .about__content p:first-of-type::after {
     right: -50px;
-  }
-  .form__container {
-    grid-template-columns: repeat(3, 1fr);
   }
   .posts__grid {
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
@@ -1070,9 +1070,6 @@ input:focus {
   }
   .about__content p:first-of-type::after {
     right: -20px;
-  }
-  .form__container {
-    grid-template-columns: repeat(3, 1fr);
   }
   .posts__grid {
     grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
@@ -1156,7 +1153,7 @@ input:focus {
     right: -10px;
   }
   .form__container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .form-item:nth-of-type(1) {
     grid-column: 1 / span 2;

@@ -8,14 +8,11 @@
 
     @extend %container;
     gap: $gap;
-    @include lg-min {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @include lg-md {
+    @include md-min {
       grid-template-columns: repeat(3, 1fr);
     }
     @include md-sm {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -38,8 +35,8 @@
 }
 
 .form-item {
-  &:nth-of-type(1) {
-    @include md-sm {
+  @include md-sm {
+    &:nth-of-type(1) {
       grid-column: 1 / span 2;
     }
   }
