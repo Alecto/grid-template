@@ -37,7 +37,7 @@
       margin-left: $gap;
     }
     @include md {
-      margin: $gap $gap / 2;
+      margin: $gap ($gap / 2);
     }
   }
 
@@ -49,10 +49,10 @@
     font-size: 1.125rem;
 
     @include md-min {
-      padding: $gap $gap / 2;
+      padding: $gap ($gap / 2);
     }
     @include md {
-      padding: $gap / 2 $gap;
+      padding: ($gap / 2) $gap;
     }
 
     &:hover,
