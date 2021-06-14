@@ -1,268 +1,6 @@
-html {
-  line-height: 1.15;
-
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
-
-h1 {
-  margin: 0.67em 0;
-
-  font-size: 2em;
-}
-
-figcaption,
-figure {
-  display: block;
-}
-
-figure {
-  margin: 1em 40px;
-}
-
-hr {
-  overflow: visible;
-
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-main {
-  display: block;
-}
-
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-a {
-  background-color: transparent;
-
-  -webkit-text-decoration-skip: objects;
-}
-
-abbr[title] {
-  text-decoration: underline;
-  text-decoration: underline dotted;
-
-  border-bottom: none;
-
-  -webkit-text-decoration: underline dotted;
-}
-
-b,
-strong {
-  font-weight: inherit;
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-dfn {
-  font-style: italic;
-}
-
-mark {
-  color: #000000;
-  background-color: #ffff00;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  position: relative;
-
-  vertical-align: baseline;
-
-  font-size: 75%;
-  line-height: 0;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-audio,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-
-  height: 0;
-}
-
-img {
-  border-style: none;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  margin: 0;
-
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-}
-
-button {
-  overflow: visible;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  padding: 0;
-
-  border-style: none;
-}
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-input {
-  overflow: visible;
-}
-
-[type="checkbox"],
-[type="radio"] {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-[type="search"] {
-  outline-offset: -2px;
-
-  -webkit-appearance: textfield;
-}
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  font: inherit;
-
-  -webkit-appearance: button;
-}
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-legend {
-  display: table;
-
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 100%;
-  padding: 0;
-
-  white-space: normal;
-
-  color: inherit;
-}
-
-progress {
-  display: inline-block;
-
-  vertical-align: baseline;
-}
-
-textarea {
-  overflow: auto;
-}
-
-details {
-  display: block;
-}
-
-summary {
-  display: list-item;
-}
-
-menu {
-  display: block;
-}
-
-canvas {
-  display: inline-block;
-}
-
-template {
-  display: none;
-}
-
-[hidden] {
-  display: none;
-}
-
-/* наш код здесь */
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -279,6 +17,7 @@ h1 {
   font-weight: 300;
   line-height: 1.2em;
   letter-spacing: 0.08em;
+  text-align: center;
 }
 @media (min-width: 992px) {
   h1 {
@@ -317,11 +56,16 @@ input:focus {
 }
 
 .btn {
-  display: block;
   height: 60px;
-  padding: 18px 20px;
+  padding-left: 1em;
+  padding-right: 1em;
   transition: background-color 0.5s;
-  text-align: center;
+
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 1.125rem;
   letter-spacing: 0.1em;
 }
@@ -358,20 +102,50 @@ input:focus {
 
 .header-overlay {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   opacity: 0.8;
   background-color: #2d3651;
 }
 
+
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.header-content__title {}
+
+@media (min-width: 992px) {
+  .header-content__title {
+    margin: 0 0 53px;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .header-content__title {
+    margin: 0 0 43px;
+  }
+}
+@media (max-width: 767px) {
+  .header-content__title {
+    margin: 0 0 43px;
+  }
+}
+
+.header-content__actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px
+}
+.header-content__actions .btn:first-of-type {
+  margin-right: 20px;
+}
+
 .header-menu {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
+  right: 0;
   left: 0;
-  width: 100%;
 }
 @media (max-width: 767px) {
   .header-menu {
@@ -381,8 +155,9 @@ input:focus {
 
 .header-menu__container {
   display: grid;
-  grid-template-columns: auto 1fr;
   align-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
 }
 
 .header-menu__container,
@@ -503,44 +278,13 @@ input:focus {
 
 .header-navbar__link {
   display: block;
-  padding: 20px;
+  padding: 20px 10px;
   transition: color 0.5s;
   font-size: 1.125rem;
 }
 .header-navbar__link:hover,
 .header-navbar__link:focus {
   color: #d66926;
-}
-
-.header-content {
-  position: relative;
-}
-
-.header-content__title {
-  text-align: center;
-}
-@media (min-width: 992px) {
-  .header-content__title {
-    margin: 0 0 53px;
-  }
-}
-@media (max-width: 991px) and (min-width: 768px) {
-  .header-content__title {
-    margin: 0 0 43px;
-  }
-}
-@media (max-width: 767px) {
-  .header-content__title {
-    margin: 0 0 43px;
-  }
-}
-
-.header-content__actions {
-  display: flex;
-  justify-content: center;
-}
-.header-content__actions .btn:first-of-type {
-  margin-right: 20px;
 }
 
 .skills {
@@ -590,7 +334,6 @@ input:focus {
 .skill-item {
   position: relative;
   overflow: hidden;
-  background-color: #2d3651;
 }
 
 .skill-item:hover .skill-item__overlay {
@@ -633,11 +376,7 @@ input:focus {
 
 .skill-item__overlay {
   position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   transition: opacity 0.5s;
   opacity: 0.8;
   background-color: #2d3651;
@@ -645,22 +384,17 @@ input:focus {
 
 .skill-item__image {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   transition: transform 0.5s;
   background-position: 50% 50%;
   background-size: cover;
+  background-color: #2d3651;
 }
 
 .skill-item__title {
   position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  z-index: 1;
+  inset: 0;
   margin: 0;
 }
 @media (min-width: 768px) {
