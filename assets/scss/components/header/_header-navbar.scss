@@ -1,3 +1,6 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
 .header-navbar {
   display: grid;
   align-items: center;
@@ -14,7 +17,7 @@
       width: 100%;
 
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-      @include unlist(0 (-$gap / 2) 0 0);
+      @include unlist(0 -$gap-sm 0 0);
     }
     @include md {
       position: absolute;
@@ -37,7 +40,7 @@
       margin-left: $gap;
     }
     @include md {
-      margin: $gap ($gap / 2);
+      margin: $gap $gap-sm;
     }
   }
 
@@ -49,10 +52,10 @@
     font-size: 1.125rem;
 
     @include md-min {
-      padding: $gap ($gap / 2);
+      padding: $gap $gap-sm;
     }
     @include md {
-      padding: ($gap / 2) $gap;
+      padding: $gap-sm $gap;
     }
 
     &:hover,

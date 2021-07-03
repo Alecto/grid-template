@@ -1,3 +1,6 @@
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
+
 .header-content {
   position: relative;
   z-index: 1;

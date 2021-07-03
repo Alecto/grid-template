@@ -1,3 +1,7 @@
+@use "../presets" as *;
+@use "mixins-media" as *;
+@use "mixins" as *;
+
 %container {
   max-width: $ul;
   margin: auto;
@@ -7,16 +11,16 @@
 
 %section {
   @include lg-min {
-    padding-top: $gap * 5;
-    padding-bottom: $gap * 5;
+    padding-top: $gap-x5;
+    padding-bottom: $gap-x5;
   }
   @include lg-md {
-    padding-top: $gap * 4;
-    padding-bottom: $gap * 4;
+    padding-top: $gap-x4;
+    padding-bottom: $gap-x4;
   }
   @include md {
-    padding-top: $gap * 3;
-    padding-bottom: $gap * 3;
+    padding-top: $gap-x3;
+    padding-bottom: $gap-x3;
   }
 
   h2 {

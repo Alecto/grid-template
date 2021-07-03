@@ -1,3 +1,5 @@
+@use "../presets" as *;
+
 @mixin text-shortener {
   display: block;
   overflow: hidden;
