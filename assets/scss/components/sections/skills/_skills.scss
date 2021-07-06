@@ -1,11 +1,11 @@
-@use "../../../presets/index" as *;
-@use "../../../mixins/index" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 $local-gap: 13.3333333px; // 20 * 0.66
 
 .skills {
   @include sm-min {
-    padding: $gap-sm $gap-sm $gap-sm;
+    padding: $gap-sm $gap-sm $gap-x2;
   }
   @include sm {
     padding: $gap;

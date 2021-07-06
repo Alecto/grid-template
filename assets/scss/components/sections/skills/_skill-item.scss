@@ -1,5 +1,5 @@
-@use "../../../presets/index" as *;
-@use "../../../mixins/index" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .skill-item {
   position: relative;
