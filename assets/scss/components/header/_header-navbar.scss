@@ -17,7 +17,7 @@
       width: 100%;
 
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-      @include unlist(0 -$gap-sm 0 0);
+      @include unlist(0 (-$gap-sm) 0 0);
     }
     @include md {
       position: absolute;
