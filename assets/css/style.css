@@ -91,7 +91,7 @@ input:focus {
   position: relative;
   display: grid;
   min-height: 100vh;
-  padding: 100px 0;
+  padding: 150px 0;
   color: #ffffff;
   background-color: #2d3651;
   background-image: url(../img/img-header.png);
@@ -289,12 +289,10 @@ input:focus {
 
 .skills {
   padding: 10px;
-  margin-bottom: 30px;
 }
 
 .skills__container {
   display: grid;
-  margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   .skills__container {
@@ -338,6 +336,8 @@ input:focus {
 .skills__actions {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .skill-item {
