@@ -1,6 +1,6 @@
 @use "../presets" as *;
-@use "mixins-media" as *;
 @use "mixins" as *;
+@use "mixins-media" as *;
 
 %container {
   max-width: $ul;
@@ -28,7 +28,7 @@
   }
 }
 
-% btn-container {
+%btn-container {
   @include sm-min {
     display: flex;
     justify-content: center;

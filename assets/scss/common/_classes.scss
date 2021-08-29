@@ -32,10 +32,6 @@
     min-width: 200px;
     height: 50px;
   }
-  @include md-sm {
-    min-width: 170px;
-    height: 40px;
-  }
   @include sm {
     min-width: 170px;
     height: 40px;
@@ -45,7 +41,13 @@
 .btn--primary {
   font-size: 1.125rem;
   height: 60px;
-  min-width: 350px;
   border-color: $color-primary;
   background-color: rgba($color-primary, 0.8);
+
+  @include sm-min {
+    width: 350px;
+  }
+  @include sm {
+    width: 100%;
+  }
 }
