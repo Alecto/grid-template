@@ -135,7 +135,7 @@ input:focus {
 }
 @media (max-width: 767px) {
   .header-content__title {
-    margin: 0 0 43px;
+    margin: 0 0 33px;
   }
 }
 
@@ -187,9 +187,6 @@ input:focus {
 
 .header-navbar {
   position: relative;
-  display: grid;
-  align-items: center;
-  justify-items: end;
 }
 
 .header-navbar__btn {
@@ -260,7 +257,7 @@ input:focus {
 @media (min-width: 768px) {
   .header-navbar__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(2em, max-content));
     justify-content: end;
     gap: 20px;
   }
