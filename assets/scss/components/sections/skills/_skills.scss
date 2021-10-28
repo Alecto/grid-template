@@ -5,7 +5,7 @@ $local-gap: 13.3333333px; // 20 * 0.66
 
 .skills {
   @include sm-min {
-    padding: $gap-sm $gap-sm $gap-x2;
+    padding: $gap-sm;
   }
   @include sm {
     padding: $gap;
@@ -47,5 +47,9 @@ $local-gap: 13.3333333px; // 20 * 0.66
 
   &__actions {
     @extend %btn-container;
+
+    @include sm-min {
+      margin-bottom: $gap-lg;
+    }
   }
 }

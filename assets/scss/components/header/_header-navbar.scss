@@ -78,9 +78,6 @@
     @include md-min {
       display: none;
     }
-    @include md {
-      display: block;
-    }
 
     &-row {
       position: absolute;
