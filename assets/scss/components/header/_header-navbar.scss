@@ -16,6 +16,7 @@
 
       width: 100%;
 
+      gap: $gap;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       @include unlist(0 (-$gap-sm) 0 0);
     }
@@ -36,9 +37,6 @@
   }
 
   &__item {
-    @include md-min {
-      margin-left: $gap;
-    }
     @include md {
       margin: $gap $gap-sm;
     }
