@@ -6,8 +6,7 @@
   z-index: 2;
   top: 0;
   left: 0;
-
-  width: 100%;
+  right: 0;
 
   @include md {
     background-color: rgba($color-gray-dark, 0.25);
