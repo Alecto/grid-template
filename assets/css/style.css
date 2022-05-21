@@ -193,6 +193,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  background-color: #ffffff;
+}
+
 h1 {
   letter-spacing: 0.08em;
 
@@ -903,11 +907,9 @@ input:focus {
 
     list-style: none;
 
+    gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-  }
-  .header-navbar__item {
-    margin-left: 20px;
   }
   .header-navbar__link {
     padding: 20px 10px;
@@ -1012,6 +1014,10 @@ input:focus {
   h1 {
     font-size: 1.875rem;
   }
+  .btn--light {
+    min-width: 170px;
+    height: 40px;
+  }
   .header-content__title {
     margin: 0 0 33px;
   }
@@ -1093,10 +1099,6 @@ input:focus {
     text-align: center;
 
     font-size: 1.5rem;
-  }
-  .btn--light {
-    min-width: 170px;
-    height: 40px;
   }
   .btn--primary {
     width: 100%;
