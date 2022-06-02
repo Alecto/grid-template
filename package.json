@@ -6,8 +6,8 @@
   "author": "Alecto <fomenkoandrey@inbox.ru>",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.1",
-    "jquery": "^3.5.1",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "jquery": "^3.6.0",
     "normalize.css": "^8.0.1"
   }
 }
