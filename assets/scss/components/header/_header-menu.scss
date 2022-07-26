@@ -19,5 +19,6 @@
 
     @extend %container;
     grid-template-columns: auto 1fr;
+    gap: $gap;
   }
 }

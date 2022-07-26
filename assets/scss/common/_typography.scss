@@ -8,13 +8,12 @@
 }
 
 html {
-  color: $color-gray;
-
   font-family: $font-main;
   font-size: 16px;
 }
 
 body {
+  color: $color-gray;
   background-color: $color-light;
 }
 
