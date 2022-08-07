@@ -55,3 +55,7 @@
     width: 100%;
   }
 }
+
+.hidden {
+  @include visually-hidden;
+}

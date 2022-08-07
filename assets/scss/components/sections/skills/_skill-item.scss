@@ -12,6 +12,22 @@
 
   justify-items: center;
 
+  &__title {
+    z-index: 1;
+
+    margin: 0;
+
+    letter-spacing: 0.1em;
+
+    @include abs-position;
+    @include md-min {
+      font-size: 1.25rem;
+    }
+    @include md {
+      font-size: 1.125rem;
+    }
+  }
+
   &__link {
     display: flex;
     align-items: center;
@@ -40,22 +56,6 @@
     background-size: cover;
 
     @include abs-position;
-  }
-
-  &__title {
-    z-index: 1;
-
-    margin: 0;
-
-    letter-spacing: 0.1em;
-
-    @include abs-position;
-    @include md-min {
-      font-size: 1.25rem;
-    }
-    @include md {
-      font-size: 1.125rem;
-    }
   }
 
   &:hover {

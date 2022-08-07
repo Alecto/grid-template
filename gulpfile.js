@@ -1,21 +1,81 @@
-'use strict';
+const {task, series, parallel, src, dest, watch} = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const dc = require('postcss-discard-comments');
+const browserSync = require('browser-sync');
+const postcss = require('gulp-postcss');
+const csscomb = require('gulp-csscomb');
+const autoprefixer = require('autoprefixer');
+const mqpacker = require('css-mqpacker');
+const sortCSSmq = require('sort-css-media-queries');
 
-require('/webProjects/gulp/gulp-init.js')({HTML: '.'});
+const option = process.argv[3];
 
-const comb = require('/webProjects/gulp/tasks/comb.js'),
-    scssDC     = require('/webProjects/gulp/tasks/scss.js').scssDC,
-    mincss   = require('/webProjects/gulp/tasks/mincss.js'),
-    uglifyes = require('/webProjects/gulp/tasks/uglify.js').uglifyes,
-    { sync, syncInit } = require('/webProjects/gulp/tasks/sync.js');
+const PATH = {
+  scssFolder: './assets/scss/',
+  scssFiles: './assets/scss/**/*.scss',
+  scssFile: './assets/scss/style.scss',
+  cssFolder: './assets/css/',
+  cssFiles: './assets/css/*.css',
+  cssFile: './assets/css/style.css',
+  htmlFiles: './*.html',
+  jsFiles: './assets/js/**/*.js'
+};
 
-function watchFiles () {
-    syncInit();
-    watch($.PATH.scss.files, series(scssDC));
-    watch([$.PATH.js.files, '!' + $.PATH.js.filesMin], series(uglifyes, sync));
-    watch($.PATH.html.files, sync);
+const PLUGINS = [
+  dc({ discardComments: true }),
+  autoprefixer({
+    overrideBrowserslist: [
+      'last 5 versions',
+      '> 0.1%'
+    ],
+    cascade: true
+  }),
+  mqpacker({sort: sortCSSmq})
+];
+
+function scss() {
+  return src(PATH.scssFile)
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(postcss(PLUGINS))
+    .pipe(csscomb())
+    .pipe(dest(PATH.cssFolder))
+    .pipe(browserSync.stream());
+}
+function scssDev() {
+  return src(PATH.scssFile, {sourcemaps: true})
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(postcss(PLUGINS))
+    .pipe(dest(PATH.cssFolder, {sourcemaps: true}))
+    .pipe(browserSync.stream());
 }
 
-task('combScss', comb);
-task('uglifyEs6', series(uglifyes, sync));
-task('sass', series(scssDC));
+function comb() {
+  return src(PATH.scssFiles)
+    .pipe(csscomb())
+    .pipe(dest(PATH.scssFolder));
+}
+
+function syncInit() {
+  browserSync({
+    server: {baseDir: './'},
+    notify: false
+  });
+}
+
+async function sync() {
+  browserSync.reload();
+}
+
+function watchFiles() {
+  syncInit();
+  if (!option) watch(PATH.scssFiles, series(scss));
+  if (option === '--dev') watch(PATH.scssFiles, series(scssDev));
+  if (option === '--css') watch(PATH.cssFiles, sync);
+  watch(PATH.htmlFiles, sync);
+  watch(PATH.jsFiles, sync);
+}
+
+task('comb', series(comb));
+task('scss', series(scss));
+task('dev', series(scssDev));
 task('watch', watchFiles);
