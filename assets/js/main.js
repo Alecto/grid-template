@@ -1,4 +1,3 @@
-
 $(document).ready(() => {
 
   $('.header-navbar__btn').on('click', function () {
