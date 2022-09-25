@@ -5,8 +5,6 @@
   display: grid;
   align-items: center;
 
-  letter-spacing: 0.1em;
-
   justify-items: end;
 
   &__list {
@@ -48,6 +46,7 @@
     transition: color 0.5s;
 
     font-size: 1.125rem;
+    letter-spacing: 0.1em;
 
     @include md-min {
       padding: $gap $gap-sm;

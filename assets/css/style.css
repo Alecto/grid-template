@@ -310,7 +310,7 @@ input:focus {
   font-size: 1.125rem;
 }
 
-.hidden {
+.visually-hidden {
   position: absolute;
 
   overflow: hidden;

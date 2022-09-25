@@ -1,7 +1,8 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
+@use "sass:math";
 
-$local-gap: calc(40px / 3);
+$local-gap: math.div(40px, 3);
 
 .skills {
   @include sm-min {
