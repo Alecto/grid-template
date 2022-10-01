@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "editorconfig": "editorconfig-checker -exclude libs|css"
+    "editorconfig": "editorconfig-checker -exclude \"(libs|bootstrap|normalize\\.|reset\\.)\""
   },
   "repository": "https://github.com/Alecto/grid-template.git",
   "author": "Alecto <fomenkoandrey@inbox.ru>",
