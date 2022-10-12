@@ -32,6 +32,11 @@
       @include box-shadow;
       @include unlist;
     }
+
+    &.animate__flipInX,
+    &.animate__flipOutX {
+      display: block;
+    }
   }
 
   &__item {
@@ -44,9 +49,9 @@
     display: block;
 
     transition: color 0.5s;
+    letter-spacing: 0.1em;
 
     font-size: 1.125rem;
-    letter-spacing: 0.1em;
 
     @include md-min {
       padding: $gap $gap-sm;

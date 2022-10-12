@@ -1,81 +1,19 @@
-const {task, series, parallel, src, dest, watch} = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const dc = require('postcss-discard-comments');
-const browserSync = require('browser-sync');
-const postcss = require('gulp-postcss');
-const csscomb = require('gulp-csscomb');
-const autoprefixer = require('autoprefixer');
-const mqpacker = require('css-mqpacker');
-const sortCSSmq = require('sort-css-media-queries');
+'use strict';
 
-const option = process.argv[3];
+require('/webProjects/gulp/gulp-init.js')({HTML: '.'});
 
-const PATH = {
-  scssFolder: './assets/scss/',
-  scssFiles: './assets/scss/**/*.scss',
-  scssFile: './assets/scss/style.scss',
-  cssFolder: './assets/css/',
-  cssFiles: './assets/css/*.css',
-  cssFile: './assets/css/style.css',
-  htmlFiles: './*.html',
-  jsFiles: './assets/js/**/*.js'
-};
-
-const PLUGINS = [
-  dc({ discardComments: true }),
-  autoprefixer({
-    overrideBrowserslist: [
-      'last 5 versions',
-      '> 0.1%'
-    ],
-    cascade: true
-  }),
-  mqpacker({sort: sortCSSmq})
-];
-
-function scss() {
-  return src(PATH.scssFile)
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(postcss(PLUGINS))
-    .pipe(csscomb())
-    .pipe(dest(PATH.cssFolder))
-    .pipe(browserSync.stream());
-}
-function scssDev() {
-  return src(PATH.scssFile, {sourcemaps: true})
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(postcss(PLUGINS))
-    .pipe(dest(PATH.cssFolder, {sourcemaps: true}))
-    .pipe(browserSync.stream());
-}
-
-function comb() {
-  return src(PATH.scssFiles)
-    .pipe(csscomb())
-    .pipe(dest(PATH.scssFolder));
-}
-
-function syncInit() {
-  browserSync({
-    server: {baseDir: './'},
-    notify: false
-  });
-}
-
-async function sync() {
-  browserSync.reload();
-}
+const comb = require('/webProjects/gulp/tasks/comb.js'),
+  scssDC = require('/webProjects/gulp/tasks/scss.js').scssDC,
+  mincss = require('/webProjects/gulp/tasks/mincss.js'),
+  {sync, syncInit} = require('/webProjects/gulp/tasks/sync.js');
 
 function watchFiles() {
   syncInit();
-  if (!option) watch(PATH.scssFiles, series(scss));
-  if (option === '--dev') watch(PATH.scssFiles, series(scssDev));
-  if (option === '--css') watch(PATH.cssFiles, sync);
-  watch(PATH.htmlFiles, sync);
-  watch(PATH.jsFiles, sync);
+  watch($.PATH.scss.files, series(scssDC));
+  watch([$.PATH.js.files, '!' + $.PATH.js.filesMin], series(sync));
+  watch($.PATH.html.files, sync);
 }
 
-task('comb', series(comb));
-task('scss', series(scss));
-task('dev', series(scssDev));
+task('combScss', comb);
+task('sass', series(scssDC));
 task('watch', watchFiles);
