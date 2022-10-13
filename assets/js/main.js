@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = document.querySelector('.header-navbar__btn');
   const list = document.querySelector('.header-navbar__list');
 
+  if (!btn || !list) return;
+
   btn.addEventListener('click', () => {
     btn.classList.toggle('header-navbar__btn--active');
 
