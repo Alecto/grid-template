@@ -189,6 +189,8 @@ template {
 }
 
 html {
+  overflow-y: scroll;
+
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
