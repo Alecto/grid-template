@@ -34,6 +34,18 @@
       border-color: $color-light;
       background-color: $color-accent;
     }
+
+    &:disabled {
+      &:hover,
+      &:focus {
+        cursor: initial;
+
+        opacity: 0.3;
+        border-color: rgba($color-light, 0);
+        border-bottom-color: rgba($color-light, 0.20);
+        background-color: rgba($color-light, 0.10);
+      }
+    }
   }
 }
 
