@@ -1,5 +1,5 @@
-@use "../../../presets" as *;
-@use "../../../mixins" as *;
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
 
 .post-item {
   transition: background-color 0.5s;

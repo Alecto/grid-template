@@ -1,5 +1,5 @@
-@use "../../../presets" as *;
-@use "../../../mixins" as *;
+@use "../../presets/index" as *;
+@use "../../mixins/index" as *;
 
 .form {
   padding: $gap-lg 0;
