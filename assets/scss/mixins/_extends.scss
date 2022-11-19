@@ -3,10 +3,8 @@
 @use "mixins-media" as *;
 
 %container {
-  max-width: $ul;
-  margin: auto;
-  padding-right: $gap;
-  padding-left: $gap;
+  width: min(100% - $gap * 2, $container);
+  margin-inline: auto;
 }
 
 %section {
