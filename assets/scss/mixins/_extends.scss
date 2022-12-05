@@ -3,7 +3,7 @@
 @use "mixins-media" as *;
 
 %container {
-  width: min(100% - $gap * 2, $container);
+  width: min(100% - $gap-x2, $container);
   margin-inline: auto;
 }
 

@@ -22,16 +22,16 @@
   .btn--primary {
     width: 100%;
 
-    color: $color-light;
-    border-color: rgba($color-light, 0);
-    border-bottom-color: rgba($color-light, 0.20);
-    background-color: rgba($color-light, 0.10);
+    color: $color-white;
+    border-color: rgba($color-white, 0);
+    border-bottom-color: rgba($color-white, 0.20);
+    background-color: rgba($color-white, 0.10);
 
     &:hover,
     &:focus {
       cursor: pointer;
 
-      border-color: $color-light;
+      border-color: $color-white;
       background-color: $color-accent;
     }
 
@@ -41,9 +41,9 @@
         cursor: initial;
 
         opacity: 0.3;
-        border-color: rgba($color-light, 0);
-        border-bottom-color: rgba($color-light, 0.20);
-        background-color: rgba($color-light, 0.10);
+        border-color: rgba($color-white, 0);
+        border-bottom-color: rgba($color-white, 0.20);
+        background-color: rgba($color-white, 0.10);
       }
     }
   }
@@ -67,10 +67,10 @@
     transition: background-color 0.5s, border-color 0.5s;
     letter-spacing: 0.15em;
 
-    color: $color-light;
-    border: 2px solid rgba($color-light, 0);
-    border-bottom-color: rgba($color-light, 0.25);
-    background-color: rgba($color-light, 0.05);
+    color: $color-white;
+    border: 2px solid rgba($color-white, 0);
+    border-bottom-color: rgba($color-white, 0.25);
+    background-color: rgba($color-white, 0.05);
 
     font-size: 1.125rem;
 
@@ -80,9 +80,9 @@
 
     &:hover,
     &:focus {
-      border-color: rgba($color-light, 0.15);
-      border-bottom-color: $color-light;
-      background-color: rgba($color-light, 0.15);
+      border-color: rgba($color-white, 0.15);
+      border-bottom-color: $color-white;
+      background-color: rgba($color-white, 0.15);
 
       &::placeholder {
         color: lighten($color-gray, 15%);

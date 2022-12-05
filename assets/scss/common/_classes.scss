@@ -21,8 +21,8 @@
 }
 
 .btn--light {
-  border-color: $color-light;
-  background-color: rgba($color-light, 0.1);
+  border-color: $color-white;
+  background-color: rgba($color-white, 0.1);
 
   @include lg-min {
     min-width: 250px;
