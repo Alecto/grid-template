@@ -2,21 +2,10 @@
 @use "../../mixins" as *;
 
 .header-logo {
-  align-self: center;
-
-  letter-spacing: 0.22em;
-
-  font-size: 1.5rem;
-
   &__link {
     display: block;
-
-    padding: $gap $gap $gap 0;
-
-    &:hover,
-    &:focus {
-      color: $color-white;
-    }
+    font-size: 1.5rem;
+    letter-spacing: 0.22em;
   }
 
   &__accent {
