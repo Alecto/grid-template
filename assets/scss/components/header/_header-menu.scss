@@ -7,7 +7,7 @@
   top: 0;
   right: 0;
   left: 0;
-  padding-top: $gap;
+  padding: $gap 0;
 
   @include md {
     background-color: rgba($color-gray-dark, 0.25);
