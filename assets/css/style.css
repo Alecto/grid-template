@@ -643,6 +643,7 @@ input:focus {
 }
 .form .btn--primary {
   width: 100%;
+  min-width: auto;
 
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0);
@@ -1047,8 +1048,8 @@ input:focus {
   }
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
-    -webkit-box-shadow: -3px 3px 20px -10px black;
-    box-shadow: -3px 3px 20px -10px black;
+    -webkit-box-shadow: -3px 3px 20px -10px #000000;
+    box-shadow: -3px 3px 20px -10px #000000;
   }
   .header-navbar__list {
     position: absolute;
@@ -1065,8 +1066,8 @@ input:focus {
     text-align: right;
 
     background-color: rgba(68, 89, 110, 0.9);
-    -webkit-box-shadow: -3px 3px 20px -10px black;
-    box-shadow: -3px 3px 20px -10px black;
+    -webkit-box-shadow: -3px 3px 20px -10px #000000;
+    box-shadow: -3px 3px 20px -10px #000000;
   }
   .header-navbar__item {
     margin: 20px 10px;
@@ -1086,7 +1087,7 @@ input:focus {
   }
   .skills__container {
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .about__container {
     gap: 20px;
