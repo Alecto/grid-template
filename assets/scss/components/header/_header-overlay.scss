@@ -2,8 +2,8 @@
 @use "../../mixins" as *;
 
 .header-overlay {
-  opacity: 0.8;
-  background-color: $color-primary;
+  background-color: rgba($color-primary, 0.8);
+
 
   @include abs-position;
 }

@@ -18,6 +18,7 @@
 <body>
 
 <header class="header" style="background-image: url(assets/img/img-header.webp)">
+  <!-- header-content -->
   <div class="header-content">
     <div class="header-content__container">
       <h1 class="header-content__title">WE ARE REAL WEB-DEVELOPERS</h1>
@@ -26,7 +27,8 @@
         <a class="btn btn--light" href="#">Get started</a>
       </div>
     </div>
-  </div>
+  </div><!-- header-content end -->
+  <!-- header-menu -->
   <div class="header-menu">
     <div class="header-menu__container">
       <div class="header-logo">
@@ -51,8 +53,9 @@
         </ol>
       </nav>
     </div>
-  </div>
-  <div class="header-overlay" style="opacity: 0.8; background-color: #2d3651;"></div>
+  </div><!-- header-menu end -->
+  <!-- header-overlay -->
+  <div class="header-overlay" style="opacity: 0.8; background-color: #2d3651;"></div><!-- header-overlay end -->
 </header>
 
 <main class="main">
@@ -61,7 +64,8 @@
     <div class="skills__container">
       <article class="skill-item">
         <h3 class="skill-item__title">
-          <a class="skill-item__link" href="">HTML</a><!-- HTML  CSS  Markup  Web-Design  Quality Assurance  Codding  Adaptability  PHP  SEO-->
+          <a class="skill-item__link" href="">HTML</a>
+          <!-- HTML  CSS  Markup  Web-Design  Quality Assurance  Codding  Adaptability  PHP  SEO-->
         </h3>
         <div class="skill-item__image" style="background-image:url(assets/img/img-html.webp);"></div>
         <div class="skill-item__overlay" style="opacity: 0.8; background-color: #2d3651;"></div>
@@ -128,46 +132,53 @@
     </div>
   </section>
 
+  <!-- about -->
   <section class="about">
     <div class="about__container">
       <div class="about__content">
-        <h2>Are You Ready? <br>Let's start!</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptates commodi eligendi perspiciatis non
-          ipsam numquam, perferendis fugiat amet molestias provident unde, deleniti quo ducimus placeat voluptas!</p>
-        <p>Quisquam voluptatum quae veritatis quas odio dolores quis voluptas asperiores ex obcaecati reiciendis quidem
-          ducimus et doloribus sed tempore, unde beatae aut consectetur eligendi ratione repellendus nulla pariatur.
-          Explicabo enim officia iure blanditiis eos, velit.
-        </p>
-        <p>Culpa consequatur labore, adipisci asperiores impedit tenetur quam ab dicta recusandae quas nobis
-          reprehenderit
-          necessitatibus placeat corporis enim aliquid sequi saepe. Quos amet, aliquam, reiciendis porro eos voluptates
-          maiores. Voluptas dolor quidem tempora illum laboriosam dolorum neque tenetur.</p>
-        <p>Alias voluptates commodi eligendi perspiciatis non ipsam numquam, perferendis fugiat amet molestias provident
-          unde, deleniti quo ducimus placeat voluptas! Quos amet, aliquam, reiciendis porro eos voluptates maiores.</p>
-        <p>Culpa consequatur labore, adipisci asperiores impedit tenetur quam ab dicta recusandae quas nobis
-          reprehenderit
-          necessitatibus placeat corporis enim aliquid sequi saepe.</p>
+        <h2 class="about__title">Are You Ready?<br> Let's start!</h2>
+        <div class="about__description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptates commodi eligendi perspiciatis
+            non ipsam numquam, perferendis fugiat amet molestias provident unde, deleniti quo ducimus placeat
+            voluptas!</p>
+          <p>Quisquam voluptatum quae veritatis quas odio dolores quis voluptas asperiores ex obcaecati reiciendis
+            quidem ducimus et doloribus sed tempore, unde beatae aut consectetur eligendi ratione repellendus nulla
+            pariatur. Explicabo enim officia iure blanditiis eos, velit.</p>
+          <p>Culpa consequatur labore, adipisci asperiores impedit tenetur quam ab dicta recusandae quas nobis
+            reprehenderit necessitatibus placeat corporis enim aliquid sequi saepe. Quos amet, aliquam, reiciendis porro
+            eos voluptates maiores. Voluptas dolor quidem tempora illum laboriosam dolorum neque tenetur.</p>
+          <p>Alias voluptates commodi eligendi perspiciatis non ipsam numquam, perferendis fugiat amet molestias
+            provident unde, deleniti quo ducimus placeat voluptas! Quos amet, aliquam, reiciendis porro eos voluptates
+            maiores.</p>
+          <p>Culpa consequatur labore, adipisci asperiores impedit tenetur quam ab dicta recusandae quas nobis
+            reprehenderit necessitatibus placeat corporis enim aliquid sequi saepe.</p>
+        </div>
       </div>
-      <div class="about__image">
-        <img alt="motivation" src="assets/img/img-lamp-webdev.webp">
+      <div class="about__picture">
+        <img alt="motivation" class="about__image" src="assets/images/img-lamp-webdev.png">
       </div>
     </div>
-  </section>
+  </section><!-- about end -->
 
-  <section class="form">
-    <h2 class="form__title visually-hidden">Contact form</h2>
-    <form action="#" class="form__container">
-      <div class="form-item">
-        <input class="form-item__input" placeholder="Your name..." type="text">
-      </div>
-      <div class="form-item">
-        <input class="form-item__input" placeholder="Your email..." type="email">
-      </div>
-      <div class="form-item">
-        <button class="btn btn--primary" type="submit">Subscribe</button>
-      </div>
-    </form>
-  </section>
+  <!-- subscribe -->
+  <section class="subscribe">
+    <div class="subscribe__container">
+      <h2 class="subscribe__title visually-hidden">Contact form</h2>
+      <form action="" class="subscribe__form">
+        <div class="subscribe-item">
+          <label class="visually-hidden" for="name">Name</label>
+          <input class="subscribe-item__control" id="name" placeholder="Your name..." type="text">
+        </div>
+        <div class="subscribe-item">
+          <label class="visually-hidden" for="email">Email</label>
+          <input class="subscribe-item__control" id="email" placeholder="Your email..." type="text">
+        </div>
+        <div class="subscribe-item">
+          <button class="subscribe-item__btn" type="submit">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section><!-- subscribe end -->
 
   <section class="posts">
     <div class="posts__container">

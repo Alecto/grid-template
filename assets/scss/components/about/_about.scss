@@ -1,9 +1,7 @@
-@use "../../presets/index" as *;
-@use "../../mixins/index" as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .about {
-  letter-spacing: 0.055em;
-
   background-color: $color-gray-light;
 
   @extend %section;
@@ -17,71 +15,52 @@
       grid-template-columns: 1fr 271px;
     }
     @include lg-md {
+      gap: $gap-x3;
+      grid-template-columns: 1fr 255px;
+    }
+    @include md {
       gap: $gap-x2;
-      grid-template-columns: 1fr 271px;
-    }
-    @include md-sm {
-      gap: $gap;
-      grid-template-columns: 1fr 236px;
-    }
-    @include sm {
-      gap: $gap;
-      grid-template-columns: 1fr;
     }
   }
 
-  &__content {
-    p {
-      @include lg-min {
-        font-size: 1.125rem;
-      }
-
-      &:first-of-type {
-        position: relative;
-
-        margin-top: -5px;
-
-        &::after {
-          position: absolute;
-          top: 0;
-
-          width: 2px;
-          height: 200px;
-
-          content: "";
-
-          background-color: rgba($color-gray, 0.1);
-
-          @include lg-min {
-            right: -$gap * 2.5;
-          }
-          @include lg-md {
-            right: -$gap;
-          }
-          @include md-sm {
-            right: -$gap-sm;
-          }
-          @include sm {
-            display: none;
-          }
-        }
-      }
-
-      &:last-of-type {
-        margin: 0;
-      }
-    }
+  &__picture {
+    text-align: center;
   }
 
   &__image {
-    display: grid;
-    align-content: center;
+    max-width: 100%;
+    max-height: 480px;
+  }
 
-    justify-items: center;
+  &__description {
+    position: relative;
 
-    img {
-      max-width: 100%;
-      max-height: 480px;
+    &::before {
+      position: absolute;
+      top: 5px;
+
+      width: 2px;
+      height: 55%;
+      min-height: 200px;
+
+      content: "";
+
+      background-color: rgba($color-gray, 0.1);
+
+      @include lg-min {
+        right: -$gap * 2.5;
+      }
+      @include lg-md {
+        right: -$gap * 1.5;
+      }
+    }
+
+    p {
+      line-height: 1.333333em;
+
+      @include md-min {
+        font-size: 1.25rem;
+      }
     }
   }
 }

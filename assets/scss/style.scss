@@ -1,11 +1,4 @@
 @use "../../libs/normalize.css/normalize";
 
 @use "common";
-@use "components/header";
-@use "components/skills";
-
-@use "components/about";
-@use "components/form";
-@use "components/posts";
-
-@use "components/footer";
+@use "components";
