@@ -4,6 +4,7 @@
 
 %container {
   width: min(100% - $gap-x2, $container-size);
+
   margin-inline: auto;
 }
 
@@ -19,25 +20,5 @@
   @include md {
     padding-top: $gap-x3;
     padding-bottom: $gap-x3;
-  }
-
-  h2 {
-    margin-top: 0;
-  }
-}
-
-%btn-container {
-  @include sm-min {
-    display: flex;
-    justify-content: center;
-  }
-
-  .btn--primary {
-    @include sm-min {
-      min-width: 350px;
-    }
-    @include sm {
-      width: 100%;
-    }
   }
 }

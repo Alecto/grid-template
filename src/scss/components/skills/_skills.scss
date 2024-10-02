@@ -1,5 +1,5 @@
-@use "../../presets/index" as *;
-@use "../../mixins/index" as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 @use "sass:math";
 $local-gap: math.div(40px, 3);
 
@@ -37,15 +37,17 @@ $local-gap: math.div(40px, 3);
     }
 
     @media (min-height: 691px) {
-      grid-auto-rows: calc(33.33333vh - #{$local-gap}); /* 20 / 2 * 4 / 3 => 20 * 2 / 3 => 20 * 0.66  */
+      grid-auto-rows: calc(33.3333vh - $local-gap);
     }
     @media (max-height: 690px) {
-      grid-auto-rows: calc(230px - #{$local-gap});
+      grid-auto-rows: calc(230px - $local-gap);
     }
   }
 
   &__actions {
-    @extend %btn-container;
+    display: flex;
+    justify-content: center;
+
     @include sm-min {
       margin-bottom: $gap-lg;
     }

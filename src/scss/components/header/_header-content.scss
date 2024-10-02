@@ -6,8 +6,6 @@
   z-index: 1;
 
   &__container {
-    display: grid;
-
     @extend %container;
   }
 
@@ -15,13 +13,13 @@
     text-align: center;
 
     @include lg-min {
-      margin: 0 0 53px;
+      margin: 0 0 53px 0;
     }
     @include lg-md {
-      margin: 0 0 43px;
+      margin: 0 0 43px 0;
     }
     @include md {
-      margin: 0 0 33px;
+      margin: 0 0 33px 0;
     }
   }
 

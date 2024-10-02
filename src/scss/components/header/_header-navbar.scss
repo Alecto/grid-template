@@ -2,20 +2,13 @@
 @use "../../mixins" as *;
 
 .header-navbar {
-  display: grid;
-  align-items: center;
-
-  justify-items: end;
-
   &__list {
     @include md-min {
       display: grid;
       justify-content: end;
 
-      width: 100%;
-
       gap: $gap;
-      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
       @include unlist(0 (-$gap-sm) 0 0);
     }
     @include md {
@@ -25,30 +18,23 @@
 
       display: none;
 
-      text-align: right;
-
       background-color: rgba($color-gray-dark, 0.9);
 
-      @include box-shadow;
       @include unlist;
-    }
-
-    &.animate__flipInX,
-    &.animate__flipOutX {
-      display: block;
+      @include box-shadow;
     }
   }
 
   &__item {
     @include md {
-      margin: $gap $gap-sm;
+      margin: $gap;
     }
   }
 
   &__link {
     display: block;
 
-    transition: color 0.5s;
+    transition: color 0.3s;
     letter-spacing: 0.09em;
 
     font-size: 1.125rem;
@@ -69,13 +55,11 @@
   &__btn {
     position: relative;
 
-    width: 30px;
-    height: 23px;
-    margin: $gap-sm 0;
+    width: 40px;
+    height: 30px;
+    margin-left: auto;
 
     cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transform: rotate(0deg);
 
     @include md-min {
       display: none;
@@ -88,43 +72,43 @@
       display: block;
 
       width: 100%;
-      height: 3px;
+      height: 4px;
 
       transition: 0.25s ease-in-out;
       transform: rotate(0deg);
 
       opacity: 1;
-      border-radius: 3px;
-      background: $color-white;
+      border-radius: 4px;
+      background-color: $color-white;
 
       &:nth-of-type(1) {
         top: 0;
       }
 
       &:nth-of-type(2) {
-        top: 9px;
+        top: 12px;
       }
 
       &:nth-of-type(3) {
-        top: 18px;
+        top: 24px;
       }
     }
 
-    &--active span {
+    &.active span {
       &:nth-of-type(1) {
-        top: 9px;
+        top: 12px;
 
         transform: rotate(135deg);
       }
 
       &:nth-of-type(2) {
-        left: -30px;
+        left: -40px;
 
         opacity: 0;
       }
 
       &:nth-of-type(3) {
-        top: 9px;
+        top: 12px;
 
         transform: rotate(-135deg);
       }

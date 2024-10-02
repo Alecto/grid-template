@@ -1,0 +1,39 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.posts {
+  @extend %section;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__grid {
+    display: grid;
+
+    margin-bottom: $gap;
+
+    gap: $gap;
+    
+    @include lg-min {
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a6 a6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg-md {
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6";
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+}
