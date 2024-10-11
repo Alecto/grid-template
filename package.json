@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "editorconfig": "editorconfig-checker -exclude \"(libs|img|psd|bootstrap|node_modules|normalize\\.|reset\\.|\\.git)\""
+    "editorconfig": "editorconfig-checker -exclude \"(libs|img|psd|bootstrap|node_modules|normalize\\.|reset\\.|\\.git|style\\.css)\""
   },
   "devDependencies": {
     "editorconfig-checker": "^5.1.9",
