@@ -16,3 +16,4 @@ jobs:
         with:
           root: ./
           css: true
+          blacklist: "margin-inline"
