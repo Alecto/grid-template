@@ -3,7 +3,11 @@
   "version": "2.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "editorconfig": "editorconfig-checker -exclude \"(libs|img|psd|bootstrap|node_modules|normalize\\.|reset\\.|\\.git)\""
+  },
   "devDependencies": {
+    "editorconfig-checker": "^5.1.9",
     "autoprefixer": "^10.4.19",
     "browser-sync": "^3.0.2",
     "css-mqpacker": "^7.0.0",
