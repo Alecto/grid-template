@@ -12,8 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Tests Integration with Github Actions.
-        uses: Cyb3r-Jak3/html5validator-action@master
+        uses: Cyb3r-Jak3/html5validator-action-experimental@master
         with:
           root: ./
           css: true
-          blacklist: "margin-inline"
