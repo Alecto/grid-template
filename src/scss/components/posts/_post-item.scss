@@ -42,14 +42,13 @@
   &__image {
     display: block;
 
-    width: 100%;
+    width: 100% !important; // щоб переважити атрибут width
 
     transition: transform 0.3s;
 
     object-fit: cover;
   }
 }
-
 
 @for $i from 1 through 6 {
   .post-item:nth-of-type(#{$i}) {
