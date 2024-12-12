@@ -4,7 +4,7 @@
 .header-navbar {
   &__list {
     @include md-min {
-      display: grid;
+      display: grid !important;
       justify-content: end;
 
       gap: $gap;
@@ -17,11 +17,27 @@
       right: $gap;
 
       display: none;
+      overflow: hidden;
 
-      background-color: rgba($color-gray-dark, 0.9);
+      text-align: right;
 
-      @include unlist;
       @include box-shadow;
+      @include unlist;
+
+      &::before {
+        position: absolute;
+        z-index: -1;
+        top: -$gap;
+        right: -$gap;
+        bottom: -$gap;
+        left: -$gap;
+
+        content: "";
+
+        background-color: rgba($color-gray-dark, 0.25);
+
+        backdrop-filter: blur(5px);
+      }
     }
   }
 
