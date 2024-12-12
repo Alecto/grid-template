@@ -38,10 +38,6 @@
 
     line-height: 1.333333em;
 
-    p:last-of-type {
-      margin-bottom: 0;
-    }
-
     @include md-min {
       font-size: 1.125rem;
     }
@@ -68,6 +64,10 @@
           right: -$gap;
         }
       }
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
     }
   }
 
