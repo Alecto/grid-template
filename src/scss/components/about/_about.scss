@@ -80,7 +80,9 @@
   }
 
   &__image {
+    width: auto;
     max-width: 100%;
+    height: auto;
 
     @include sm-min {
       max-height: 488px;
