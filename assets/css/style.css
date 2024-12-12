@@ -313,10 +313,13 @@ a{
 }
 .header-navbar__btn{
   position:relative;
+  display:block;
   width:40px;
   height:30px;
   margin-left:auto;
   cursor:pointer;
+  border:none;
+  background:none;
 }
 .header-navbar__btn-row{
   position:absolute;
@@ -502,7 +505,9 @@ a{
   text-align:center;
 }
 .about__image{
+  width:auto;
   max-width:100%;
+  height:auto;
 }
 
 .subscribe{
@@ -640,7 +645,7 @@ a{
 }
 .post-item__image{
   display:block;
-  width:100%;
+  width:100% !important;
   -webkit-transition:-webkit-transform 0.3s;
   transition:-webkit-transform 0.3s;
   transition:transform 0.3s;
