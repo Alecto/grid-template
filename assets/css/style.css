@@ -495,6 +495,9 @@ a{
   letter-spacing:0.05em;
   line-height:1.333333em;
 }
+.about__description p:last-of-type{
+  margin-bottom:0;
+}
 .about__picture{
   text-align:center;
 }
@@ -766,11 +769,11 @@ a{
   .about__description::before{
     position:absolute;
     top:5px;
-    width:1px;
+    width:2px;
     height:50%;
     min-height:200px;
     content:"";
-    background-color:rgba(99, 117, 136, 0.5);
+    background-color:rgba(99, 117, 136, 0.1);
   }
   .about__image{
     max-height:488px;
@@ -951,9 +954,6 @@ a{
   .skill-item__title{
     font-size:1.125rem;
   }
-  .about__content{
-    margin-bottom:40px;
-  }
 }
 @media (height < 690px){
   .skills__container{
@@ -982,6 +982,9 @@ a{
   .skills__container{
     gap:20px;
     grid-template-areas:"a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+  }
+  .about__content{
+    margin-bottom:40px;
   }
   .about__image{
     max-height:400px;
