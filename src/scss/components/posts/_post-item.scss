@@ -8,13 +8,10 @@
 
   &:hover {
     background-color: darken($color-gray-light2, 5%);
-
-    a {
-      color: $color-primary;
-    }
+    color: $color-primary;
 
     img {
-      transform: scale(1.05);
+      scale: 1.1;
     }
   }
 
@@ -33,7 +30,6 @@
   }
 
   &__picture {
-    display: flex;
     overflow: hidden;
 
     height: 300px;
@@ -42,9 +38,9 @@
   &__image {
     display: block;
 
-    width: 100% !important; // щоб переважити атрибут width
+    width: 100%;
 
-    transition: transform 0.3s;
+    transition: scale 0.3s;
 
     object-fit: cover;
   }

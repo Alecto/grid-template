@@ -21,15 +21,15 @@
     display: flex;
     justify-content: center;
 
-    margin-bottom: $gap-x2;
+    margin-bottom: $gap-x3;
 
     font-size: 2.25rem;
 
-    gap: $gap;
+    gap: $gap-lg;
 
     &::after {
       position: absolute;
-      bottom: -$gap;
+      bottom: -$gap-lg;
 
       display: block;
 
@@ -58,18 +58,21 @@
 
       margin-bottom: 3px;
 
-      transform: translateX(0.1em);
-      letter-spacing: 0.3em;
+      letter-spacing: 0.33em;
 
       font-weight: 100;
+
+      translate: 0.1em;
     }
 
     &-last {
       display: block;
 
-      letter-spacing: 0.05em;
+      letter-spacing: 0.07em;
 
       color: $color-white;
+
+      font-weight: 700;
     }
   }
 }
