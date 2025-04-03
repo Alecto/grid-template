@@ -1,7 +1,5 @@
-@use "../../presets" as *;
-@use "../../mixins" as *;
+@use "../../abstracts" as *;
 @use "sass:math";
-@use "sass:color";
 $local-gap: math.div(40px, 3);
 $local-height: 690px;
 
@@ -52,82 +50,6 @@ $local-height: 690px;
 
     @include sm-min {
       margin-bottom: $gap-lg;
-    }
-  }
-
-  &__item {
-    position: relative;
-
-    overflow: hidden;
-
-    &-title {
-      z-index: 1;
-
-      margin: 0;
-
-      letter-spacing: 0.1em;
-
-      font-family: $font-main;
-
-      @include abs-position;
-      @include md-min {
-        font-size: 1.25rem;
-      }
-      @include md {
-        font-size: 1.125rem;
-      }
-    }
-
-    &-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      height: 100%;
-      padding: $gap;
-
-      transition: color 0.3s;
-
-      color: inherit;
-    }
-
-    &-image {
-      transition: transform 0.3s;
-
-      background-color: $color-primary;
-      background-position: center;
-      background-size: cover;
-
-      @include abs-position;
-    }
-
-    &-overlay {
-      transition: opacity 0.3s;
-
-      opacity: 0.8;
-      background-color: $color-primary;
-
-      @include abs-position;
-    }
-
-    &:hover {
-      .skills__item-overlay {
-        opacity: 0.95;
-      }
-
-      .skills__item-image {
-        transform: scale(1.1);
-      }
-
-      .skills__item-link {
-        color: $color-accent;
-      }
-    }
-
-    @for $i from 1 through 9 {
-      &:nth-of-type(#{$i}) {
-        grid-area: a#{$i};
-      }
     }
   }
 }

@@ -382,6 +382,7 @@ a{
       -ms-flex-pack:center;
           justify-content:center;
 }
+
 .skills__item{
   position:relative;
   overflow:hidden;
@@ -600,6 +601,7 @@ a{
       -ms-flex-pack:center;
           justify-content:center;
 }
+
 .posts__item{
   -webkit-transition:background-color 0.3s;
   transition:background-color 0.3s;
