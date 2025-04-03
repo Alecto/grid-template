@@ -1,8 +1,8 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
 
-.header-navbar {
-  &__list {
+.header__navbar {
+  &-list {
     @include md-min {
       display: grid !important;
       justify-content: end;
@@ -41,13 +41,13 @@
     }
   }
 
-  &__item {
+  &-item {
     @include md {
       margin: $gap;
     }
   }
 
-  &__link {
+  &-link {
     display: block;
 
     transition: color 0.3s;
@@ -68,7 +68,7 @@
     }
   }
 
-  &__btn {
+  &-btn {
     position: relative;
 
     display: block;

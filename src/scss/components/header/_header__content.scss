@@ -1,15 +1,15 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
 
-.header-content {
+.header__content {
   position: relative;
   z-index: 1;
 
-  &__container {
+  &-container {
     @extend %container;
   }
 
-  &__title {
+  &-title {
     text-align: center;
 
     @include lg-min {
@@ -23,7 +23,7 @@
     }
   }
 
-  &__actions {
+  &-actions {
     display: flex;
     justify-content: center;
 

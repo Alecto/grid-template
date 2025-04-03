@@ -1,7 +1,7 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
 
-.header-menu {
+.header__menu {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -16,7 +16,7 @@
     @include box-shadow;
   }
 
-  &__container {
+  &-container {
     display: grid;
     align-items: center;
 

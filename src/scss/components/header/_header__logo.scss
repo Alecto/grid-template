@@ -1,8 +1,8 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
 
-.header-logo {
-  &__link {
+.header__logo {
+  &-link {
     display: block;
 
     letter-spacing: 0.22em;
@@ -10,7 +10,7 @@
     font-size: 1.5rem;
   }
 
-  &__accent {
+  &-accent {
     display: inline-block;
 
     margin-right: 4px;

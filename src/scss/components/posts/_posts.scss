@@ -1,5 +1,6 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
+@use "sass:color";
 
 .posts {
   @extend %section;
