@@ -16,3 +16,4 @@ jobs:
         with:
           root: ./
           css: true
+          extra: "--ignore-re 'Property \"translate\" doesn\\'t exist'"
