@@ -1,0 +1,23 @@
+@use "../../abstracts" as *;
+
+.subscribe {
+  padding: $gap-lg 0;
+
+  background-color: $color-primary;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__form {
+    display: grid;
+
+    gap: $gap;
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

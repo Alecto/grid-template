@@ -1,0 +1,53 @@
+@use "../../abstracts" as *;
+@use "sass:color";
+
+.posts__item {
+  transition: background-color 0.3s;
+
+  background-color: $color-gray-light2;
+
+  &:hover {
+    color: $color-primary;
+    background-color: color.adjust($color-gray-light2, $lightness: -5%);
+
+    img {
+      scale: 1.1;
+    }
+  }
+
+  &-link {
+    transition: color 0.3s;
+
+    color: inherit;
+  }
+
+  &-content {
+    padding: $gap-lg $gap;
+
+    text-align: center;
+
+    line-height: 1.25;
+  }
+
+  &-picture {
+    overflow: hidden;
+
+    height: 300px;
+  }
+
+  &-image {
+    display: block;
+
+    width: 100%;
+
+    transition: scale 0.3s;
+
+    object-fit: cover;
+  }
+
+  @for $i from 1 through 6 {
+    &:nth-of-type(#{$i}) {
+      grid-area: a#{$i};
+    }
+  }
+}

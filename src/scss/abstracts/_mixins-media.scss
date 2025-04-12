@@ -1,0 +1,274 @@
+@use "variables" as *;
+@use "skin" as *;
+
+/* ul */
+@mixin ul-min {
+  @media (#{$ul} <= width) {
+    @content;
+  }
+}
+
+@mixin ul {
+  @media (width < #{$ul}) {
+    @content;
+  }
+}
+
+@mixin ul-xl {
+  @media (#{$xl} <= width < #{$ul}) {
+    @content;
+  }
+}
+
+@mixin ul-lg {
+  @media (#{$lg} <= width < #{$ul}) {
+    @content;
+  }
+}
+
+@mixin ul-md {
+  @media (#{$md} <= width < #{$ul}) {
+    @content;
+  }
+}
+
+@mixin ul-sm {
+  @media (#{$sm} <= width < #{$ul}) {
+    @content;
+  }
+}
+
+@mixin ul-xs {
+  @media (#{$xs} <= width < #{$ul}) {
+    @content;
+  }
+}
+
+@mixin ul-vs {
+  @media (#{$vs} <= width < #{$ul}) {
+    @content;
+  }
+}
+
+@mixin ul-us {
+  @media (#{$us} <= width < #{$ul}) {
+    @content;
+  }
+}
+
+/* xl */
+@mixin xl-min {
+  @media (#{$xl} <= width) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (width < #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl-lg {
+  @media (#{$lg} <= width < #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl-md {
+  @media (#{$md} <= width < #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl-sm {
+  @media (#{$sm} <= width < #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl-xs {
+  @media (#{$xs} <= width < #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl-vs {
+  @media (#{$vs} <= width < #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xl-us {
+  @media (#{$us} <= width < #{$xl}) {
+    @content;
+  }
+}
+
+/* lg */
+@mixin lg-min {
+  @media (#{$lg} <= width) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (width < #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg-md {
+  @media (#{$md} <= width < #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg-sm {
+  @media (#{$sm} <= width < #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg-xs {
+  @media (#{$xs} <= width < #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg-vs {
+  @media (#{$vs} <= width < #{$lg}) {
+    @content;
+  }
+}
+
+@mixin lg-us {
+  @media (#{$us} <= width < #{$lg}) {
+    @content;
+  }
+}
+
+/* md */
+@mixin md-min {
+  @media (#{$md} <= width) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (width < #{$md}) {
+    @content;
+  }
+}
+
+@mixin md-sm {
+  @media (#{$sm} <= width < #{$md}) {
+    @content;
+  }
+}
+
+@mixin md-xs {
+  @media (#{$xs} <= width < #{$md}) {
+    @content;
+  }
+}
+
+@mixin md-vs {
+  @media (#{$vs} <= width < #{$md}) {
+    @content;
+  }
+}
+
+@mixin md-us {
+  @media (#{$us} <= width < #{$md}) {
+    @content;
+  }
+}
+
+/* sm */
+@mixin sm-min {
+  @media (#{$sm} <= width) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (width < #{$sm}) {
+    @content;
+  }
+}
+
+@mixin sm-xs {
+  @media (#{$xs} <= width < #{$sm}) {
+    @content;
+  }
+}
+
+@mixin sm-vs {
+  @media (#{$vs} <= width < #{$sm}) {
+    @content;
+  }
+}
+
+@mixin sm-us {
+  @media (#{$us} <= width < #{$sm}) {
+    @content;
+  }
+}
+
+/* xs */
+@mixin xs-min {
+  @media (#{$xs} <= width) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (width < #{$xs}) {
+    @content;
+  }
+}
+
+@mixin xs-vs {
+  @media (#{$vs} <= width < #{$xs}) {
+    @content;
+  }
+}
+
+@mixin xs-us {
+  @media (#{$us} <= width < #{$xs}) {
+    @content;
+  }
+}
+
+/* vs */
+@mixin vs-min {
+  @media (#{$vs} <= width) {
+    @content;
+  }
+}
+
+@mixin vs {
+  @media (width < #{$vs}) {
+    @content;
+  }
+}
+
+@mixin vs-us {
+  @media (#{$us} <= width < #{$vs}) {
+    @content;
+  }
+}
+
+/* us */
+@mixin us-min {
+  @media (#{$us} <= width) {
+    @content;
+  }
+}
+
+@mixin us {
+  @media (width < #{$us}) {
+    @content;
+  }
+}
