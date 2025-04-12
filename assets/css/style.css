@@ -412,7 +412,7 @@ a{
   padding:20px;
   -webkit-transition:color 0.3s;
   transition:color 0.3s;
-  color:inherit;
+  color:#ffffff;
 }
 .skills__item-image{
   -webkit-transition:-webkit-transform 0.3s;
@@ -701,9 +701,12 @@ a{
 .footer__copyright-first{
   display:block;
   margin-bottom:3px;
+  -webkit-transform:translate(0.1em);
+      -ms-transform:translate(0.1em);
+          transform:translate(0.1em);
   letter-spacing:0.33em;
+  color:rgba(255, 255, 255, 0.7);
   font-weight:100;
-  translate:0.1em;
 }
 .footer__copyright-last{
   display:block;
