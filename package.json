@@ -1,0 +1,24 @@
+{
+  "name": "grid-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "editorconfig-checker": "^5.1.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alecto/grid-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alecto/grid-template/issues"
+  },
+  "homepage": "https://github.com/Alecto/grid-template#readme",
+  "description": ""
+}
