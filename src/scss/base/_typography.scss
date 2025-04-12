@@ -23,7 +23,7 @@ h1 {
 
   font-family: $font-header;
   font-weight: 300;
-  line-height: 1.2em;
+  line-height: 1.2;
 
   @include lg-min {
     font-size: 3.75rem;
@@ -64,7 +64,7 @@ h3 {
   letter-spacing: 0.05em;
 
   font-family: $font-header;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 a {
