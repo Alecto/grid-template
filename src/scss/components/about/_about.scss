@@ -23,19 +23,13 @@
     }
   }
 
-  &__content {
-    @include sm {
-      margin-bottom: $gap-x2;
-    }
-  }
-
   &__description {
     position: relative;
 
     text-align: justify;
     letter-spacing: 0.05em;
 
-    line-height: 1.333333em;
+    line-height: 1.333333;
 
     @include md-min {
       font-size: 1.125rem;
@@ -54,13 +48,13 @@
         background-color: rgba($color-gray, 0.1);
 
         @include lg-min {
-          right: -$gap * 2.5;
+          right: -2.5 * $gap;
         }
         @include lg-md {
-          right: -$gap * 1.5;
+          right: -1.6 * $gap;
         }
         @include md-sm {
-          right: -$gap;
+          right: -1.2 * $gap;
         }
       }
     }
@@ -73,8 +67,16 @@
   &__picture {
     text-align: center;
 
+    @include lg-md {
+      margin-top: $gap-x5;
+    }
+
     @include md-sm {
       margin-top: $gap-x4;
+    }
+
+    @include sm {
+      margin-top: $gap-x3;
     }
   }
 

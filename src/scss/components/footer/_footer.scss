@@ -18,15 +18,16 @@
     position: relative;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
     margin-bottom: $gap-x3;
 
     font-size: 2.25rem;
 
-    gap: $gap-lg;
+    gap: $gap $gap-lg;
 
-    &::after {
+    &::before {
       position: absolute;
       bottom: -$gap-lg;
 
@@ -39,36 +40,38 @@
 
       background-color: rgba($color-white, 0.2);
     }
-  }
 
-  &__social-item {
-    transition: color 0.3s;
+    &-link {
+      transition: color 0.3s ease;
 
-    &:hover {
-      color: $color-accent;
+      color: $color-white;
+
+      &:hover {
+        color: $color-accent;
+      }
     }
   }
 
   &__copyright {
     text-align: center;
+    text-transform: uppercase;
 
     &-first {
       display: block;
 
-      margin-bottom: 3px;
+      margin-bottom: 5px;
 
-      transform: translate(0.1em);
       letter-spacing: 0.33em;
 
-      color: rgba($color-white, 0.7);
+      color: rgba($color-white, 0.5);
 
-      font-weight: 100;
+      font-weight: 300;
     }
 
-    &-last {
+    &-second {
       display: block;
 
-      letter-spacing: 0.07em;
+      letter-spacing: 0.1em;
 
       color: $color-white;
 
