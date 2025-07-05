@@ -44,7 +44,7 @@ h2 {
   color: $color-primary;
 
   font-family: $font-header;
-  line-height: 1.2em;
+  line-height: 1.2;
 
   @include lg-min {
     font-size: 2.5rem;

@@ -1,6 +1,8 @@
 @use "../../abstracts" as *;
 
 .posts {
+  background-color: $color-white;
+
   @extend %section;
 
   &__container {

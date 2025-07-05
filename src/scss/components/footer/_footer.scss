@@ -42,11 +42,10 @@
     }
 
     &-link {
-      transition: color 0.3s ease;
+      transition: color 0.3s;
 
-      color: $color-white;
-
-      &:hover {
+      &:hover,
+      &:focus {
         color: $color-accent;
       }
     }
@@ -59,19 +58,20 @@
     &-first {
       display: block;
 
+      margin-right: -3px;
       margin-bottom: 5px;
 
-      letter-spacing: 0.33em;
+      letter-spacing: 0.3em;
 
       color: rgba($color-white, 0.5);
 
-      font-weight: 300;
+      font-weight: 100;
     }
 
     &-second {
       display: block;
 
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
 
       color: $color-white;
 

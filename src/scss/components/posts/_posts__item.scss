@@ -19,7 +19,6 @@
   }
 
   &-picture {
-    display: flex;
     overflow: hidden;
 
     height: 300px;
@@ -37,7 +36,7 @@
   }
 
   &-content {
-    padding: 1.25em 1.875em;
+    padding: 1.25em 2em;
 
     text-align: center;
 

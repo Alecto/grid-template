@@ -67,15 +67,13 @@
   &__picture {
     text-align: center;
 
-    @include lg-md {
+    @include lg-min {
       margin-top: $gap-x5;
     }
-
-    @include md-sm {
+    @include lg-md {
       margin-top: $gap-x4;
     }
-
-    @include sm {
+    @include md {
       margin-top: $gap-x3;
     }
   }
