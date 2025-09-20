@@ -38,6 +38,10 @@
 
   font-size: 1.125rem;
 
+  @include sm {
+    text-align: center;
+  }
+
   &:focus-visible {
     outline: none;
   }

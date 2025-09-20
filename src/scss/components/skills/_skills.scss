@@ -1,5 +1,6 @@
 @use "../../abstracts" as *;
 @use "sass:math";
+
 $local-gap: math.div(40px, 3);
 $local-height: 690px;
 
@@ -13,6 +14,7 @@ $local-height: 690px;
 
   &__container {
     display: grid;
+    grid-auto-rows: minmax($local-height, calc(33.3333333333vh - $local-gap));
 
     margin-bottom: $gap;
 
@@ -34,13 +36,6 @@ $local-height: 690px;
     @include sm {
       gap: $gap;
       grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
-    }
-
-    @media ($local-height <= height) {
-      grid-auto-rows: calc(33.33333vh - $local-gap);
-    }
-    @media (height < $local-height) {
-      grid-auto-rows: calc(math.div($local-height, 3) - $local-gap);
     }
   }
 

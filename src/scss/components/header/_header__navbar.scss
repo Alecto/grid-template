@@ -24,12 +24,8 @@
       @include unlist;
 
       &::before {
-        position: absolute;
+        @include abs-position(-$gap, -$gap, -$gap, -$gap);
         z-index: -1;
-        top: -$gap;
-        right: -$gap;
-        bottom: -$gap;
-        left: -$gap;
 
         content: "";
 
