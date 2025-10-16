@@ -1,7 +1,7 @@
 [![HTML CSS valid](https://github.com/Alecto/grid-template/actions/workflows/HTML5Validator.yml/badge.svg)](https://github.com/Alecto/grid-template/actions/workflows/HTML5Validator.yml)
-[//]: # ([![Code style]
-&#40;https://github.com/Alecto/grid-template/actions/workflows/EditorConfig.yml/badge.svg&#41;]&#40;https://github.com/Alecto/grid-template/actions/workflows/EditorConfig.yml&#41;)
 [![Deploy](https://github.com/Alecto/grid-template/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Alecto/grid-template/actions/workflows/pages/pages-build-deployment)
+
+[//]: # ([![Code style]&#40;https://github.com/Alecto/grid-template/actions/workflows/EditorConfig.yml/badge.svg&#41;]&#40;https://github.com/Alecto/grid-template/actions/workflows/EditorConfig.yml&#41;)
 
 # GRID-TEMPLATE
 
