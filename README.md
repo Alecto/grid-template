@@ -1,10 +1,12 @@
 [![HTML CSS valid](https://github.com/Alecto/grid-template/actions/workflows/HTML5Validator.yml/badge.svg)](https://github.com/Alecto/grid-template/actions/workflows/HTML5Validator.yml)
-[![Code style](https://github.com/Alecto/grid-template/actions/workflows/EditorConfig.yml/badge.svg)](https://github.com/Alecto/grid-template/actions/workflows/EditorConfig.yml)
+[//]: # ([![Code style]
+&#40;https://github.com/Alecto/grid-template/actions/workflows/EditorConfig.yml/badge.svg&#41;]&#40;https://github.com/Alecto/grid-template/actions/workflows/EditorConfig.yml&#41;)
 [![Deploy](https://github.com/Alecto/grid-template/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Alecto/grid-template/actions/workflows/pages/pages-build-deployment)
 
 # GRID-TEMPLATE
 
-Фінальна версія учбового проекту GRID-TEMPLATE. Цей проект демонструє один із варіантів верстання адаптивного сайту з використанням CSS Grid.
+Фінальна версія учбового проекту GRID-TEMPLATE. Цей проект демонструє один із варіантів верстання адаптивного сайту з
+використанням CSS Grid.
 
 ## Структура проекту
 
@@ -34,7 +36,8 @@ npm install
 gulp watch
 ```
 
-Більше інформації про налаштування Gulp: [Інструкції з налаштування Gulp](https://github.com/FomenkoAndrey/gulp-training/tree/master)
+Більше інформації про налаштування
+Gulp: [Інструкції з налаштування Gulp](https://github.com/FomenkoAndrey/gulp-training/tree/master)
 
 ### Дизайн
 
